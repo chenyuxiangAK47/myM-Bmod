@@ -1,46 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<NPCCharacters>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:output omit-xml-declaration="yes"/>
+	<xsl:template match="@*|node()">
+		<xsl:copy>
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:copy>
+	</xsl:template>
 
 <!-- Skolder Veteran Broda - 把标枪替换成飞斧 -->
-	<NPCCharacter
-		id="skolderbrotva_tier_3"
-		default_group="Infantry"
-		level="21"
-		occupation="Soldier"
-		culture="Culture.nord"
-		name="{=YGexslSX}Skolder Veteran Broda">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_sturgia" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="60" />
-			<skill
-				id="Riding"
-				value="30" />
-			<skill
-				id="OneHanded"
-				value="110" />
-			<skill
-				id="TwoHanded"
-				value="60" />
-			<skill
-				id="Polearm"
-				value="110" />
-			<skill
-				id="Bow"
-				value="40" />
-			<skill
-				id="Crossbow"
-				value="15" />
-			<skill
-				id="Throwing"
-				value="100" />
-		</skills>
-		<upgrade_targets></upgrade_targets>
+	<xsl:template match="NPCCharacter[@id='skolderbrotva_tier_3']/Equipments">
 		<Equipments>
 			<EquipmentRoster>
 				<equipment slot="Item0"
@@ -109,52 +78,10 @@
 				id="sturgia_troop_civilian_template_t3"
 				civilian="true" />
 		</Equipments>
-	</NPCCharacter>
+	</xsl:template>
 
 <!-- Sturgian Spearman (斯特吉亚矛兵) - 把标枪替换成飞斧 -->
-	<NPCCharacter
-		id="sturgian_spearman"
-		default_group="Infantry"
-		level="21"
-		occupation="Soldier"
-		culture="Culture.sturgia"
-		name="{=CfO7eDsv}Sturgian Spearman">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_sturgia_veteran" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="100" />
-			<skill
-				id="Riding"
-				value="45" />
-			<skill
-				id="OneHanded"
-				value="100" />
-			<skill
-				id="TwoHanded"
-				value="60" />
-			<skill
-				id="Polearm"
-				value="100" />
-			<skill
-				id="Bow"
-				value="45" />
-			<skill
-				id="Crossbow"
-				value="15" />
-			<skill
-				id="Throwing"
-				value="60" />
-		</skills>
-		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.sturgian_shock_troop" />
-			<upgrade_target
-				id="NPCCharacter.sturgian_veteran_warrior" />
-		</upgrade_targets>
+	<xsl:template match="NPCCharacter[@id='sturgian_spearman']/Equipments">
 		<Equipments>
 			<EquipmentRoster>
 				<equipment slot="Item0"
@@ -217,55 +144,10 @@
 				id="sturgia_troop_civilian_template_t3"
 				civilian="true" />
 		</Equipments>
-	</NPCCharacter>
+	</xsl:template>
 
 <!-- Nord Spear Warrior (诺德持矛勇士) - 把标枪替换成飞斧 -->
-	<NPCCharacter
-		id="nord_spear_warrior"
-		default_group="Infantry"
-		level="16"
-		occupation="Soldier"
-		culture="Culture.nord"
-		name="{=GriAus4K}Nord Spear Warrior">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_nord" />
-		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
-		<skills>
-			<skill
-				id="Athletics"
-				value="80" />
-			<skill
-				id="Riding"
-				value="30" />
-			<skill
-				id="OneHanded"
-				value="50" />
-			<skill
-				id="TwoHanded"
-				value="30" />
-			<skill
-				id="Polearm"
-				value="70" />
-			<skill
-				id="Bow"
-				value="30" />
-			<skill
-				id="Crossbow"
-				value="10" />
-			<skill
-				id="Throwing"
-				value="40" />
-		</skills>
-		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.nord_vargr" />
-		</upgrade_targets>
+	<xsl:template match="NPCCharacter[@id='nord_spear_warrior']/Equipments">
 		<Equipments>
 			<EquipmentRoster>
 				<equipment slot="Item0"
@@ -331,6 +213,7 @@
 				id="nord_troop_civilian_template_t2"
 				civilian="true" />
 		</Equipments>
-	</NPCCharacter>
+	</xsl:template>
 
-</NPCCharacters>
+</xsl:stylesheet>
+
