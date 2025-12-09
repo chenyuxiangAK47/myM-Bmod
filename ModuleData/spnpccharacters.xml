@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- 覆盖诺德兵种，为所有兵种添加飞斧，如果有标枪就替换成飞斧 -->
+	
+	<!-- Skolder Recruit - 已经有飞斧了，保持不变 -->
+	<NPCCharacter id="skolderbrotva_tier_1">
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.northern_spear_1_t2" />
+				<equipment slot="Item1" id="Item.northern_scouts_shield" />
+				<equipment slot="Item2" id="Item.northern_throwing_axe_1_t1" />
+				<equipment slot="Item3" id="Item.sturgia_axe_2_t2" />
+				<equipment slot="Body" id="Item.northern_tunic" />
+				<equipment slot="Head" id="Item.nasal_helmet" />
+				<equipment slot="Leg" id="Item.highland_leg_wrappings" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.northern_spear_1_t2" />
+				<equipment slot="Item1" id="Item.northern_scouts_shield" />
+				<equipment slot="Item2" id="Item.northern_throwing_axe_1_t1" />
+				<equipment slot="Item3" id="Item.sturgia_axe_2_t2" />
+				<equipment slot="Body" id="Item.northern_tunic" />
+				<equipment slot="Head" id="Item.nasal_helmet" />
+				<equipment slot="Leg" id="Item.highland_leg_wrappings" />
+			</EquipmentRoster>
+			<EquipmentSet id="sturgia_troop_civilian_template_t1" civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- Skolder Warrior Broda - 已经有飞斧了，保持不变 -->
+	<NPCCharacter id="skolderbrotva_tier_2">
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.northern_axe_t3" />
+				<equipment slot="Item1" id="Item.viking_round_shield" />
+				<equipment slot="Item2" id="Item.northern_throwing_axe_1_t1" />
+				<equipment slot="Item3" id="Item.sturgia_sword_3_t3" />
+				<equipment slot="Head" id="Item.northern_goggled_helmet" />
+				<equipment slot="Body" id="Item.armored_baggy_trunks" />
+				<equipment slot="Leg" id="Item.highland_boots" />
+				<equipment slot="Gloves" id="Item.highland_gloves" />
+				<equipment slot="Cape" id="Item.bearskin" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.northern_axe_t3" />
+				<equipment slot="Item1" id="Item.leather_round_shield" />
+				<equipment slot="Item2" id="Item.northern_throwing_axe_1_t1" />
+				<equipment slot="Item3" id="Item.sturgia_sword_3_t3" />
+				<equipment slot="Head" id="Item.sturgian_lord_helmet_b" />
+				<equipment slot="Body" id="Item.baggy_trunks" />
+				<equipment slot="Leg" id="Item.battania_leather_boots" />
+				<equipment slot="Gloves" id="Item.guarded_armwraps" />
+				<equipment slot="Cape" id="Item.battania_shoulder_furr" />
+			</EquipmentRoster>
+			<EquipmentSet id="sturgia_troop_civilian_template_t2" civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- Skolder Veteran Broda - 把标枪替换成飞斧 -->
+	<NPCCharacter id="skolderbrotva_tier_3">
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.sturgia_2haxe_1_t4" />
+				<equipment slot="Item1" id="Item.heavy_round_shield" />
+				<equipment slot="Item2" id="Item.northern_throwing_axe_1_t1" />
+				<equipment slot="Item3" id="Item.sturgia_sword_4_t4" />
+				<equipment slot="Head" id="Item.goggled_helmet_over_full_mail" />
+				<equipment slot="Body" id="Item.nordic_hauberk" />
+				<equipment slot="Leg" id="Item.mail_chausses" />
+				<equipment slot="Gloves" id="Item.highland_gloves" />
+				<equipment slot="Cape" id="Item.bearskin" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.sturgia_2haxe_1_t4" />
+				<equipment slot="Item1" id="Item.heavy_round_shield" />
+				<equipment slot="Item2" id="Item.northern_throwing_axe_1_t1" />
+				<equipment slot="Item3" id="Item.sturgia_sword_4_t4" />
+				<equipment slot="Head" id="Item.closed_goggled_helmet" />
+				<equipment slot="Body" id="Item.sturgian_chainmale_shortsleeve" />
+				<equipment slot="Leg" id="Item.strapped_mail_chausses" />
+				<equipment slot="Gloves" id="Item.guarded_armwraps" />
+				<equipment slot="Cape" id="Item.battania_shoulder_furr" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.sturgia_2haxe_1_t4" />
+				<equipment slot="Item1" id="Item.heavy_round_shield" />
+				<equipment slot="Item2" id="Item.northern_throwing_axe_1_t1" />
+				<equipment slot="Item3" id="Item.sturgia_sword_4_t4" />
+				<equipment slot="Head" id="Item.nordic_helmet" />
+				<equipment slot="Body" id="Item.decorated_nordic_hauberk" />
+				<equipment slot="Leg" id="Item.northern_plated_boots" />
+				<equipment slot="Gloves" id="Item.rough_tied_bracers" />
+				<equipment slot="Cape" id="Item.mail_shoulders" />
+			</EquipmentRoster>
+			<EquipmentSet id="sturgia_troop_civilian_template_t2" civilian="true" />
+			<EquipmentSet id="sturgia_troop_civilian_template_t3" civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+</NPCCharacters>
+

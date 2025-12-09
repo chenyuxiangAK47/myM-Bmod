@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+  <Name value="NordThrowingAxeMod"/>
+  <Id value="NordThrowingAxeMod"/>
+  <Version value="v1.0.0"/>
+  <SingleplayerModule value="true"/>
+  <MultiplayerModule value="false"/>
+  <DependedModules>
+    <DependedModule Id="Native" Optional="false"/>
+    <DependedModule Id="SandBoxCore" Optional="false"/>
+    <DependedModule Id="Sandbox" Optional="false"/>
+    <DependedModule Id="StoryMode" Optional="false"/>
+  </DependedModules>
+  <SubModules>
+  </SubModules>
+  <Xmls>
+    <XmlNode>
+      <XmlName id="NPCCharacters" path="spnpccharacters"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+        <GameType value="EditorGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+  </Xmls>
+</Module>
+
