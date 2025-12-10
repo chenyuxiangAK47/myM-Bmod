@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- ================================================= -->
+	<!-- ==================== TIER 1 ==================== -->
+	<!-- ================================================= -->
+	
+	<!-- T1: Imperial Tirones（帝国新兵） -->
+	<NPCCharacter
+		id="imperial_t1_tirones"
+		default_group="Infantry"
+		level="6"
+		name="{=ImperialTirones}Imperial Tirones"
+		occupation="Soldier"
+		is_basic_troop="true"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="20" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="20" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="20" />
+			<skill
+				id="Bow"
+				value="5" />
+			<skill
+				id="Crossbow"
+				value="5" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t2_navalis_auxilia" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t2_miles_legionarius" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t2_sagittarius_auxilia" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t2_eques_auxilia" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 模板1：基础装备，整齐但简单 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.arming_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_a" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.arming_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_a" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ================================================= -->
+	<!-- ==================== 海军线 ===================== -->
+	<!-- ================================================= -->
+	
+	<!-- T2: Navalis Auxilia（海军辅助兵） -->
+	<NPCCharacter
+		id="imperial_t2_navalis_auxilia"
+		default_group="Infantry"
+		level="11"
+		name="{=NavalisAuxilia}Navalis Auxilia"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="40" />
+			<skill
+				id="Riding"
+				value="5" />
+			<skill
+				id="OneHanded"
+				value="35" />
+			<skill
+				id="TwoHanded"
+				value="15" />
+			<skill
+				id="Polearm"
+				value="35" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="35" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_sagittarii_navales" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_classiarii_manipulares" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 海军装备：剑+矛+盾+标枪，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_b" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_padded_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_b" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 远程海军路线 ====== -->
+	
+	<!-- T3: Sagittarii Navales（海军弓箭手） -->
+	<NPCCharacter
+		id="imperial_t3_sagittarii_navales"
+		default_group="Archer"
+		level="16"
+		name="{=SagittariiNavales}Sagittarii Navales"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="30" />
+			<skill
+				id="Bow"
+				value="70" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_veterani_sagittarii_navales" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 海军弓箭手：弓+箭+剑+盾，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_padded_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Veterani Sagittarii Navales（海军熟练弓箭手） -->
+	<NPCCharacter
+		id="imperial_t4_veterani_sagittarii_navales"
+		default_group="Archer"
+		level="21"
+		name="{=VeteraniSagittariiNavales}Veterani Sagittarii Navales"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="90" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_praetoriani_sagittarii_navales" />
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_d" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Praetoriani Sagittarii Navales（海军禁卫弓箭手） -->
+	<NPCCharacter
+		id="imperial_t5_praetoriani_sagittarii_navales"
+		default_group="Archer"
+		level="26"
+		name="{=PraetorianiSagittariiNavales}Praetoriani Sagittarii Navales"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="100" />
+			<skill
+				id="Riding"
+				value="20" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="110" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_e" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 近战海军路线 ====== -->
+	
+	<!-- T3: Classiarii Manipulares（海军军团兵） -->
+	<NPCCharacter
+		id="imperial_t3_classiarii_manipulares"
+		default_group="Infantry"
+		level="16"
+		name="{=ClassiariiManipulares}Classiarii Manipulares"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="25" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_veterani_classiarii" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 海军近战：剑+矛+盾+标枪，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_padded_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Veterani Classiarii（海军熟练兵） -->
+	<NPCCharacter
+		id="imperial_t4_veterani_classiarii"
+		default_group="Infantry"
+		level="21"
+		name="{=VeteraniClassiarii}Veterani Classiarii"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="35" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_praetoriani_classiarii" />
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_d" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Praetoriani Classiarii（海军禁卫兵） -->
+	<NPCCharacter
+		id="imperial_t5_praetoriani_classiarii"
+		default_group="Infantry"
+		level="26"
+		name="{=PraetorianiClassiarii}Praetoriani Classiarii"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="100" />
+			<skill
+				id="Riding"
+				value="20" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="45" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="70" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_e" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ================================================= -->
+	<!-- ==================== 步兵线 ===================== -->
+	<!-- ================================================= -->
+	
+	<!-- T2: Miles Legionarius（军团预备兵） -->
+	<NPCCharacter
+		id="imperial_t2_miles_legionarius"
+		default_group="Infantry"
+		level="11"
+		name="{=MilesLegionarius}Miles Legionarius"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="40" />
+			<skill
+				id="Riding"
+				value="5" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="15" />
+			<skill
+				id="Crossbow"
+				value="15" />
+			<skill
+				id="Throwing"
+				value="20" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_legionarius_ordinarius" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_veles" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_hastatus_duplex" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 军团预备兵：剑+矛+盾+标枪，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_b" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_padded_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_b" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 盾墙军团路线 ====== -->
+	
+	<!-- T3: Legionarius Ordinarius（普通军团兵） -->
+	<NPCCharacter
+		id="imperial_t3_legionarius_ordinarius"
+		default_group="Infantry"
+		level="16"
+		name="{=LegionariusOrdinarius}Legionarius Ordinarius"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="25" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="20" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_legionarius_hastatus" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 盾墙军团：剑+矛+盾+标枪，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_padded_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Legionarius Hastatus（长矛军团兵） -->
+	<NPCCharacter
+		id="imperial_t4_legionarius_hastatus"
+		default_group="Infantry"
+		level="21"
+		name="{=LegionariusHastatus}Legionarius Hastatus"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="35" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="30" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_primus_pilus" />
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_d" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Primus Pilus（第一大队长） -->
+	<NPCCharacter
+		id="imperial_t5_primus_pilus"
+		default_group="Infantry"
+		level="26"
+		name="{=PrimusPilus}Primus Pilus"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="100" />
+			<skill
+				id="Riding"
+				value="20" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="45" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="40" />
+			<skill
+				id="Throwing"
+				value="70" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.emirs_oval_shield" />
+				<equipment
+					slot="Item3"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_e" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 掷矛轻步兵路线 ====== -->
+	
+	<!-- T3: Veles（轻步兵） -->
+	<NPCCharacter
+		id="imperial_t3_veles"
+		default_group="Infantry"
+		level="16"
+		name="{=Veles}Veles"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="70" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_velites_hastati" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 掷矛轻步兵：剑+多标枪+小盾，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Item4"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_a" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Item4"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_padded_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_a" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Velites Hastati（长矛轻步兵） -->
+	<NPCCharacter
+		id="imperial_t4_velites_hastati"
+		default_group="Infantry"
+		level="21"
+		name="{=VelitesHastati}Velites Hastati"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="90" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="80" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_velites_praetoriani" />
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Item2"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Item4"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Velites Praetoriani（禁卫轻步兵） -->
+	<NPCCharacter
+		id="imperial_t5_velites_praetoriani"
+		default_group="Infantry"
+		level="26"
+		name="{=VelitesPraetoriani}Velites Praetoriani"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="110" />
+			<skill
+				id="Riding"
+				value="20" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="90" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Item2"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Item4"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_e" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 双刃枪兵路线 ====== -->
+	
+	<!-- T3: Hastatus Duplex（双刃枪兵） -->
+	<NPCCharacter
+		id="imperial_t3_hastatus_duplex"
+		default_group="Infantry"
+		level="16"
+		name="{=HastatusDuplex}Hastatus Duplex"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_hastati_duplex_manipulares" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 双刃枪兵：双手长矛+剑+标枪，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_padded_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.western_javelin_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_c" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Hastati Duplex Manipulares（双刃枪军团兵） -->
+	<NPCCharacter
+		id="imperial_t4_hastati_duplex_manipulares"
+		default_group="Infantry"
+		level="21"
+		name="{=HastatiDuplexManipulares}Hastati Duplex Manipulares"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="60" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_triarii_duplex" />
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_d" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Triarii Duplex（双刃枪老兵） -->
+	<NPCCharacter
+		id="imperial_t5_triarii_duplex"
+		default_group="Infantry"
+		level="26"
+		name="{=TriariiDuplex}Triarii Duplex"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="100" />
+			<skill
+				id="Riding"
+				value="20" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="70" />
+			<skill
+				id="Polearm"
+				value="80" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item2"
+					id="Item.imperial_throwing_spear_1_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.empire_warrior_padded_armor_e" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+</NPCCharacters>
+

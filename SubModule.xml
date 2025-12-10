@@ -17,6 +17,51 @@
 		<Module Id="NavalDLC"/>
 	</ModulesToLoadAfterThis>
 	<Xmls>
+		<!-- 新Nord兵种定义 -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="nord_troops_new"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- 修改农民升级路径 -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="nord_upgrade_paths" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- 隐藏旧Nord兵种 -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="nord_replace_old_troops" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- 修改Nord文化的基础兵种设置（取代招募） -->
+		<XmlNode>
+			<XmlName id="SPCultures" path="nord_culture_change" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- 旧装备替换（保留兼容性） -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="nord_throwing_axe" type="XSLT"/>
 			<IncludedGameTypes>
