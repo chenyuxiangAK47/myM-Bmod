@@ -2645,7 +2645,7 @@
 				id="NPCCharacter.imperial_t4_ballistarius_eques_veteranus" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 弓骑兵：弓+箭+剑+盾+马，装备与T2相似 -->
+			<!-- 弓骑兵：参考原版库吉特：双箭袋+剑，无盾无矛 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -2655,10 +2655,10 @@
 					id="Item.empire_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_sword_2_t3" />
+					id="Item.empire_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.southern_oval_shield" />
+					id="Item.empire_sword_2_t3" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet_over_mail_coif" />
@@ -2687,10 +2687,10 @@
 					id="Item.empire_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_sword_3_t3" />
+					id="Item.empire_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.southern_oval_shield" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet_over_mail_coif" />
@@ -2871,7 +2871,7 @@
 				id="NPCCharacter.imperial_t5_ballistarius_eques_praetorianus" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 老练弓骑兵：弓+箭+剑+盾+马，装备与T2-T3相似 -->
+			<!-- 老练弓骑兵：参考原版库吉特：双箭袋+剑，无盾无矛 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -2881,10 +2881,10 @@
 					id="Item.empire_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_sword_4_t4" />
+					id="Item.empire_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.southern_oval_shield" />
+					id="Item.empire_sword_4_t4" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet_over_mail_coif" />
@@ -2913,10 +2913,10 @@
 					id="Item.empire_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_sword_5_t4" />
+					id="Item.empire_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.southern_oval_shield" />
+					id="Item.empire_sword_5_t4" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet_over_mail_coif" />
@@ -3090,7 +3090,7 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 禁卫骑射手：弓+箭+剑+盾+马 -->
+			<!-- 禁卫骑射手：参考原版库吉特：双箭袋+剑，无盾无矛 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -3100,6 +3100,9 @@
 					id="Item.empire_arrows" />
 				<equipment
 					slot="Item2"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item3"
 					id="Item.empire_sword_4_t4" />
 				<equipment
 					slot="Item3"
@@ -3132,10 +3135,10 @@
 					id="Item.empire_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_sword_4_t4" />
+					id="Item.empire_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.southern_oval_shield" />
+					id="Item.empire_sword_4_t4" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet_over_mail" />

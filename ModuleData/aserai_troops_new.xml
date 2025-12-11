@@ -1350,7 +1350,7 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 弓箭+盾+长矛三合一，中甲，适合作战灵活的文明骑兵 -->
+			<!-- 弓箭，参考原版库吉特：双箭袋+剑，无盾无矛 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -1360,10 +1360,10 @@
 					id="Item.bodkin_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.eastern_spear_3_t4" />
+					id="Item.bodkin_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.adarga" />
+					id="Item.aserai_sword_4_t4" />
 				<equipment
 					slot="Head"
 					id="Item.desert_helmet" />
@@ -1395,10 +1395,10 @@
 					id="Item.bodkin_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.eastern_spear_3_t4" />
+					id="Item.bodkin_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.oval_shield" />
+					id="Item.aserai_sword_4_t4" />
 				<equipment
 					slot="Head"
 					id="Item.desert_helmet" />

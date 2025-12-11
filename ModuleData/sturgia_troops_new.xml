@@ -1004,10 +1004,10 @@
 					id="Item.bodkin_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.sturgia_axe_3_t3" />
+					id="Item.bodkin_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.sturgia_infantry_shield_b" />
+					id="Item.sturgia_axe_3_t3" />
 				<equipment
 					slot="Head"
 					id="Item.spangenhelm_with_padded_cloth" />
@@ -1409,7 +1409,7 @@
 				id="NPCCharacter.sturgia_t4_druzhina_cavalry" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 弓+箭+刀+盾 -->
+			<!-- 弓+箭+刀，参考原版库吉特：双箭袋+剑，无盾 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -1419,10 +1419,10 @@
 					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.sturgia_sword_4_t4" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.sturgia_infantry_shield_a" />
+					id="Item.sturgia_sword_4_t4" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet_with_mail" />
@@ -1451,10 +1451,10 @@
 					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.sturgia_sword_5_t4" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.sturgia_infantry_shield_b" />
+					id="Item.sturgia_sword_5_t4" />
 				<equipment
 					slot="Head"
 					id="Item.sturgian_helmet_open" />
@@ -1639,7 +1639,7 @@
 				id="NPCCharacter.sturgia_t5_veteran_druzhina" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 弓+箭+刀+盾，中等甲 -->
+			<!-- 弓+箭+刀，参考原版库吉特：双箭袋+剑，无盾 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -1649,10 +1649,10 @@
 					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.sturgia_sword_5_t5" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.sturgia_infantry_shield_a" />
+					id="Item.sturgia_sword_5_t5" />
 				<equipment
 					slot="Head"
 					id="Item.sturgian_helmet_closed" />
@@ -1681,10 +1681,10 @@
 					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.sturgia_noble_sword_1_t5" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.sturgia_infantry_shield_b" />
+					id="Item.sturgia_noble_sword_1_t5" />
 				<equipment
 					slot="Head"
 					id="Item.sturgian_helmet_open" />
@@ -1863,7 +1863,7 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 弓+箭+刀+盾，中等甲+中等马甲 -->
+			<!-- 弓+箭+刀，参考原版库吉特：双箭袋+剑，无盾 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -1873,10 +1873,10 @@
 					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.sturgia_noble_sword_2_t5" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.sturgia_infantry_shield_a" />
+					id="Item.sturgia_noble_sword_2_t5" />
 				<equipment
 					slot="Head"
 					id="Item.sturgian_helmet_closed" />
@@ -1905,10 +1905,10 @@
 					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.sturgia_noble_sword_3_t5" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.sturgia_infantry_shield_b" />
+					id="Item.sturgia_noble_sword_3_t5" />
 				<equipment
 					slot="Head"
 					id="Item.sturgian_helmet_open" />

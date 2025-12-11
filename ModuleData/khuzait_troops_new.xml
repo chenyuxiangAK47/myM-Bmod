@@ -611,7 +611,7 @@
 				id="NPCCharacter.khuzait_t4_armored_horse_archer" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 弓骑兵：强弓+强骑术 -->
+			<!-- 弓骑兵：强弓+强骑术，参考原版库吉特：双箭袋+剑，无盾无矛 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -621,10 +621,10 @@
 					id="Item.steppe_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.khuzait_sword_2_t3" />
+					id="Item.steppe_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_spear_1_t2" />
+					id="Item.khuzait_sword_2_t3" />
 				<equipment
 					slot="Head"
 					id="Item.nomad_helmet" />
@@ -653,10 +653,10 @@
 					id="Item.steppe_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.khuzait_sword_2_t3" />
+					id="Item.steppe_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_spear_1_t2" />
+					id="Item.khuzait_sword_2_t3" />
 				<equipment
 					slot="Head"
 					id="Item.nomad_helmet" />
@@ -721,7 +721,7 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 重装弓骑兵：最强弓+最强骑术+重甲 -->
+			<!-- 重装弓骑兵：最强弓+最强骑术+重甲，参考原版库吉特：双箭袋+剑，无盾无矛 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -731,10 +731,10 @@
 					id="Item.steppe_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.khuzait_sword_3_t3" />
+					id="Item.steppe_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_spear_2_t3" />
+					id="Item.khuzait_sword_3_t3" />
 				<equipment
 					slot="Head"
 					id="Item.plumed_nomad_helmet" />
@@ -766,10 +766,10 @@
 					id="Item.steppe_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.khuzait_sword_3_t3" />
+					id="Item.steppe_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_spear_2_t3" />
+					id="Item.khuzait_sword_3_t3" />
 				<equipment
 					slot="Head"
 					id="Item.steppe_helmet" />
