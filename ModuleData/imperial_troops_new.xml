@@ -285,52 +285,29 @@
 				id="NPCCharacter.imperial_t4_veterani_sagittarii_navales" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 直接复制巴丹民兵弓箭手装备 -->
+			<!-- 直接复制原版帝国弓箭手装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.mountain_hunting_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_1_t1" />
+					id="Item.empire_sword_1_t2" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_a" />
+					id="Item.imperial_padded_cloth" />
+				<equipment
+					slot="Gloves"
+					id="Item.guarded_padded_vambrace" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_shoes" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.highland_ranger_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_pickaxe_1_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-				<equipment
-					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.laced_coif" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
@@ -338,41 +315,26 @@
 					id="Item.mountain_hunting_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
+					id="Item.empire_sword_1_t2" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_c" />
+					id="Item.tunic_with_rolled_cloth" />
+				<equipment
+					slot="Gloves"
+					id="Item.padded_vambrace" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.wrapped_shoes" />
+				<equipment
+					slot="Head"
+					id="Item.laced_coif" />
 			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.mountain_hunting_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t2"
+				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
 	
@@ -424,94 +386,79 @@
 				id="NPCCharacter.imperial_t5_praetoriani_sagittarii_navales" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 直接复制巴丹民兵弓箭手装备 -->
+			<!-- 直接复制原版帝国资深弓箭手装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_1_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_a" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.leatherlame_roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_pickaxe_1_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_b" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.mountain_hunting_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_c" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
+				<equipment
+					slot="Head"
+					id="Item.ironlame_roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.mountain_hunting_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t2"
+				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
 	
@@ -561,94 +508,79 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 直接复制巴丹民兵弓箭手装备 -->
+			<!-- 直接复制原版帝国资深弓箭手装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_1_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_a" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.leatherlame_roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_pickaxe_1_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_b" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.mountain_hunting_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_c" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
+				<equipment
+					slot="Head"
+					id="Item.ironlame_roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.mountain_hunting_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t2"
+				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
 	
@@ -1800,52 +1732,29 @@
 				id="NPCCharacter.imperial_t3_ballistarius_ordinarius" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 直接复制巴丹民兵弓箭手装备 -->
+			<!-- 直接复制原版帝国弓箭手装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.mountain_hunting_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_1_t1" />
+					id="Item.empire_sword_1_t2" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_a" />
+					id="Item.imperial_padded_cloth" />
+				<equipment
+					slot="Gloves"
+					id="Item.guarded_padded_vambrace" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_shoes" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.highland_ranger_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_pickaxe_1_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-				<equipment
-					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.laced_coif" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
@@ -1853,41 +1762,26 @@
 					id="Item.mountain_hunting_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
+					id="Item.empire_sword_1_t2" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_c" />
+					id="Item.tunic_with_rolled_cloth" />
+				<equipment
+					slot="Gloves"
+					id="Item.padded_vambrace" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.wrapped_shoes" />
+				<equipment
+					slot="Head"
+					id="Item.laced_coif" />
 			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.mountain_hunting_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t2"
+				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
 	
@@ -1936,52 +1830,29 @@
 				id="NPCCharacter.imperial_t4_sagittarius_veteranus" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 直接复制巴丹民兵弓箭手装备 -->
+			<!-- 直接复制原版帝国弓箭手装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.mountain_hunting_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_1_t1" />
+					id="Item.empire_sword_1_t2" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_a" />
+					id="Item.imperial_padded_cloth" />
+				<equipment
+					slot="Gloves"
+					id="Item.guarded_padded_vambrace" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_shoes" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.highland_ranger_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_pickaxe_1_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-				<equipment
-					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.laced_coif" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
@@ -1989,41 +1860,26 @@
 					id="Item.mountain_hunting_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
+					id="Item.empire_sword_1_t2" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_c" />
+					id="Item.tunic_with_rolled_cloth" />
+				<equipment
+					slot="Gloves"
+					id="Item.padded_vambrace" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.wrapped_shoes" />
+				<equipment
+					slot="Head"
+					id="Item.laced_coif" />
 			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.mountain_hunting_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t2"
+				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
 	
@@ -2070,94 +1926,79 @@
 				id="NPCCharacter.imperial_t5_sagittarius_praetorianus" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 直接复制巴丹民兵弓箭手装备 -->
+			<!-- 直接复制原版帝国资深弓箭手装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_1_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_a" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.leatherlame_roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_pickaxe_1_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_b" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.mountain_hunting_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_c" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
+				<equipment
+					slot="Head"
+					id="Item.ironlame_roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.mountain_hunting_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t2"
+				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
 	
@@ -2202,94 +2043,79 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 直接复制巴丹民兵弓箭手装备 -->
+			<!-- 直接复制原版帝国资深弓箭手装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_1_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_a" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.leatherlame_roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.highland_ranger_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_pickaxe_1_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_b" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_civil_hood" />
+					id="Item.roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.mountain_hunting_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
+					id="Item.empire_sword_3_t3" />
 				<equipment
 					slot="Body"
-					id="Item.battania_civil_c" />
+					id="Item.eastern_studded_leather" />
 				<equipment
 					slot="Leg"
-					id="Item.highland_leg_wrappings" />
+					id="Item.leather_cavalier_boots" />
+				<equipment
+					slot="Head"
+					id="Item.ironlame_roundkettle_over_imperial_leather" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
 			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.mountain_hunting_bow" />
-				<equipment
-					slot="Item1"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.default_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.peasant_hammer_2_t1" />
-				<equipment
-					slot="Body"
-					id="Item.battania_civil_b" />
-				<equipment
-					slot="Leg"
-					id="Item.highland_leg_wrappings" />
-			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t2"
+				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
 	
