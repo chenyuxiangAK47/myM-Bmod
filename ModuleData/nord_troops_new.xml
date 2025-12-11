@@ -464,6 +464,7 @@
 		</skills>
 		<upgrade_targets></upgrade_targets>
 		<Equipments>
+			<!-- 防御型蛮子：T3弓箭手+熊皮装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -485,10 +486,10 @@
 					id="Item.northman_raider_boot" />
 				<equipment
 					slot="Head"
-					id="Item.nasalhelm_over_leather" />
+					id="Item.nordic_fur_cap" />
 				<equipment
 					slot="Cape"
-					id="Item.scarf" />
+					id="Item.bearskin" />
 				<equipment
 					slot="Gloves"
 					id="Item.studded_arm_guards" />
@@ -514,10 +515,10 @@
 					id="Item.northman_raider_boot" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nordic_fur_cap" />
 				<equipment
 					slot="Cape"
-					id="Item.nord_casual_cloak" />
+					id="Item.armored_bearskin" />
 				<equipment
 					slot="Gloves"
 					id="Item.studded_arm_guards" />
@@ -691,6 +692,7 @@
 		</skills>
 		<upgrade_targets></upgrade_targets>
 		<Equipments>
+			<!-- 防御型蛮子：T3破阵战士+熊皮装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -709,10 +711,10 @@
 					id="Item.northman_raider_boot" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nordic_fur_cap" />
 				<equipment
 					slot="Cape"
-					id="Item.nord_fur_shoulder" />
+					id="Item.bearskin" />
 				<equipment
 					slot="Gloves"
 					id="Item.studded_arm_guards" />
@@ -735,10 +737,10 @@
 					id="Item.northman_raider_boot" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nordic_fur_cap" />
 				<equipment
 					slot="Cape"
-					id="Item.scarf" />
+					id="Item.armored_bearskin" />
 				<equipment
 					slot="Gloves"
 					id="Item.studded_arm_guards" />
@@ -794,6 +796,7 @@
 		</skills>
 		<upgrade_targets></upgrade_targets>
 		<Equipments>
+			<!-- 防御型蛮子：T3盾墙战士+大圆盾+熊皮装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -815,7 +818,7 @@
 					id="Item.mail_chausses" />
 				<equipment
 					slot="Head"
-					id="Item.closed_goggled_helmet" />
+					id="Item.nordic_fur_cap" />
 				<equipment
 					slot="Cape"
 					id="Item.bearskin" />
@@ -844,10 +847,10 @@
 					id="Item.strapped_mail_chausses" />
 				<equipment
 					slot="Head"
-					id="Item.goggled_helmet_over_full_mail" />
+					id="Item.nordic_fur_cap" />
 				<equipment
 					slot="Cape"
-					id="Item.battania_shoulder_furr" />
+					id="Item.armored_bearskin" />
 				<equipment
 					slot="Gloves"
 					id="Item.guarded_armwraps" />
