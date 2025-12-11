@@ -38,6 +38,16 @@
   <string id="BattanianShieldWarrior" text="巴丹盾战士"/>
   <string id="BattanianJavelinRaider" text="巴丹标枪突袭者"/>
   <string id="BattanianHorseRaider" text="巴丹森林轻骑兵"/>
+  <string id="KhergitNomad" text="库吉特游牧民"/>
+  <string id="KhergitMixedMilitia" text="库吉特混合民兵"/>
+  <string id="KhergitSpearGuard" text="库吉特长矛守卫"/>
+  <string id="KhergitSteppeRider" text="库吉特草原骑手"/>
+  <string id="KhergitHorseArcher" text="库吉特弓骑兵"/>
+  <string id="KhergitArmoredHorseArcher" text="库吉特重装弓骑兵"/>
+  <string id="KhergitMountedSkirmisher" text="库吉特骑乘散兵"/>
+  <string id="KhergitRaiderCavalry" text="库吉特突袭骑兵"/>
+  <string id="KhergitLightLancer" text="库吉特轻装枪骑兵"/>
+  <string id="KhergitHeavyLancer" text="库吉特重装枪骑兵"/>
  </strings>
 </base>
 

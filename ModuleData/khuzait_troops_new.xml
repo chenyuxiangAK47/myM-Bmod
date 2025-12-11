@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- ================================================= -->
+	<!-- ==================== TIER 1 ==================== -->
+	<!-- ================================================= -->
+	
+	<!-- T1: Khergit Nomad（库吉特游牧民） - 混乱的新兵，什么武器都有 -->
+	<NPCCharacter
+		id="khuzait_t1_nomad"
+		default_group="Infantry"
+		level="6"
+		name="{=KhergitNomad}Khergit Nomad"
+		occupation="Soldier"
+		is_basic_troop="true"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="25" />
+			<skill
+				id="Riding"
+				value="30" />
+			<skill
+				id="OneHanded"
+				value="20" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="20" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="15" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t2_mixed_militia" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_t2_spear_guard" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_t2_steppe_rider" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 混乱的新兵：各种武器混搭 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_1_t2" />
+				<equipment
+					slot="Item3"
+					id="Item.footmans_wicker_shield" />
+				<equipment
+					slot="Body"
+					id="Item.khuzait_belt_leather" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Leg"
+					id="Item.eastern_leather_boots" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_spear_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.footmans_wicker_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_1_t2" />
+				<equipment
+					slot="Body"
+					id="Item.khuzait_belt_leather" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Leg"
+					id="Item.eastern_leather_boots" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.eastern_spear_1_t2" />
+				<equipment
+					slot="Body"
+					id="Item.khuzait_belt_leather" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Leg"
+					id="Item.eastern_leather_boots" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ================================================= -->
+	<!-- ==================== 步兵线（只到T2） ========== -->
+	<!-- ================================================= -->
+	
+	<!-- T2: Khergit Mixed Militia（库吉特混合民兵） - 通用杂兵：弓+盾+刀，比矛兵强一点 -->
+	<NPCCharacter
+		id="khuzait_t2_mixed_militia"
+		default_group="Archer"
+		level="11"
+		name="{=KhergitMixedMilitia}Khergit Mixed Militia"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="50" />
+			<skill
+				id="Riding"
+				value="25" />
+			<skill
+				id="OneHanded"
+				value="45" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="30" />
+			<skill
+				id="Bow"
+				value="70" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="30" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 通用杂兵：弓+盾+刀，游牧文化基础 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_1_t2" />
+				<equipment
+					slot="Item3"
+					id="Item.footmans_wicker_shield" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.stronger_footmans_wicker_shield" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.steppe_leather_vambraces" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T2: Khergit Spear Guard（库吉特长矛守卫） - 长矛盾民兵，游牧不擅长 -->
+	<NPCCharacter
+		id="khuzait_t2_spear_guard"
+		default_group="Infantry"
+		level="11"
+		name="{=KhergitSpearGuard}Khergit Spear Guard"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="45" />
+			<skill
+				id="Riding"
+				value="20" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="15" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="25" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 长矛盾民兵：游牧不擅长，比弓兵弱一点 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_spear_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.stronger_footmans_wicker_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_spear_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.footmans_wicker_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.steppe_leather_vambraces" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ================================================= -->
+	<!-- ==================== 骑兵线（主力T2-T4） ======= -->
+	<!-- ================================================= -->
+	
+	<!-- T2: Khergit Steppe Rider（库吉特草原骑手） - 基础轻骑 -->
+	<NPCCharacter
+		id="khuzait_t2_steppe_rider"
+		default_group="Cavalry"
+		level="11"
+		name="{=KhergitSteppeRider}Khergit Steppe Rider"
+		upgrade_requires="ItemCategory.horse"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="30" />
+			<skill
+				id="Riding"
+				value="60" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t3_horse_archer" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_t3_mounted_skirmisher" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_t3_light_lancer" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 基础轻骑：弓+矛+刀+马 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.eastern_spear_1_t2" />
+				<equipment
+					slot="Item3"
+					id="Item.khuzait_sword_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.eastern_spear_1_t2" />
+				<equipment
+					slot="Item3"
+					id="Item.khuzait_sword_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 弓骑兵路线 ====== -->
+	
+	<!-- T3: Khergit Horse Archer（库吉特弓骑兵） -->
+	<NPCCharacter
+		id="khuzait_t3_horse_archer"
+		default_group="HorseArcher"
+		level="16"
+		name="{=KhergitHorseArcher}Khergit Horse Archer"
+		upgrade_requires="ItemCategory.horse"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="50" />
+			<skill
+				id="Riding"
+				value="90" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="25" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="100" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t4_armored_horse_archer" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 弓骑兵：强弓+强骑术 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.composite_steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.eastern_spear_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.eastern_plated_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_heavy_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.eastern_spear_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.eastern_plated_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Khergit Armored Horse Archer（库吉特重装弓骑兵） -->
+	<NPCCharacter
+		id="khuzait_t4_armored_horse_archer"
+		default_group="HorseArcher"
+		level="21"
+		name="{=KhergitArmoredHorseArcher}Khergit Armored Horse Archer"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait_veteran" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="130" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 重装弓骑兵：最强弓+最强骑术+重甲 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_war_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_3_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.eastern_spear_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.plumed_nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.leather_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.steppe_leather_vambraces" />
+				<equipment
+					slot="Cape"
+					id="Item.leather_lamellar_shoulders" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_war_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_3_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.eastern_spear_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.steppe_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.leather_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Cape"
+					id="Item.eastern_studded_shoulders" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 标枪骑兵路线 ====== -->
+	
+	<!-- T3: Khergit Mounted Skirmisher（库吉特骑乘散兵） -->
+	<NPCCharacter
+		id="khuzait_t3_mounted_skirmisher"
+		default_group="Cavalry"
+		level="16"
+		name="{=KhergitMountedSkirmisher}Khergit Mounted Skirmisher"
+		upgrade_requires="ItemCategory.horse"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="50" />
+			<skill
+				id="Riding"
+				value="90" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="25" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="100" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t4_raider_cavalry" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 骑乘散兵：标枪+强骑术 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.eastern_spear_1_t2" />
+				<equipment
+					slot="Item3"
+					id="Item.khuzait_sword_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.eastern_plated_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.steppe_leather_vambraces" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.stronger_footmans_wicker_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.eastern_plated_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Khergit Raider Cavalry（库吉特突袭骑兵） -->
+	<NPCCharacter
+		id="khuzait_t4_raider_cavalry"
+		default_group="Cavalry"
+		level="21"
+		name="{=KhergitRaiderCavalry}Khergit Raider Cavalry"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait_veteran" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="80" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="130" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 突袭骑兵：最强标枪+最强骑术+重甲 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.khuzait_sword_3_t3" />
+				<equipment
+					slot="Head"
+					id="Item.plumed_nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.leather_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.steppe_leather_vambraces" />
+				<equipment
+					slot="Cape"
+					id="Item.leather_lamellar_shoulders" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.eastern_throwing_spear_1_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.eastern_spear_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.khuzait_sword_3_t3" />
+				<equipment
+					slot="Head"
+					id="Item.steppe_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.leather_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Cape"
+					id="Item.eastern_studded_shoulders" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 枪骑兵路线 ====== -->
+	
+	<!-- T3: Khergit Light Lancer（库吉特轻装枪骑兵） -->
+	<NPCCharacter
+		id="khuzait_t3_light_lancer"
+		default_group="Cavalry"
+		level="16"
+		name="{=KhergitLightLancer}Khergit Light Lancer"
+		upgrade_requires="ItemCategory.horse"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="50" />
+			<skill
+				id="Riding"
+				value="90" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="25" />
+			<skill
+				id="Polearm"
+				value="100" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="30" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t4_heavy_lancer" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 轻装枪骑兵：长矛+强骑术 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_spear_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.khuzait_sword_2_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.stronger_footmans_wicker_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.eastern_plated_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.steppe_leather_vambraces" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_spear_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.khuzait_sword_2_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item3"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Head"
+					id="Item.nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.eastern_plated_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Khergit Heavy Lancer（库吉特重装枪骑兵） -->
+	<NPCCharacter
+		id="khuzait_t4_heavy_lancer"
+		default_group="Cavalry"
+		level="21"
+		name="{=KhergitHeavyLancer}Khergit Heavy Lancer"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait_veteran" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="130" />
+			<skill
+				id="Bow"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 重装枪骑兵：最强长矛+最强骑术+重甲 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_spear_3_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.khuzait_sword_3_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.stronger_footmans_wicker_shield" />
+				<equipment
+					slot="Head"
+					id="Item.plumed_nomad_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.leather_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.steppe_leather_vambraces" />
+				<equipment
+					slot="Cape"
+					id="Item.leather_lamellar_shoulders" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.eastern_spear_3_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.khuzait_sword_3_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item3"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Head"
+					id="Item.steppe_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.leather_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_leather_boots" />
+				<equipment
+					slot="Cape"
+					id="Item.eastern_studded_shoulders" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_khuzait_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.steppe_fur_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="khuzait_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+</NPCCharacters>
+
