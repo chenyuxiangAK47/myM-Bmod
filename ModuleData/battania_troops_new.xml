@@ -9,7 +9,7 @@
 		id="battania_t1_tribesman"
 		default_group="Infantry"
 		level="6"
-		name="{=BattanianTribesman}Battanian Tribesman"
+		name="{=BattanianTribesman}巴丹散兵"
 		occupation="Soldier"
 		is_basic_troop="true"
 		culture="Culture.battania">
@@ -20,28 +20,28 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="25" />
+				value="40" />
 			<skill
 				id="Riding"
 				value="5" />
 			<skill
 				id="OneHanded"
-				value="20" />
+				value="25" />
 			<skill
 				id="TwoHanded"
-				value="15" />
-			<skill
-				id="Polearm"
 				value="20" />
 			<skill
+				id="Polearm"
+				value="25" />
+			<skill
 				id="Bow"
-				value="10" />
+				value="15" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="15" />
+				value="20" />
 		</skills>
 		<upgrade_targets>
 			<upgrade_target
@@ -62,7 +62,7 @@
 					id="Item.battania_shield_targe_a" />
 				<equipment
 					slot="Body"
-					id="Item.tattered_cloth" />
+					id="Item.battania_civil_a" />
 				<equipment
 					slot="Leg"
 					id="Item.leather_boots" />
@@ -76,7 +76,7 @@
 					id="Item.battania_shield_targe_a" />
 				<equipment
 					slot="Body"
-					id="Item.tattered_cloth" />
+					id="Item.battania_civil_b" />
 				<equipment
 					slot="Leg"
 					id="Item.leather_boots" />
@@ -90,7 +90,7 @@
 					id="Item.western_spear_1_t2" />
 				<equipment
 					slot="Body"
-					id="Item.tattered_cloth" />
+					id="Item.battania_civil_c" />
 				<equipment
 					slot="Leg"
 					id="Item.leather_boots" />
@@ -108,9 +108,9 @@
 	<!-- T2: Battanian Woods Bowman（巴丹森林弓手） -->
 	<NPCCharacter
 		id="battania_t2_woods_bowman"
-		default_group="Archer"
+		default_group="Ranged"
 		level="11"
-		name="{=BattanianWoodsBowman}Battanian Woods Bowman"
+		name="{=BattanianWoodsBowman}巴丹森林弓手"
 		occupation="Soldier"
 		culture="Culture.battania">
 		<face>
@@ -148,68 +148,83 @@
 				id="NPCCharacter.battania_t3_wild_marksman" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 森林弓手：弓+箭+近战武器+小盾 -->
+			<!-- 森林弓手：使用原版巴丹尼亚弓箭手确实存在的装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nomad_bow" />
+					id="Item.woodland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.bodkin_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item3"
 					id="Item.battania_sword_1_t2" />
 				<equipment
-					slot="Item3"
-					id="Item.battania_shield_targe_a" />
-				<equipment
 					slot="Head"
-					id="Item.fur_hat" />
+					id="Item.battania_civil_hood" />
 				<equipment
 					slot="Body"
-					id="Item.northern_leather_vest" />
+					id="Item.battania_civil_a" />
 				<equipment
 					slot="Leg"
-					id="Item.leather_boots" />
+					id="Item.highland_leg_wrappings" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nomad_bow" />
+					id="Item.woodland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.bodkin_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.battania_axe_1_t2" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.battania_shield_targe_a" />
+					id="Item.battania_axe_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.fur_hat" />
+					id="Item.battania_civil_hood" />
 				<equipment
 					slot="Body"
-					id="Item.northern_leather_vest" />
+					id="Item.battania_civil_b" />
 				<equipment
 					slot="Leg"
-					id="Item.leather_boots" />
-				<equipment
-					slot="Cape"
-					id="Item.scarf" />
+					id="Item.highland_leg_wrappings" />
 			</EquipmentRoster>
-			<EquipmentSet
-				id="battania_troop_civilian_template_t1"
-				civilian="true" />
+			<EquipmentRoster
+				civilian="true">
+				<equipment
+					slot="Item0"
+					id="Item.woodland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item3"
+					id="Item.peasant_hammer_2_t1" />
+				<equipment
+					slot="Body"
+					id="Item.battania_civil_b" />
+				<equipment
+					slot="Leg"
+					id="Item.highland_leg_wrappings" />
+			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
 	
-	<!-- T3: Battanian Wild Marksman（巴丹野猎射手） -->
+	<!-- T2.5: Battanian Test Archer（巴旦测试弓手）- 完全抄袭原版，用于测试 -->
 	<NPCCharacter
-		id="battania_t3_wild_marksman"
-		default_group="Archer"
-		level="16"
-		name="{=BattanianWildMarksman}Battanian Wild Marksman"
+		id="battania_t2_test_archer"
+		default_group="Ranged"
+		level="11"
+		name="{=BattanianTestArcher}巴丹森林弓手"
 		occupation="Soldier"
 		culture="Culture.battania">
 		<face>
@@ -219,91 +234,191 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="80" />
-			<skill
-				id="Riding"
-				value="15" />
-			<skill
-				id="OneHanded"
 				value="50" />
 			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="35" />
+			<skill
 				id="TwoHanded"
-				value="30" />
+				value="20" />
 			<skill
 				id="Polearm"
-				value="40" />
+				value="30" />
 			<skill
 				id="Bow"
-				value="100" />
+				value="70" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="50" />
+				value="30" />
 		</skills>
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 野猎射手：更强的弓+近战武器+小盾+狼皮装备 -->
+			<!-- 完全抄袭原版battanian_militia_archer的装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nomad_bow" />
+					id="Item.woodland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.bodkin_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item3"
+					id="Item.peasant_hammer_1_t1" />
+				<equipment
+					slot="Body"
+					id="Item.battania_civil_a" />
+				<equipment
+					slot="Leg"
+					id="Item.highland_leg_wrappings" />
+				<equipment
+					slot="Head"
+					id="Item.battania_civil_hood" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.woodland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item3"
+					id="Item.peasant_pickaxe_1_t1" />
+				<equipment
+					slot="Body"
+					id="Item.battania_civil_b" />
+				<equipment
+					slot="Leg"
+					id="Item.highland_leg_wrappings" />
+				<equipment
+					slot="Head"
+					id="Item.battania_civil_hood" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T3: Battanian Wild Marksman（巴丹野猎射手） -->
+	<NPCCharacter
+		id="battania_t3_wild_marksman"
+		default_group="Ranged"
+		level="16"
+		name="{=BattanianWildMarksman}巴丹森林弓手"
+		occupation="Soldier"
+		culture="Culture.battania">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_battania" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="110" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="55" />
+			<skill
+				id="TwoHanded"
+				value="35" />
+			<skill
+				id="Polearm"
+				value="45" />
+			<skill
+				id="Bow"
+				value="105" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="55" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 野猎射手：使用原版巴丹尼亚资深弓箭手确实存在的装备 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.woodland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item3"
 					id="Item.battania_sword_2_t3" />
 				<equipment
-					slot="Item3"
-					id="Item.battania_shield_targe_a" />
-				<equipment
 					slot="Head"
-					id="Item.battania_fur_helmet" />
+					id="Item.battania_civil_hood" />
 				<equipment
 					slot="Body"
-					id="Item.northern_padded_gambeson" />
+					id="Item.battania_civil_c" />
 				<equipment
 					slot="Leg"
-					id="Item.turndown_leather_boots" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_vambrace" />
-				<equipment
-					slot="Cape"
-					id="Item.wolf_shoulder" />
+					id="Item.highland_leg_wrappings" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nomad_bow" />
+					id="Item.woodland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.bodkin_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.battania_axe_1_t2" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
-					id="Item.battania_shield_targe_a" />
+					id="Item.battania_axe_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.battania_fur_helmet" />
+					id="Item.battania_civil_hood" />
 				<equipment
 					slot="Body"
-					id="Item.northern_padded_gambeson" />
+					id="Item.battania_civil_b" />
 				<equipment
 					slot="Leg"
-					id="Item.turndown_leather_boots" />
-				<equipment
-					slot="Cape"
-					id="Item.bearskin" />
+					id="Item.highland_leg_wrappings" />
 			</EquipmentRoster>
-			<EquipmentSet
-				id="battania_troop_civilian_template_t1"
-				civilian="true" />
+			<EquipmentRoster
+				civilian="true">
+				<equipment
+					slot="Item0"
+					id="Item.woodland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item3"
+					id="Item.peasant_hammer_2_t1" />
+				<equipment
+					slot="Body"
+					id="Item.battania_civil_b" />
+				<equipment
+					slot="Leg"
+					id="Item.highland_leg_wrappings" />
+			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
 	
@@ -316,7 +431,7 @@
 		id="battania_t2_wildfighter"
 		default_group="Infantry"
 		level="11"
-		name="{=BattanianWildfighter}Battanian Wildfighter"
+		name="{=BattanianWildfighter}巴丹野性战士"
 		occupation="Soldier"
 		culture="Culture.battania">
 		<face>
@@ -326,48 +441,51 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="60" />
+				value="90" />
 			<skill
 				id="Riding"
 				value="10" />
 			<skill
 				id="OneHanded"
-				value="30" />
+				value="45" />
 			<skill
 				id="TwoHanded"
-				value="50" />
+				value="75" />
 			<skill
 				id="Polearm"
-				value="30" />
+				value="45" />
 			<skill
 				id="Bow"
-				value="10" />
+				value="15" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="20" />
+				value="35" />
 		</skills>
 		<upgrade_targets>
 			<upgrade_target
 				id="NPCCharacter.battania_t3_berserker" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 半裸双手战士：轻甲+双手武器 -->
+			<!-- 半裸双手战士：野人甲+双手武器，混搭风格，有些有狼头/狼皮，有些没有 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
 					id="Item.battania_2hsword_1_t2" />
 				<equipment
-					slot="Item1"
-					id="Item.battania_2haxe_1_t2" />
-				<equipment
 					slot="Body"
-					id="Item.tattered_cloth" />
+					id="Item.battanian_savage_armor" />
 				<equipment
 					slot="Leg"
 					id="Item.leather_boots" />
+				<equipment
+					slot="Head"
+					id="Item.wolfhead" />
+				<equipment
+					slot="Cape"
+					id="Item.wolf_shoulder" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
@@ -375,7 +493,7 @@
 					id="Item.battania_2hsword_2_t3" />
 				<equipment
 					slot="Body"
-					id="Item.northern_leather_vest" />
+					id="Item.battanian_savage_armor" />
 				<equipment
 					slot="Leg"
 					id="Item.leather_boots" />
@@ -389,10 +507,16 @@
 					id="Item.battania_2haxe_1_t2" />
 				<equipment
 					slot="Body"
-					id="Item.tattered_cloth" />
+					id="Item.battanian_savage_armor" />
 				<equipment
 					slot="Leg"
 					id="Item.leather_boots" />
+				<equipment
+					slot="Head"
+					id="Item.battania_fur_helmet" />
+				<equipment
+					slot="Cape"
+					id="Item.wolf_shoulder" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="battania_troop_civilian_template_t1"
@@ -405,7 +529,7 @@
 		id="battania_t3_berserker"
 		default_group="Infantry"
 		level="16"
-		name="{=BattanianBerserker}Battanian Berserker"
+		name="{=BattanianBerserker}巴丹狂战士"
 		occupation="Soldier"
 		culture="Culture.battania">
 		<face>
@@ -415,40 +539,37 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="100" />
+				value="120" />
 			<skill
 				id="Riding"
 				value="15" />
 			<skill
 				id="OneHanded"
-				value="40" />
+				value="45" />
 			<skill
 				id="TwoHanded"
-				value="90" />
+				value="100" />
 			<skill
 				id="Polearm"
-				value="40" />
+				value="45" />
 			<skill
 				id="Bow"
-				value="15" />
+				value="20" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="30" />
+				value="35" />
 		</skills>
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 狂野斗士：半裸+双手武器（镰刀剑、双手斧），高输出低防御，狼皮装备 -->
+			<!-- 狂野斗士：半裸+双手武器（镰刀剑、双手斧），高输出低防御，混搭风格 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
 					id="Item.battania_2hsword_2_t3" />
-				<equipment
-					slot="Item1"
-					id="Item.battania_2hsword_3_t3" />
 				<equipment
 					slot="Body"
 					id="Item.tattered_cloth" />
@@ -457,7 +578,7 @@
 					id="Item.leather_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_fur_helmet" />
+					id="Item.wolfhead" />
 				<equipment
 					slot="Cape"
 					id="Item.wolf_shoulder" />
@@ -466,9 +587,6 @@
 				<equipment
 					slot="Item0"
 					id="Item.battania_2hsword_3_t3" />
-				<equipment
-					slot="Item1"
-					id="Item.battania_2haxe_1_t2" />
 				<equipment
 					slot="Body"
 					id="Item.tattered_cloth" />
@@ -485,9 +603,6 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.battania_2hsword_4_t4" />
-				<equipment
-					slot="Item1"
 					id="Item.battania_2haxe_1_t2" />
 				<equipment
 					slot="Body"
@@ -497,7 +612,7 @@
 					id="Item.leather_boots" />
 				<equipment
 					slot="Head"
-					id="Item.battania_fur_helmet" />
+					id="Item.wolfhead" />
 				<equipment
 					slot="Cape"
 					id="Item.wolf_shoulder" />
@@ -517,7 +632,7 @@
 		id="battania_t2_spear_warrior"
 		default_group="Infantry"
 		level="11"
-		name="{=BattanianSpearWarrior}Battanian Spear Warrior"
+		name="{=BattanianSpearWarrior}巴丹盾牌战士"
 		occupation="Soldier"
 		culture="Culture.battania">
 		<face>
@@ -614,7 +729,7 @@
 		id="battania_t3_shield_warrior"
 		default_group="Infantry"
 		level="16"
-		name="{=BattanianShieldWarrior}Battanian Shield Warrior"
+		name="{=BattanianShieldWarrior}巴丹盾牌战士"
 		occupation="Soldier"
 		culture="Culture.battania">
 		<face>
@@ -746,7 +861,7 @@
 		id="battania_t3_javelin_raider"
 		default_group="Infantry"
 		level="16"
-		name="{=BattanianJavelinRaider}Battanian Javelin Raider"
+		name="{=BattanianJavelinRaider}巴丹散兵"
 		occupation="Soldier"
 		culture="Culture.battania">
 		<face>
@@ -876,7 +991,7 @@
 		id="battania_t3_horse_raider"
 		default_group="Cavalry"
 		level="16"
-		name="{=BattanianHorseRaider}Battanian Horse Raider"
+		name="{=BattanianHorseRaider}巴丹轻骑兵"
 		upgrade_requires="ItemCategory.horse"
 		occupation="Soldier"
 		culture="Culture.battania">

@@ -9,7 +9,7 @@
 		id="aserai_t1_desert_tribesman"
 		default_group="Infantry"
 		level="6"
-		name="{=DesertTribesman}Desert Tribesman"
+		name="{=DesertTribesman}沙漠步兵"
 		occupation="Soldier"
 		is_basic_troop="true"
 		culture="Culture.aserai">
@@ -20,10 +20,10 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="30" />
+				value="45" />
 			<skill
 				id="Riding"
-				value="10" />
+				value="15" />
 			<skill
 				id="OneHanded"
 				value="25" />
@@ -41,7 +41,7 @@
 				value="0" />
 			<skill
 				id="Throwing"
-				value="25" />
+				value="35" />
 		</skills>
 		<upgrade_targets>
 			<upgrade_target
@@ -65,7 +65,7 @@
 					id="Item.aserai_sword_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -79,7 +79,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.eastern_spear_1_t2" />
 				<equipment
 					slot="Item1"
 					id="Item.adarga" />
@@ -87,8 +87,11 @@
 					slot="Item2"
 					id="Item.aserai_sword_1_t2" />
 				<equipment
+					slot="Item3"
+					id="Item.desert_throwing_knife" />
+				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -99,7 +102,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nomad_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.bodkin_arrows" />
@@ -111,7 +114,7 @@
 					id="Item.adarga" />
 				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -137,7 +140,7 @@
 		id="aserai_t2_desert_spearman"
 		default_group="Infantry"
 		level="11"
-		name="{=DesertSpearman}Desert Spearman"
+		name="{=DesertSpearman}沙漠长矛兵"
 		occupation="Soldier"
 		culture="Culture.aserai">
 		<face>
@@ -147,10 +150,10 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="50" />
+				value="70" />
 			<skill
 				id="Riding"
-				value="15" />
+				value="20" />
 			<skill
 				id="OneHanded"
 				value="40" />
@@ -168,7 +171,7 @@
 				value="0" />
 			<skill
 				id="Throwing"
-				value="40" />
+				value="50" />
 		</skills>
 		<upgrade_targets>
 			<upgrade_target
@@ -190,7 +193,7 @@
 					id="Item.aserai_sword_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -213,7 +216,7 @@
 					id="Item.aserai_sword_2_t2" />
 				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -235,7 +238,7 @@
 		id="aserai_t3_desert_guard"
 		default_group="Infantry"
 		level="16"
-		name="{=DesertGuard}Desert Guard"
+		name="{=DesertGuard}沙漠长矛兵"
 		occupation="Soldier"
 		culture="Culture.aserai">
 		<face>
@@ -286,10 +289,10 @@
 					id="Item.aserai_sword_3_t3" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -312,10 +315,10 @@
 					id="Item.aserai_sword_3_t3" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -337,7 +340,7 @@
 		id="aserai_t4_desert_line_infantry"
 		default_group="Infantry"
 		level="21"
-		name="{=DesertLineInfantry}Desert Line Infantry"
+		name="{=DesertLineInfantry}沙漠长矛兵"
 		occupation="Soldier"
 		culture="Culture.aserai">
 		<face>
@@ -386,7 +389,7 @@
 					id="Item.aserai_sword_4_t4" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Head"
 					id="Item.desert_helmet" />
@@ -415,7 +418,7 @@
 					id="Item.aserai_sword_5_t4" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Head"
 					id="Item.desert_helmet" />
@@ -440,7 +443,7 @@
 		id="aserai_t3_desert_javelinier"
 		default_group="Infantry"
 		level="16"
-		name="{=DesertJavelinier}Desert Javelinier"
+		name="{=DesertJavelinier}沙漠标枪散兵"
 		occupation="Soldier"
 		culture="Culture.aserai">
 		<face>
@@ -482,10 +485,10 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
 					id="Item.adarga" />
@@ -508,10 +511,10 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
 					id="Item.oval_shield" />
@@ -542,7 +545,7 @@
 		id="aserai_t4_desert_veteran_skirmisher"
 		default_group="Infantry"
 		level="21"
-		name="{=DesertVeteranSkirmisher}Desert Veteran Skirmisher"
+		name="{=DesertVeteranSkirmisher}沙漠标枪散兵"
 		occupation="Soldier"
 		culture="Culture.aserai">
 		<face>
@@ -582,13 +585,13 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item3"
 					id="Item.aserai_sword_4_t4" />
@@ -611,10 +614,10 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
 					id="Item.adarga" />
@@ -647,9 +650,9 @@
 	<!-- T2: Desert Bowmen（沙漠弓兵） -->
 	<NPCCharacter
 		id="aserai_t2_desert_bowmen"
-		default_group="Archer"
+		default_group="Ranged"
 		level="11"
-		name="{=DesertBowmen}Desert Bowmen"
+		name="{=DesertBowmen}沙漠弓手"
 		occupation="Soldier"
 		culture="Culture.aserai">
 		<face>
@@ -659,10 +662,10 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="55" />
+				value="75" />
 			<skill
 				id="Riding"
-				value="20" />
+				value="25" />
 			<skill
 				id="OneHanded"
 				value="40" />
@@ -680,7 +683,7 @@
 				value="0" />
 			<skill
 				id="Throwing"
-				value="30" />
+				value="40" />
 		</skills>
 		<upgrade_targets>
 			<upgrade_target
@@ -691,7 +694,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nomad_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.bodkin_arrows" />
@@ -703,7 +706,7 @@
 					id="Item.adarga" />
 				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -714,7 +717,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nomad_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.bodkin_arrows" />
@@ -726,7 +729,7 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -743,12 +746,12 @@
 		</Equipments>
 	</NPCCharacter>
 	
-	<!-- T3: Desert Archer（沙漠弓箭手） - 复合弓，移动快 -->
+	<!-- T3: Desert Archer（沙漠熟练弓手） - 复合弓，移动快 -->
 	<NPCCharacter
 		id="aserai_t3_desert_archer"
-		default_group="Archer"
+		default_group="Ranged"
 		level="16"
-		name="{=DesertArcher}Desert Archer"
+		name="{=DesertArcher}沙漠熟练弓手"
 		occupation="Soldier"
 		culture="Culture.aserai">
 		<face>
@@ -800,7 +803,7 @@
 					id="Item.adarga" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -814,7 +817,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.longbow_recurve_desert_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.bodkin_arrows" />
@@ -826,7 +829,7 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -852,7 +855,7 @@
 		id="aserai_t2_desert_rider"
 		default_group="Cavalry"
 		level="11"
-		name="{=DesertRider}Desert Rider"
+		name="{=DesertRider}沙漠轻骑兵"
 		upgrade_requires="ItemCategory.horse"
 		occupation="Soldier"
 		culture="Culture.aserai">
@@ -899,10 +902,10 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
 					id="Item.adarga" />
@@ -911,7 +914,7 @@
 					id="Item.aserai_sword_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -923,15 +926,15 @@
 					id="Item.empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_1_t2" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
 					id="Item.oval_shield" />
@@ -940,7 +943,7 @@
 					id="Item.aserai_sword_2_t2" />
 				<equipment
 					slot="Head"
-					id="Item.desert_cap" />
+					id="Item.wrapped_desert_cap" />
 				<equipment
 					slot="Body"
 					id="Item.desert_padded_cloth" />
@@ -952,7 +955,7 @@
 					id="Item.empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="aserai_troop_civilian_template_t1"
@@ -967,7 +970,7 @@
 		id="aserai_t3_desert_light_cavalry"
 		default_group="Cavalry"
 		level="16"
-		name="{=DesertLightCavalry}Desert Light Cavalry"
+		name="{=DesertLightCavalry}沙漠轻骑兵"
 		upgrade_requires="ItemCategory.horse"
 		occupation="Soldier"
 		culture="Culture.aserai">
@@ -1010,10 +1013,10 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
 					id="Item.adarga" />
@@ -1022,7 +1025,7 @@
 					id="Item.aserai_sword_3_t3" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -1037,15 +1040,15 @@
 					id="Item.t2_empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
 					id="Item.oval_shield" />
@@ -1054,7 +1057,7 @@
 					id="Item.aserai_sword_3_t3" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -1066,7 +1069,7 @@
 					id="Item.t2_empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="aserai_troop_civilian_template_t1"
@@ -1079,7 +1082,7 @@
 		id="aserai_t4_desert_jund_cavalry"
 		default_group="Cavalry"
 		level="21"
-		name="{=DesertJundCavalry}Desert Jund Cavalry"
+		name="{=DesertJundCavalry}沙漠标枪骑兵"
 		upgrade_requires="ItemCategory.war_horse"
 		occupation="Soldier"
 		culture="Culture.aserai">
@@ -1120,13 +1123,13 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item3"
 					id="Item.aserai_sword_4_t4" />
@@ -1150,15 +1153,15 @@
 					id="Item.t2_empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.desert_throwing_knife" />
 				<equipment
 					slot="Item2"
 					id="Item.adarga" />
@@ -1175,11 +1178,15 @@
 					slot="Leg"
 					id="Item.eastern_leather_boots" />
 				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
 					slot="Horse"
 					id="Item.t2_empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="aserai_troop_civilian_template_t1"
@@ -1194,7 +1201,7 @@
 		id="aserai_t3_desert_horse_archer"
 		default_group="HorseArcher"
 		level="16"
-		name="{=DesertHorseArcher}Desert Horse Archer"
+		name="{=DesertHorseArcher}沙漠弓骑兵"
 		upgrade_requires="ItemCategory.horse"
 		occupation="Soldier"
 		culture="Culture.aserai">
@@ -1249,7 +1256,7 @@
 					id="Item.adarga" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -1264,12 +1271,12 @@
 					id="Item.t2_empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.longbow_recurve_desert_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.bodkin_arrows" />
@@ -1281,7 +1288,7 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -1293,7 +1300,7 @@
 					id="Item.t2_empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="aserai_troop_civilian_template_t1"
@@ -1306,7 +1313,7 @@
 		id="aserai_t4_desert_faris_ranger"
 		default_group="HorseArcher"
 		level="21"
-		name="{=DesertFarisRanger}Desert Faris Ranger"
+		name="{=DesertFarisRanger}沙漠弓骑兵"
 		upgrade_requires="ItemCategory.war_horse"
 		occupation="Soldier"
 		culture="Culture.aserai">
@@ -1377,12 +1384,12 @@
 					id="Item.t2_empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.longbow_recurve_desert_bow" />
+					id="Item.composite_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.bodkin_arrows" />
@@ -1406,7 +1413,7 @@
 					id="Item.t2_empire_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.eastern_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="aserai_troop_civilian_template_t1"
@@ -1421,7 +1428,7 @@
 		id="aserai_t3_desert_camel_rider"
 		default_group="Cavalry"
 		level="16"
-		name="{=DesertCamelRider}Desert Camel Rider"
+		name="{=DesertCamelRider}沙漠骆驼突击兵"
 		upgrade_requires="ItemCategory.camel"
 		occupation="Soldier"
 		culture="Culture.aserai">
@@ -1464,10 +1471,10 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.eastern_throwing_spear_1_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.eastern_throwing_spear_1_t3" />
 				<equipment
 					slot="Item2"
 					id="Item.eastern_spear_2_t3" />
@@ -1476,7 +1483,7 @@
 					id="Item.adarga" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -1491,15 +1498,15 @@
 					id="Item.camel" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.camel_saddle" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.eastern_throwing_spear_1_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.eastern_throwing_spear_1_t3" />
 				<equipment
 					slot="Item2"
 					id="Item.eastern_spear_2_t3" />
@@ -1508,7 +1515,7 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.desert_helmet" />
+					id="Item.loose_wrapped_desert_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.eastern_studded_leather" />
@@ -1520,7 +1527,7 @@
 					id="Item.camel" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.camel_saddle" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="aserai_troop_civilian_template_t1"
@@ -1533,7 +1540,7 @@
 		id="aserai_t4_desert_camel_lancer"
 		default_group="Cavalry"
 		level="21"
-		name="{=DesertCamelLancer}Desert Camel Lancer"
+		name="{=DesertCamelLancer}沙漠骆驼枪骑兵"
 		upgrade_requires="ItemCategory.camel"
 		occupation="Soldier"
 		culture="Culture.aserai">
@@ -1570,20 +1577,20 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 3袋标枪+长矛，反骑兵顶级单位，速度比马慢但冲锋硬度更强 -->
+			<!-- 标枪+长矛，反骑兵顶级单位，速度比马慢但冲锋硬度更强 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.eastern_throwing_spear_1_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.eastern_spear_3_t4" />
 				<equipment
 					slot="Item2"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.adarga" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_spear_3_t4" />
+					id="Item.aserai_sword_4_t4" />
 				<equipment
 					slot="Head"
 					id="Item.desert_helmet" />
@@ -1604,21 +1611,21 @@
 					id="Item.camel" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.camel_saddle" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.eastern_throwing_spear_1_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.eastern_spear_3_t4" />
 				<equipment
 					slot="Item2"
-					id="Item.eastern_javelin_2_t3" />
+					id="Item.oval_shield" />
 				<equipment
 					slot="Item3"
-					id="Item.eastern_spear_3_t4" />
+					id="Item.aserai_sword_5_t4" />
 				<equipment
 					slot="Head"
 					id="Item.desert_helmet" />
@@ -1633,7 +1640,7 @@
 					id="Item.camel" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.stripped_leather_harness" />
+					id="Item.camel_saddle" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="aserai_troop_civilian_template_t1"
@@ -1642,4 +1649,9 @@
 	</NPCCharacter>
 	
 </NPCCharacters>
+
+
+
+
+
 

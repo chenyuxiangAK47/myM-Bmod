@@ -22,3 +22,8 @@
 	<xsl:template match="NPCCharacter[@id='druzhinnik_champion']"/>
 </xsl:stylesheet>
 
+
+
+
+
+

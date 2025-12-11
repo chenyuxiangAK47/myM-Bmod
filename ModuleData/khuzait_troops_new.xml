@@ -9,7 +9,7 @@
 		id="khuzait_t1_nomad"
 		default_group="Infantry"
 		level="6"
-		name="{=KhergitNomad}Khergit Nomad"
+		name="{=KhergitNomad}草原杂牌步兵"
 		occupation="Soldier"
 		is_basic_troop="true"
 		culture="Culture.khuzait">
@@ -20,10 +20,10 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="25" />
+				value="30" />
 			<skill
 				id="Riding"
-				value="30" />
+				value="40" />
 			<skill
 				id="OneHanded"
 				value="20" />
@@ -35,7 +35,7 @@
 				value="20" />
 			<skill
 				id="Bow"
-				value="30" />
+				value="40" />
 			<skill
 				id="Crossbow"
 				value="0" />
@@ -63,9 +63,6 @@
 				<equipment
 					slot="Item2"
 					id="Item.khuzait_sword_1_t2" />
-				<equipment
-					slot="Item3"
-					id="Item.footmans_wicker_shield" />
 				<equipment
 					slot="Body"
 					id="Item.khuzait_belt_leather" />
@@ -129,9 +126,9 @@
 	<!-- T2: Khergit Mixed Militia（库吉特混合民兵） - 通用杂兵：弓+盾+刀，比矛兵强一点 -->
 	<NPCCharacter
 		id="khuzait_t2_mixed_militia"
-		default_group="Archer"
+		default_group="Ranged"
 		level="11"
-		name="{=KhergitMixedMilitia}Khergit Mixed Militia"
+		name="{=KhergitMixedMilitia}草原杂牌弓步兵"
 		occupation="Soldier"
 		culture="Culture.khuzait">
 		<face>
@@ -141,10 +138,10 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="50" />
+				value="55" />
 			<skill
 				id="Riding"
-				value="25" />
+				value="35" />
 			<skill
 				id="OneHanded"
 				value="45" />
@@ -156,7 +153,7 @@
 				value="30" />
 			<skill
 				id="Bow"
-				value="70" />
+				value="80" />
 			<skill
 				id="Crossbow"
 				value="0" />
@@ -165,9 +162,11 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t3_foot_archer" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 通用杂兵：弓+盾+刀，游牧文化基础 -->
+			<!-- 通用杂兵：弓+草原盾+弯刀，游牧文化基础 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -180,7 +179,7 @@
 					id="Item.khuzait_sword_1_t2" />
 				<equipment
 					slot="Item3"
-					id="Item.footmans_wicker_shield" />
+					id="Item.tribal_steppe_shield" />
 				<equipment
 					slot="Head"
 					id="Item.fur_hat" />
@@ -206,7 +205,7 @@
 					id="Item.khuzait_sword_2_t3" />
 				<equipment
 					slot="Item3"
-					id="Item.stronger_footmans_wicker_shield" />
+					id="Item.decorated_steppe_shield" />
 				<equipment
 					slot="Head"
 					id="Item.fur_hat" />
@@ -231,7 +230,7 @@
 		id="khuzait_t2_spear_guard"
 		default_group="Infantry"
 		level="11"
-		name="{=KhergitSpearGuard}Khergit Spear Guard"
+		name="{=KhergitSpearGuard}草原轻矛步兵"
 		occupation="Soldier"
 		culture="Culture.khuzait">
 		<face>
@@ -329,7 +328,7 @@
 		id="khuzait_t2_steppe_rider"
 		default_group="Cavalry"
 		level="11"
-		name="{=KhergitSteppeRider}Khergit Steppe Rider"
+		name="{=KhergitSteppeRider}草原轻骑兵"
 		upgrade_requires="ItemCategory.horse"
 		occupation="Soldier"
 		culture="Culture.khuzait">
@@ -440,6 +439,132 @@
 		</Equipments>
 	</NPCCharacter>
 	
+	<!-- ====== 步行弓箭手路线 ====== -->
+	
+	<!-- T3: Khergit Foot Archer（库吉特步行弓箭手） - 草原盾+弓+箭+弯刀 -->
+	<NPCCharacter
+		id="khuzait_t3_foot_archer"
+		default_group="Ranged"
+		level="16"
+		name="{=KhergitFootArcher}草原杂牌弓步兵"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="30" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="25" />
+			<skill
+				id="Polearm"
+				value="35" />
+			<skill
+				id="Bow"
+				value="100" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 步行弓箭手：草原盾+弓+箭+铁杖（破甲武器） -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_mace_2_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.tribal_steppe_shield" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_mace_3_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.decorated_steppe_shield" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.steppe_leather_vambraces" />
+			</EquipmentRoster>
+			<EquipmentRoster
+				civilian="true">
+				<equipment
+					slot="Item0"
+					id="Item.steppe_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.steppe_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.khuzait_mace_2_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.tribal_steppe_shield" />
+				<equipment
+					slot="Head"
+					id="Item.fur_hat" />
+				<equipment
+					slot="Body"
+					id="Item.studded_leather_waistcoat" />
+				<equipment
+					slot="Leg"
+					id="Item.khuzait_curved_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+	
 	<!-- ====== 弓骑兵路线 ====== -->
 	
 	<!-- T3: Khergit Horse Archer（库吉特弓骑兵） -->
@@ -447,7 +572,7 @@
 		id="khuzait_t3_horse_archer"
 		default_group="HorseArcher"
 		level="16"
-		name="{=KhergitHorseArcher}Khergit Horse Archer"
+		name="{=KhergitHorseArcher}草原弓骑兵"
 		upgrade_requires="ItemCategory.horse"
 		occupation="Soldier"
 		culture="Culture.khuzait">
@@ -522,7 +647,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.steppe_heavy_bow" />
+					id="Item.composite_steppe_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.steppe_arrows" />
@@ -559,7 +684,7 @@
 		id="khuzait_t4_armored_horse_archer"
 		default_group="HorseArcher"
 		level="21"
-		name="{=KhergitArmoredHorseArcher}Khergit Armored Horse Archer"
+		name="{=KhergitArmoredHorseArcher}草原弓骑兵"
 		upgrade_requires="ItemCategory.war_horse"
 		occupation="Soldier"
 		culture="Culture.khuzait">
@@ -600,7 +725,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.steppe_war_bow" />
+					id="Item.composite_steppe_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.steppe_arrows" />
@@ -635,7 +760,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.steppe_war_bow" />
+					id="Item.composite_steppe_bow" />
 				<equipment
 					slot="Item1"
 					id="Item.steppe_arrows" />
@@ -677,7 +802,7 @@
 		id="khuzait_t3_mounted_skirmisher"
 		default_group="Cavalry"
 		level="16"
-		name="{=KhergitMountedSkirmisher}Khergit Mounted Skirmisher"
+		name="{=KhergitMountedSkirmisher}草原标枪袭掠者"
 		upgrade_requires="ItemCategory.horse"
 		occupation="Soldier"
 		culture="Culture.khuzait">
@@ -726,10 +851,10 @@
 					id="Item.eastern_throwing_spear_1_t3" />
 				<equipment
 					slot="Item2"
-					id="Item.eastern_spear_1_t2" />
+					id="Item.khuzait_sword_2_t3" />
 				<equipment
 					slot="Item3"
-					id="Item.khuzait_sword_2_t3" />
+					id="Item.stronger_footmans_wicker_shield" />
 				<equipment
 					slot="Head"
 					id="Item.nomad_helmet" />
@@ -789,7 +914,7 @@
 		id="khuzait_t4_raider_cavalry"
 		default_group="Cavalry"
 		level="21"
-		name="{=KhergitRaiderCavalry}Khergit Raider Cavalry"
+		name="{=KhergitRaiderCavalry}草原标枪袭掠者"
 		upgrade_requires="ItemCategory.war_horse"
 		occupation="Soldier"
 		culture="Culture.khuzait">
@@ -871,10 +996,10 @@
 					id="Item.eastern_throwing_spear_1_t3" />
 				<equipment
 					slot="Item2"
-					id="Item.eastern_spear_2_t3" />
+					id="Item.khuzait_sword_3_t3" />
 				<equipment
 					slot="Item3"
-					id="Item.khuzait_sword_3_t3" />
+					id="Item.stronger_footmans_wicker_shield" />
 				<equipment
 					slot="Head"
 					id="Item.steppe_helmet" />
@@ -907,7 +1032,7 @@
 		id="khuzait_t3_light_lancer"
 		default_group="Cavalry"
 		level="16"
-		name="{=KhergitLightLancer}Khergit Light Lancer"
+		name="{=KhergitLightLancer}草原长枪骑兵"
 		upgrade_requires="ItemCategory.horse"
 		occupation="Soldier"
 		culture="Culture.khuzait">
@@ -1016,7 +1141,7 @@
 		id="khuzait_t4_heavy_lancer"
 		default_group="Cavalry"
 		level="21"
-		name="{=KhergitHeavyLancer}Khergit Heavy Lancer"
+		name="{=KhergitHeavyLancer}草原长枪骑兵"
 		upgrade_requires="ItemCategory.war_horse"
 		occupation="Soldier"
 		culture="Culture.khuzait">

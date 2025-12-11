@@ -9,7 +9,7 @@
 		id="imperial_t1_tirones"
 		default_group="Infantry"
 		level="6"
-		name="{=ImperialTirones}Imperial Tirones"
+		name="{=ImperialTirones}帝国步兵"
 		occupation="Soldier"
 		is_basic_troop="true"
 		culture="Culture.empire">
@@ -20,19 +20,19 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="20" />
+				value="15" />
 			<skill
 				id="Riding"
 				value="0" />
 			<skill
 				id="OneHanded"
-				value="20" />
+				value="15" />
 			<skill
 				id="TwoHanded"
-				value="10" />
+				value="8" />
 			<skill
 				id="Polearm"
-				value="20" />
+				value="15" />
 			<skill
 				id="Bow"
 				value="5" />
@@ -41,7 +41,7 @@
 				value="5" />
 			<skill
 				id="Throwing"
-				value="10" />
+				value="8" />
 		</skills>
 		<upgrade_targets>
 			<upgrade_target
@@ -54,7 +54,7 @@
 				id="NPCCharacter.imperial_t2_eques_auxilia" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 模板1：基础装备，整齐但简单 -->
+			<!-- 辅助骑兵：剑+矛+盾+马+马具 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -67,13 +67,22 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.arming_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_a" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentRoster>
 				<equipment
@@ -90,13 +99,22 @@
 					id="Item.western_javelin_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.arming_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_a" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
 			</EquipmentRoster>
 			<EquipmentSet
 				id="empire_troop_civilian_template_t1"
@@ -113,45 +131,50 @@
 		id="imperial_t2_navalis_auxilia"
 		default_group="Infantry"
 		level="11"
-		name="{=NavalisAuxilia}Navalis Auxilia"
+		name="{=NavalisAuxilia}帝国步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_empire" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="40" />
-			<skill
-				id="Riding"
-				value="5" />
-			<skill
-				id="OneHanded"
-				value="35" />
-			<skill
-				id="TwoHanded"
-				value="15" />
-			<skill
-				id="Polearm"
-				value="35" />
-			<skill
-				id="Bow"
-				value="30" />
-			<skill
-				id="Crossbow"
-				value="0" />
-			<skill
-				id="Throwing"
-				value="35" />
-		</skills>
-		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.imperial_t3_sagittarii_navales" />
-			<upgrade_target
-				id="NPCCharacter.imperial_t3_classiarii_manipulares" />
-		</upgrade_targets>
+	<face>
+		<face_key_template
+			value="BodyProperty.fighter_empire" />
+	</face>
+	<Traits>
+		<Trait
+			id="NavalSoldier"
+			value="1" />
+	</Traits>
+	<skills>
+		<skill
+			id="Athletics"
+			value="30" />
+		<skill
+			id="Riding"
+			value="5" />
+		<skill
+			id="OneHanded"
+			value="30" />
+		<skill
+			id="TwoHanded"
+			value="12" />
+		<skill
+			id="Polearm"
+			value="30" />
+		<skill
+			id="Bow"
+			value="25" />
+		<skill
+			id="Crossbow"
+			value="0" />
+		<skill
+			id="Throwing"
+			value="30" />
+	</skills>
+	<upgrade_targets>
+		<upgrade_target
+			id="NPCCharacter.imperial_t3_sagittarii_navales" />
+		<upgrade_target
+			id="NPCCharacter.imperial_t3_classiarii_manipulares" />
+	</upgrade_targets>
 		<Equipments>
 			<!-- 海军装备：剑+矛+盾+标枪，整齐统一 -->
 			<EquipmentRoster>
@@ -169,10 +192,10 @@
 					id="Item.western_javelin_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_b" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -195,10 +218,10 @@
 					id="Item.western_javelin_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet_over_padded_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_b" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -217,15 +240,20 @@
 	<!-- T3: Sagittarii Navales（海军弓箭手） -->
 	<NPCCharacter
 		id="imperial_t3_sagittarii_navales"
-		default_group="Archer"
+		default_group="Ranged"
 		level="16"
-		name="{=SagittariiNavales}Sagittarii Navales"
+		name="{=SagittariiNavales}帝国弓箭手"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_empire" />
 		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
@@ -261,7 +289,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.empire_bow" />
+					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
 					id="Item.empire_arrows" />
@@ -273,10 +301,10 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet_over_padded_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -287,7 +315,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.empire_bow" />
+					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
 					id="Item.empire_arrows" />
@@ -299,10 +327,10 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -319,15 +347,20 @@
 	<!-- T4: Veterani Sagittarii Navales（海军熟练弓箭手） -->
 	<NPCCharacter
 		id="imperial_t4_veterani_sagittarii_navales"
-		default_group="Archer"
+		default_group="Ranged"
 		level="21"
-		name="{=VeteraniSagittariiNavales}Veterani Sagittarii Navales"
+		name="{=VeteraniSagittariiNavales}帝国弓箭手"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_empire" />
 		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
@@ -359,10 +392,11 @@
 				id="NPCCharacter.imperial_t5_praetoriani_sagittarii_navales" />
 		</upgrade_targets>
 		<Equipments>
+			<!-- 海军老练弓箭手：弓+箭+剑+盾 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.empire_bow" />
+					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
 					id="Item.empire_arrows" />
@@ -377,7 +411,33 @@
 					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_d" />
+					id="Item.imperial_mail_over_stripped_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_stripped_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -391,18 +451,23 @@
 		</Equipments>
 	</NPCCharacter>
 	
-	<!-- T5: Praetoriani Sagittarii Navales（海军禁卫弓箭手） -->
+	<!-- T5: Praetoriani Sagittarii Navales（海军历战弓箭手） -->
 	<NPCCharacter
 		id="imperial_t5_praetoriani_sagittarii_navales"
-		default_group="Archer"
+		default_group="Ranged"
 		level="26"
-		name="{=PraetorianiSagittariiNavales}Praetoriani Sagittarii Navales"
+		name="{=PraetorianiSagittariiNavales}帝国弓箭手"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_empire" />
 		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
@@ -432,10 +497,11 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
+			<!-- 海军历战弓箭手：弓+箭+剑+盾 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.empire_bow" />
+					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
 					id="Item.empire_arrows" />
@@ -450,7 +516,33 @@
 					id="Item.nasal_helmet_over_mail" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_e" />
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -471,13 +563,18 @@
 		id="imperial_t3_classiarii_manipulares"
 		default_group="Infantry"
 		level="16"
-		name="{=ClassiariiManipulares}Classiarii Manipulares"
+		name="{=ClassiariiManipulares}帝国步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_empire" />
 		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
@@ -525,10 +622,10 @@
 					id="Item.western_javelin_2_t3" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet_over_padded_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -551,10 +648,10 @@
 					id="Item.western_javelin_2_t3" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -573,13 +670,18 @@
 		id="imperial_t4_veterani_classiarii"
 		default_group="Infantry"
 		level="21"
-		name="{=VeteraniClassiarii}Veterani Classiarii"
+		name="{=VeteraniClassiarii}帝国步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_empire" />
 		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
@@ -629,7 +731,7 @@
 					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_d" />
+					id="Item.imperial_mail_over_stripped_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -648,13 +750,18 @@
 		id="imperial_t5_praetoriani_classiarii"
 		default_group="Infantry"
 		level="26"
-		name="{=PraetorianiClassiarii}Praetoriani Classiarii"
+		name="{=PraetorianiClassiarii}帝国步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_empire" />
 		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
@@ -702,7 +809,7 @@
 					id="Item.nasal_helmet_over_mail" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_e" />
+					id="Item.imperial_mail_vest" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -725,7 +832,7 @@
 		id="imperial_t2_miles_legionarius"
 		default_group="Infantry"
 		level="11"
-		name="{=MilesLegionarius}Miles Legionarius"
+		name="{=MilesLegionarius}帝国步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -783,10 +890,10 @@
 					id="Item.western_javelin_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_b" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -809,10 +916,10 @@
 					id="Item.western_javelin_1_t2" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet_over_padded_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_b" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -833,7 +940,7 @@
 		id="imperial_t3_legionarius_ordinarius"
 		default_group="Infantry"
 		level="16"
-		name="{=LegionariusOrdinarius}Legionarius Ordinarius"
+		name="{=LegionariusOrdinarius}帝国步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -887,10 +994,10 @@
 					id="Item.western_javelin_2_t3" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet_over_padded_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -916,7 +1023,7 @@
 					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -935,7 +1042,7 @@
 		id="imperial_t4_legionarius_hastatus"
 		default_group="Infantry"
 		level="21"
-		name="{=LegionariusHastatus}Legionarius Hastatus"
+		name="{=LegionariusHastatus}帝国步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -991,7 +1098,7 @@
 					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_d" />
+					id="Item.imperial_mail_over_stripped_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -1010,7 +1117,7 @@
 		id="imperial_t5_primus_pilus"
 		default_group="Infantry"
 		level="26"
-		name="{=PrimusPilus}Primus Pilus"
+		name="{=PrimusPilus}帝国步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -1064,7 +1171,7 @@
 					id="Item.nasal_helmet_over_mail" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_e" />
+					id="Item.imperial_mail_vest" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -1085,7 +1192,7 @@
 		id="imperial_t3_veles"
 		default_group="Infantry"
 		level="16"
-		name="{=Veles}Veles"
+		name="{=Veles}帝国标枪步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -1142,10 +1249,10 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_a" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -1168,10 +1275,10 @@
 					id="Item.oval_shield" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet_over_padded_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_a" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -1187,7 +1294,7 @@
 		id="imperial_t4_velites_hastati"
 		default_group="Infantry"
 		level="21"
-		name="{=VelitesHastati}Velites Hastati"
+		name="{=VelitesHastati}帝国标枪步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -1246,7 +1353,7 @@
 					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -1262,7 +1369,7 @@
 		id="imperial_t5_velites_praetoriani"
 		default_group="Infantry"
 		level="26"
-		name="{=VelitesPraetoriani}Velites Praetoriani"
+		name="{=VelitesPraetoriani}帝国标枪步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -1319,7 +1426,7 @@
 					id="Item.nasal_helmet_over_mail" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_e" />
+					id="Item.imperial_mail_vest" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -1337,7 +1444,7 @@
 		id="imperial_t3_hastatus_duplex"
 		default_group="Infantry"
 		level="16"
-		name="{=HastatusDuplex}Hastatus Duplex"
+		name="{=HastatusDuplex}帝国长矛步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -1375,23 +1482,17 @@
 				id="NPCCharacter.imperial_t4_hastati_duplex_manipulares" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 双刃枪兵：双手长矛+剑+标枪，整齐统一 -->
+			<!-- 双刃枪兵：只使用双刃枪，不需要单手武器和标枪 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.imperial_spear_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.empire_sword_2_t3" />
-				<equipment
-					slot="Item2"
-					id="Item.western_javelin_2_t3" />
+					id="Item.empire_polearm_1_t4" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet_over_padded_coif" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -1402,19 +1503,13 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.imperial_spear_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.empire_sword_2_t3" />
-				<equipment
-					slot="Item2"
-					id="Item.western_javelin_2_t3" />
+					id="Item.empire_polearm_1_t4" />
 				<equipment
 					slot="Head"
-					id="Item.nasal_helmet" />
+					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_c" />
+					id="Item.imperial_mail_over_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_horseman_boots" />
@@ -1433,7 +1528,7 @@
 		id="imperial_t4_hastati_duplex_manipulares"
 		default_group="Infantry"
 		level="21"
-		name="{=HastatiDuplexManipulares}Hastati Duplex Manipulares"
+		name="{=HastatiDuplexManipulares}帝国长矛步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -1471,22 +1566,17 @@
 				id="NPCCharacter.imperial_t5_triarii_duplex" />
 		</upgrade_targets>
 		<Equipments>
+			<!-- 双刃枪军团兵：只使用双刃枪，不需要单手武器和标枪 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.imperial_spear_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.empire_sword_3_t3" />
-				<equipment
-					slot="Item2"
-					id="Item.imperial_throwing_spear_1_t4" />
+					id="Item.empire_polearm_1_t4" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet_over_mail_coif" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_d" />
+					id="Item.imperial_mail_over_stripped_leather" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -1505,7 +1595,7 @@
 		id="imperial_t5_triarii_duplex"
 		default_group="Infantry"
 		level="26"
-		name="{=TriariiDuplex}Triarii Duplex"
+		name="{=TriariiDuplex}帝国长矛步兵"
 		occupation="Soldier"
 		culture="Culture.empire">
 		<face>
@@ -1541,22 +1631,17 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
+			<!-- 双刃枪老兵：只使用双刃枪，不需要单手武器和标枪 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.imperial_spear_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.empire_sword_4_t4" />
-				<equipment
-					slot="Item2"
-					id="Item.imperial_throwing_spear_1_t4" />
+					id="Item.empire_polearm_1_t4" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet_over_mail" />
 				<equipment
 					slot="Body"
-					id="Item.empire_warrior_padded_armor_e" />
+					id="Item.imperial_mail_vest" />
 				<equipment
 					slot="Leg"
 					id="Item.empire_boots" />
@@ -1566,6 +1651,3145 @@
 			</EquipmentRoster>
 			<EquipmentSet
 				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ================================================= -->
+	<!-- ==================== 远程线 ===================== -->
+	<!-- ================================================= -->
+	
+	<!-- T2: Sagittarius Auxilia（弓兵辅助兵） -->
+	<NPCCharacter
+		id="imperial_t2_sagittarius_auxilia"
+		default_group="Ranged"
+		level="11"
+		name="{=SagittariusAuxilia}帝国弓箭手"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="35" />
+			<skill
+				id="Riding"
+				value="5" />
+			<skill
+				id="OneHanded"
+				value="25" />
+			<skill
+				id="TwoHanded"
+				value="12" />
+			<skill
+				id="Polearm"
+				value="20" />
+			<skill
+				id="Bow"
+				value="45" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="15" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_sagittarius_ordinarius" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_ballistarius_ordinarius" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 弓兵辅助兵：弓+箭+剑+盾，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item3"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item3"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 弓兵线 ====== -->
+	
+	<!-- T3: Sagittarius Ordinarius（普通弓兵） -->
+	<NPCCharacter
+		id="imperial_t3_sagittarius_ordinarius"
+		default_group="Ranged"
+		level="16"
+		name="{=SagittariusOrdinarius}帝国弓箭手"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="30" />
+			<skill
+				id="Bow"
+				value="70" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="30" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_sagittarius_veteranus" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 普通弓兵：弓+箭+剑+盾，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Sagittarius Veteranus（熟练弓兵） -->
+	<NPCCharacter
+		id="imperial_t4_sagittarius_veteranus"
+		default_group="Ranged"
+		level="21"
+		name="{=SagittariusVeteranus}帝国弓箭手"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="90" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_sagittarius_praetorianus" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 熟练弓兵：弓+箭+剑+盾，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_stripped_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_stripped_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Sagittarius Praetorianus（禁卫弓兵） -->
+	<NPCCharacter
+		id="imperial_t5_sagittarius_praetorianus"
+		default_group="Ranged"
+		level="26"
+		name="{=SagittariusPraetorianus}帝国弓箭手"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="100" />
+			<skill
+				id="Riding"
+				value="20" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="110" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 历战弓兵：弓+箭+剑+盾 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ====== 弩兵线 ====== -->
+	
+	<!-- T3: Ballistarius Ordinarius（普通弩兵） -->
+	<NPCCharacter
+		id="imperial_t3_ballistarius_ordinarius"
+		default_group="Ranged"
+		level="16"
+		name="{=BallistariusOrdinarius}帝国弩兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="50" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="30" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="70" />
+			<skill
+				id="Throwing"
+				value="20" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_ballistarius_heavy" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 普通弩兵：弩+弩箭+剑+盾，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.light_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.light_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Ballistarius Heavy（重弩兵） -->
+	<NPCCharacter
+		id="imperial_t4_ballistarius_heavy"
+		default_group="Ranged"
+		level="21"
+		name="{=BallistariusHeavy}帝国弩兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="50" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="90" />
+			<skill
+				id="Throwing"
+				value="30" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_ballistarius_praetorianus" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 重弩兵：弩+弩箭+剑+盾，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.heavy_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_stripped_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.heavy_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.desert_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_stripped_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Ballistarius Praetorianus（禁卫弩兵） -->
+	<NPCCharacter
+		id="imperial_t5_ballistarius_praetorianus"
+		default_group="Ranged"
+		level="26"
+		name="{=BallistariusPraetorianus}帝国弩兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="90" />
+			<skill
+				id="Riding"
+				value="20" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="110" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 禁卫弩兵：弩+弩箭+剑+盾，整齐统一 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.heavy_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.heavy_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ================================================= -->
+	<!-- ==================== 骑兵线 ==================== -->
+	<!-- ================================================= -->
+	
+	<!-- T2: Eques Auxilia（辅助骑兵） -->
+	<NPCCharacter
+		id="imperial_t2_eques_auxilia"
+		default_group="Cavalry"
+		level="11"
+		name="{=EquesAuxilia}帝国辅助骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="40" />
+			<skill
+				id="Riding"
+				value="50" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="15" />
+			<skill
+				id="Throwing"
+				value="20" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_lancearius_eques" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_eques_sagittarius" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 辅助骑兵：剑+矛+盾+马 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.imperial_spear_t2" />
+				<equipment
+					slot="Item2"
+					id="Item.oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T3分支1: Lancearius Eques（长枪骑兵） -->
+	<NPCCharacter
+		id="imperial_t3_lancearius_eques"
+		default_group="Cavalry"
+		level="16"
+		name="{=LanceariusEques}帝国长枪骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="80" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="80" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="20" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_lancearius_veteranus" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 长枪骑兵：骑枪+剑+盾+马，装备与T2相似 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_1_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_1_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T3分支2: Eques Sagittarius（弓骑兵） -->
+	<NPCCharacter
+		id="imperial_t3_eques_sagittarius"
+		default_group="HorseArcher"
+		level="16"
+		name="{=EquesSagittarius}帝国弓骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="80" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="80" />
+			<skill
+				id="Crossbow"
+				value="20" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_eques_sagittarius_veteranus" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_ballistarius_eques_veteranus" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 弓骑兵：弓+箭+剑+盾+马，装备与T2相似 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4分支1: Lancearius Veteranus（老练长枪骑兵） -->
+	<NPCCharacter
+		id="imperial_t4_lancearius_veteranus"
+		default_group="Cavalry"
+		level="21"
+		name="{=LanceariusVeteranus}帝国老练长枪骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="100" />
+			<skill
+				id="OneHanded"
+				value="80" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="100" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="30" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_lancearius_cataphractarius" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 老练长枪骑兵：骑枪+剑+盾+马，装备与T2-T3相似 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_2_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_2_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4分支2: Eques Sagittarius Veteranus（老练弓骑兵） -->
+	<NPCCharacter
+		id="imperial_t4_eques_sagittarius_veteranus"
+		default_group="HorseArcher"
+		level="21"
+		name="{=EquesSagittariusVeteranus}帝国老练弓骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="100" />
+			<skill
+				id="OneHanded"
+				value="80" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="100" />
+			<skill
+				id="Crossbow"
+				value="30" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_eques_sagittarius_praetorianus" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_ballistarius_eques_praetorianus" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 老练弓骑兵：弓+箭+剑+盾+马，装备与T2-T3相似 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5分支1: Lancearius Cataphractarius（重装长枪骑兵） -->
+	<NPCCharacter
+		id="imperial_t5_lancearius_cataphractarius"
+		default_group="Cavalry"
+		level="26"
+		name="{=LanceariusCataphractarius}帝国重装长枪骑兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="90" />
+			<skill
+				id="TwoHanded"
+				value="60" />
+			<skill
+				id="Polearm"
+				value="120" />
+			<skill
+				id="Bow"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="40" />
+			<skill
+				id="Throwing"
+				value="70" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 重装长枪骑兵：骑枪+剑+盾+重装马 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_3_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_6_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+				<equipment
+					slot="Horse"
+					id="Item.noble_horse_imperial" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.imperial_scale_barding" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_3_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_noble_sword_1_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+				<equipment
+					slot="Horse"
+					id="Item.noble_horse_imperial" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.imperial_scale_barding" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Eques Sagittarius Praetorianus（历战弓骑兵） -->
+	<NPCCharacter
+		id="imperial_t5_eques_sagittarius_praetorianus"
+		default_group="HorseArcher"
+		level="26"
+		name="{=EquesSagittariusPraetorianus}帝国历战弓骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="90" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="130" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 禁卫骑射手：弓+箭+剑+盾+马 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+				<equipment
+					slot="Horse"
+					id="Item.empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+				<equipment
+					slot="Horse"
+					id="Item.empire_war_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4: Ballistarius Eques Veteranus（老练弩箭骑兵） -->
+	<NPCCharacter
+		id="imperial_t4_ballistarius_eques_veteranus"
+		default_group="HorseArcher"
+		level="21"
+		name="{=BallistariusEquesVeteranus}帝国老练弩骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="100" />
+			<skill
+				id="OneHanded"
+				value="80" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="100" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_ballistarius_eques_praetorianus" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 老练弩骑兵：弩+弩箭+剑+盾+马，装备与T2-T3相似 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.heavy_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.heavy_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.buttoned_leather_bracers" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="empire_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5: Ballistarius Eques Praetorianus（禁卫弩箭骑兵） -->
+	<NPCCharacter
+		id="imperial_t5_ballistarius_eques_praetorianus"
+		default_group="HorseArcher"
+		level="26"
+		name="{=BallistariusEquesPraetorianus}帝国历战弩骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="90" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="130" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 禁卫弩箭骑兵：弩+弩箭+剑+盾+马 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.heavy_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+				<equipment
+					slot="Horse"
+					id="Item.empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.heavy_crossbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bolts" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.leather_gloves" />
+				<equipment
+					slot="Horse"
+					id="Item.empire_war_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.empire_horse_harness" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- ================================================= -->
+	<!-- ============== NOBLE TROOPS ===================== -->
+	<!-- ================================================= -->
+	
+	<!-- T1: Imperial Wealthy Citizen（帝国富裕市民）- 贵族兵起点 -->
+	<NPCCharacter
+		id="imperial_t1_wealthy_citizen"
+		default_group="Infantry"
+		level="6"
+		name="{=ImperialWealthyCitizen}帝国富裕市民"
+		occupation="Soldier"
+		is_basic_troop="true"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="50" />
+			<skill
+				id="OneHanded"
+				value="60" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="40" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t2_noble_trainee" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 富裕市民：铁甲铁盔，装备精良 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T2: Imperial Noble Trainee（帝国贵族训练生）- 统一训练阶段 -->
+	<NPCCharacter
+		id="imperial_t2_noble_trainee"
+		default_group="Infantry"
+		level="11"
+		name="{=ImperialNobleTrainee}帝国贵族训练生"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="70" />
+			<skill
+				id="OneHanded"
+				value="80" />
+			<skill
+				id="TwoHanded"
+				value="60" />
+			<skill
+				id="Polearm"
+				value="80" />
+			<skill
+				id="Bow"
+				value="70" />
+			<skill
+				id="Crossbow"
+				value="60" />
+			<skill
+				id="Throwing"
+				value="70" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_cataphract" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_mixed_cavalry" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_guard" />
+			<upgrade_target
+				id="NPCCharacter.imperial_t3_guard_archer" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 训练生：更好的装备 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_stripped_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_over_stripped_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T3分支1: Imperial Cataphract（帝国具装骑兵）- 重装骑兵路线 -->
+	<NPCCharacter
+		id="imperial_t3_cataphract"
+		default_group="Cavalry"
+		level="16"
+		name="{=ImperialCataphract}帝国具装骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="100" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="120" />
+			<skill
+				id="TwoHanded"
+				value="80" />
+			<skill
+				id="Polearm"
+				value="120" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="30" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_heavy_cataphract" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 具装骑兵：重甲+骑枪+剑+盾 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_2_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.imperial_scale_barding" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_2_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.imperial_scale_barding" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T3分支2: Imperial Mixed Cavalry（帝国混合骑兵）- 弓骑兵路线 -->
+	<NPCCharacter
+		id="imperial_t3_mixed_cavalry"
+		default_group="HorseArcher"
+		level="16"
+		name="{=ImperialMixedCavalry}帝国混合骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="100" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="100" />
+			<skill
+				id="TwoHanded"
+				value="60" />
+			<skill
+				id="Polearm"
+				value="100" />
+			<skill
+				id="Bow"
+				value="120" />
+			<skill
+				id="Crossbow"
+				value="40" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_elite_mixed_cavalry" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 混合骑兵：半重甲+弓+枪+刀+箭袋 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_lance_1_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.chain_barding" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_lance_1_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.chain_barding" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T3分支3: Imperial Guard（帝国禁卫军）- 重装步兵路线 -->
+	<NPCCharacter
+		id="imperial_t3_guard"
+		default_group="Infantry"
+		level="16"
+		name="{=ImperialGuard}帝国禁卫军"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="120" />
+			<skill
+				id="Riding"
+				value="40" />
+			<skill
+				id="OneHanded"
+				value="120" />
+			<skill
+				id="TwoHanded"
+				value="100" />
+			<skill
+				id="Polearm"
+				value="100" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="30" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_elite_guard" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 禁卫军：重甲+剑盾/双手武器 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T3分支4: Imperial Guard Archer（帝国禁卫弓箭手）- 弓箭手路线 -->
+	<NPCCharacter
+		id="imperial_t3_guard_archer"
+		default_group="Ranged"
+		level="16"
+		name="{=ImperialGuardArcher}帝国禁卫弓箭手"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="110" />
+			<skill
+				id="Riding"
+				value="40" />
+			<skill
+				id="OneHanded"
+				value="100" />
+			<skill
+				id="TwoHanded"
+				value="60" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="120" />
+			<skill
+				id="Crossbow"
+				value="40" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t4_elite_guard_archer" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 禁卫弓箭手：中重甲+长弓+箭+剑 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_4_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_5_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4分支1: Imperial Heavy Cataphract（帝国重装具装骑兵） -->
+	<NPCCharacter
+		id="imperial_t4_heavy_cataphract"
+		default_group="Cavalry"
+		level="21"
+		name="{=ImperialHeavyCataphract}帝国重装具装骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="120" />
+			<skill
+				id="Riding"
+				value="160" />
+			<skill
+				id="OneHanded"
+				value="160" />
+			<skill
+				id="TwoHanded"
+				value="100" />
+			<skill
+				id="Polearm"
+				value="160" />
+			<skill
+				id="Bow"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="40" />
+			<skill
+				id="Throwing"
+				value="70" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_elite_cataphract" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 重装具装骑兵：最厚甲+骑枪+剑+盾 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_3_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_6_t5" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+				<equipment
+					slot="Horse"
+					id="Item.noble_horse_imperial" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.imperial_scale_barding" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_3_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_noble_sword_1_t5" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+				<equipment
+					slot="Horse"
+					id="Item.noble_horse_imperial" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.imperial_scale_barding" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4分支2: Imperial Elite Mixed Cavalry（帝国精锐混合骑兵） -->
+	<NPCCharacter
+		id="imperial_t4_elite_mixed_cavalry"
+		default_group="HorseArcher"
+		level="21"
+		name="{=ImperialEliteMixedCavalry}帝国精锐混合骑兵"
+		upgrade_requires="ItemCategory.war_horse"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="120" />
+			<skill
+				id="Riding"
+				value="160" />
+			<skill
+				id="OneHanded"
+				value="140" />
+			<skill
+				id="TwoHanded"
+				value="80" />
+			<skill
+				id="Polearm"
+				value="140" />
+			<skill
+				id="Bow"
+				value="160" />
+			<skill
+				id="Crossbow"
+				value="50" />
+			<skill
+				id="Throwing"
+				value="80" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_master_mixed_cavalry" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 精锐混合骑兵：半重甲+弓+枪+刀+箭袋 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_lance_2_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.empire_sword_6_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.chain_barding" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_lance_2_t4" />
+				<equipment
+					slot="Item3"
+					id="Item.empire_noble_sword_1_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.chain_barding" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4分支3: Imperial Elite Guard（帝国精锐禁卫军） -->
+	<NPCCharacter
+		id="imperial_t4_elite_guard"
+		default_group="Infantry"
+		level="21"
+		name="{=ImperialEliteGuard}帝国精锐禁卫军"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="140" />
+			<skill
+				id="Riding"
+				value="50" />
+			<skill
+				id="OneHanded"
+				value="160" />
+			<skill
+				id="TwoHanded"
+				value="140" />
+			<skill
+				id="Polearm"
+				value="140" />
+			<skill
+				id="Bow"
+				value="50" />
+			<skill
+				id="Crossbow"
+				value="40" />
+			<skill
+				id="Throwing"
+				value="80" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_master_guard" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 精锐禁卫军：最厚甲+剑盾/双手武器 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_sword_6_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_noble_sword_1_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T4分支4: Imperial Elite Guard Archer（帝国精锐禁卫弓箭手） -->
+	<NPCCharacter
+		id="imperial_t4_elite_guard_archer"
+		default_group="Ranged"
+		level="21"
+		name="{=ImperialEliteGuardArcher}帝国精锐禁卫弓箭手"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="130" />
+			<skill
+				id="Riding"
+				value="50" />
+			<skill
+				id="OneHanded"
+				value="140" />
+			<skill
+				id="TwoHanded"
+				value="80" />
+			<skill
+				id="Polearm"
+				value="80" />
+			<skill
+				id="Bow"
+				value="160" />
+			<skill
+				id="Crossbow"
+				value="50" />
+			<skill
+				id="Throwing"
+				value="70" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_t5_master_guard_archer" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 精锐禁卫弓箭手：中重甲+长弓+箭+剑 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_sword_6_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_noble_sword_1_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5分支1: Imperial Elite Cataphract（帝国精锐具装骑兵）- 最终形态 -->
+	<NPCCharacter
+		id="imperial_t5_elite_cataphract"
+		default_group="Cavalry"
+		level="26"
+		name="{=ImperialEliteCataphract}帝国精锐具装骑兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="140" />
+			<skill
+				id="Riding"
+				value="200" />
+			<skill
+				id="OneHanded"
+				value="200" />
+			<skill
+				id="TwoHanded"
+				value="120" />
+			<skill
+				id="Polearm"
+				value="200" />
+			<skill
+				id="Bow"
+				value="60" />
+			<skill
+				id="Crossbow"
+				value="50" />
+			<skill
+				id="Throwing"
+				value="90" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 精锐具装骑兵：最厚甲+最好武器+重装马 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_3_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_noble_sword_2_t5" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+				<equipment
+					slot="Horse"
+					id="Item.noble_horse_imperial" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.imperial_scale_barding" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_lance_3_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_horsemans_kite_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_noble_sword_3_t5" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+				<equipment
+					slot="Horse"
+					id="Item.noble_horse_imperial" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.imperial_scale_barding" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5分支2: Imperial Master Mixed Cavalry（帝国大师混合骑兵）- 最终形态 -->
+	<NPCCharacter
+		id="imperial_t5_master_mixed_cavalry"
+		default_group="HorseArcher"
+		level="26"
+		name="{=ImperialMasterMixedCavalry}帝国大师混合骑兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="140" />
+			<skill
+				id="Riding"
+				value="200" />
+			<skill
+				id="OneHanded"
+				value="180" />
+			<skill
+				id="TwoHanded"
+				value="100" />
+			<skill
+				id="Polearm"
+				value="180" />
+			<skill
+				id="Bow"
+				value="200" />
+			<skill
+				id="Crossbow"
+				value="60" />
+			<skill
+				id="Throwing"
+				value="100" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 大师混合骑兵：半重甲+弓+枪+刀+箭袋 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_lance_3_t5" />
+				<equipment
+					slot="Item3"
+					id="Item.empire_noble_sword_2_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.chain_barding" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_lance_3_t5" />
+				<equipment
+					slot="Item3"
+					id="Item.empire_noble_sword_3_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_horseman_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_empire_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.chain_barding" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5分支3: Imperial Master Guard（帝国大师禁卫军）- 最终形态 -->
+	<NPCCharacter
+		id="imperial_t5_master_guard"
+		default_group="Infantry"
+		level="26"
+		name="{=ImperialMasterGuard}帝国大师禁卫军"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="160" />
+			<skill
+				id="Riding"
+				value="60" />
+			<skill
+				id="OneHanded"
+				value="200" />
+			<skill
+				id="TwoHanded"
+				value="180" />
+			<skill
+				id="Polearm"
+				value="180" />
+			<skill
+				id="Bow"
+				value="60" />
+			<skill
+				id="Crossbow"
+				value="50" />
+			<skill
+				id="Throwing"
+				value="100" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 大师禁卫军：最厚甲+最好武器 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_noble_sword_2_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.empire_noble_sword_3_t5" />
+				<equipment
+					slot="Item1"
+					id="Item.southern_oval_shield" />
+				<equipment
+					slot="Head"
+					id="Item.imperial_goggled_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.decorated_imperial_gauntlets" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T5分支4: Imperial Master Guard Archer（帝国大师禁卫弓箭手）- 最终形态 -->
+	<NPCCharacter
+		id="imperial_t5_master_guard_archer"
+		default_group="Ranged"
+		level="26"
+		name="{=ImperialMasterGuardArcher}帝国大师禁卫弓箭手"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="150" />
+			<skill
+				id="Riding"
+				value="60" />
+			<skill
+				id="OneHanded"
+				value="180" />
+			<skill
+				id="TwoHanded"
+				value="100" />
+			<skill
+				id="Polearm"
+				value="100" />
+			<skill
+				id="Bow"
+				value="200" />
+			<skill
+				id="Crossbow"
+				value="60" />
+			<skill
+				id="Throwing"
+				value="90" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 大师禁卫弓箭手：中重甲+长弓+箭+剑 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_noble_sword_2_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.lowland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.empire_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.empire_noble_sword_3_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.empire_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.reinforced_padded_mitten" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="imperial_troop_civilian_template_t1"
 				civilian="true" />
 		</Equipments>
 	</NPCCharacter>

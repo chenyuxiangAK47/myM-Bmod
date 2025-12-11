@@ -16,7 +16,20 @@
 		<Module Id="WarlordsBattlefield"/>
 		<Module Id="NavalDLC"/>
 	</ModulesToLoadAfterThis>
+	<!-- SubModuleClass暂时注释，等C#代码编译成DLL后再启用 -->
+	<!-- <SubModuleClass>NordThrowingAxeMod.WelcomeMessageSubModule</SubModuleClass> -->
 	<Xmls>
+		<!-- 隐藏所有原版兵种（使用DeReMilitari方式，不删除而是隐藏） -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="hide_old_troops"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
 		<!-- 新Nord兵种定义 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="nord_troops_new"/>
@@ -31,17 +44,6 @@
 		<!-- 修改农民升级路径 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="nord_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- 隐藏旧Nord兵种 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="nord_replace_old_troops" type="XSLT"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -138,17 +140,6 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
-		<!-- Sturgia删除旧兵种 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="sturgia_replace_old_troops" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
 		<!-- Sturgia文化基础兵种 -->
 		<XmlNode>
 			<XmlName id="SPCultures" path="sturgia_culture_change" type="XSLT"/>
@@ -163,17 +154,6 @@
 		<!-- Vlandia农民升级路径 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="vlandia_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Vlandia删除旧兵种 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="vlandia_replace_old_troops" type="XSLT"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -204,17 +184,6 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
-		<!-- Battania删除旧兵种 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="battania_replace_old_troops" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
 		<!-- Battania文化基础兵种 -->
 		<XmlNode>
 			<XmlName id="SPCultures" path="battania_culture_change" type="XSLT"/>
@@ -229,17 +198,6 @@
 		<!-- Khuzait农民升级路径 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="khuzait_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Khuzait删除旧兵种 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="khuzait_replace_old_troops" type="XSLT"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -270,17 +228,6 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
-		<!-- Aserai删除旧兵种 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="aserai_replace_old_troops" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
 		<!-- Aserai文化基础兵种 -->
 		<XmlNode>
 			<XmlName id="SPCultures" path="aserai_culture_change" type="XSLT"/>
@@ -295,17 +242,6 @@
 		<!-- Imperial农民升级路径 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="imperial_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Imperial删除旧兵种 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="imperial_replace_old_troops" type="XSLT"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>

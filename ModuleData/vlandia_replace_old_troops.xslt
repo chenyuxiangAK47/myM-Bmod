@@ -21,3 +21,8 @@
 	<xsl:template match="NPCCharacter[@id='vlandian_champion']"/>
 </xsl:stylesheet>
 
+
+
+
+
+

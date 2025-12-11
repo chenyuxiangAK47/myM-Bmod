@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bannerlord 兵种查看器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Bannerlord 兵种查看器</h1>
+            <div class="controls">
+                <input type="file" id="xmlFileInput" accept=".xml" multiple>
+                <button id="loadBtn">加载XML文件</button>
+                <button id="loadFolderBtn">加载整个文件夹</button>
+                <input type="text" id="searchInput" placeholder="搜索兵种名称、ID或文化...">
+                <select id="cultureFilter">
+                    <option value="">所有文化</option>
+                    <option value="nord">Nord</option>
+                    <option value="sturgia">Sturgia</option>
+                    <option value="vlandia">Vlandia</option>
+                    <option value="battania">Battania</option>
+                    <option value="khuzait">Khuzait</option>
+                    <option value="aserai">Aserai</option>
+                    <option value="empire">Empire</option>
+                </select>
+                <select id="tierFilter">
+                    <option value="">所有等级</option>
+                    <option value="1">T1</option>
+                    <option value="2">T2</option>
+                    <option value="3">T3</option>
+                    <option value="4">T4</option>
+                    <option value="5">T5</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h2>兵种列表</h2>
+                <div id="troopList" class="troop-list"></div>
+            </aside>
+
+            <main class="detail-panel">
+                <div id="troopDetail" class="troop-detail">
+                    <p class="placeholder">请选择一个兵种查看详情</p>
+                </div>
+            </main>
+        </div>
+
+        <div class="troop-tree-panel" id="troopTreePanel" style="display: none;">
+            <h2>兵种树</h2>
+            <button id="closeTreeBtn">关闭</button>
+            <div id="troopTree" class="troop-tree"></div>
+        </div>
+    </div>
+
+    <script src="parser.js"></script>
+    <script src="viewer.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -11,5 +11,15 @@
 	<xsl:template match="Culture[@id='vlandia']/@basic_troop">
 		<xsl:attribute name="basic_troop">NPCCharacter.vlandia_t1_serf_levy</xsl:attribute>
 	</xsl:template>
+	
+	<!-- 修改Vlandia文化的贵族兵种设置 -->
+	<xsl:template match="Culture[@id='vlandia']/@elite_basic_troop">
+		<xsl:attribute name="elite_basic_troop">NPCCharacter.vlandia_t3_squire_knight</xsl:attribute>
+	</xsl:template>
 </xsl:stylesheet>
+
+
+
+
+
 

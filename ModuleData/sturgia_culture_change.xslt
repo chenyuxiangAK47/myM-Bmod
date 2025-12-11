@@ -11,5 +11,15 @@
 	<xsl:template match="Culture[@id='sturgia']/@basic_troop">
 		<xsl:attribute name="basic_troop">NPCCharacter.sturgia_t1_tribesman</xsl:attribute>
 	</xsl:template>
+	
+	<!-- 修改Sturgia文化的贵族兵种设置 -->
+	<xsl:template match="Culture[@id='sturgia']/@elite_basic_troop">
+		<xsl:attribute name="elite_basic_troop">NPCCharacter.sturgia_t2_noble_youth</xsl:attribute>
+	</xsl:template>
 </xsl:stylesheet>
+
+
+
+
+
 

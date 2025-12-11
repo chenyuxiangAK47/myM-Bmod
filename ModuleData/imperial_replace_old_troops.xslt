@@ -22,6 +22,9 @@
 	<xsl:template match="NPCCharacter[@id='imperial_horseman']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_cataphract']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_elite_cataphract']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_palatine_guard']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_vigla_recruit']"/>
 	<xsl:template match="NPCCharacter[@id='bucellarii']"/>
 </xsl:stylesheet>
+
 

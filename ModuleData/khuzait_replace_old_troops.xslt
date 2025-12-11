@@ -20,3 +20,8 @@
 	<xsl:template match="NPCCharacter[@id='khuzait_heavy_lancer']"/>
 </xsl:stylesheet>
 
+
+
+
+
+

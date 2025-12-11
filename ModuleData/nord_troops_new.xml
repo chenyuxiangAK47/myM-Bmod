@@ -9,7 +9,7 @@
 		id="nord_youth"
 		default_group="Infantry"
 		level="11"
-		name="{=NordYouth}Nord Youth"
+		name="{=NordYouth}诺德盾墙步兵"
 		occupation="Soldier"
 		is_basic_troop="true"
 		culture="Culture.nord">
@@ -25,19 +25,19 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="40" />
+				value="35" />
 			<skill
 				id="Riding"
 				value="5" />
 			<skill
 				id="OneHanded"
-				value="40" />
+				value="45" />
 			<skill
 				id="TwoHanded"
-				value="20" />
+				value="25" />
 			<skill
 				id="Polearm"
-				value="40" />
+				value="45" />
 			<skill
 				id="Bow"
 				value="15" />
@@ -46,7 +46,7 @@
 				value="0" />
 			<skill
 				id="Throwing"
-				value="30" />
+				value="35" />
 		</skills>
 		<upgrade_targets>
 			<upgrade_target
@@ -180,7 +180,7 @@
 		id="nord_javelin_raider"
 		default_group="Infantry"
 		level="16"
-		name="{=NordJavelinRaider}Nord Javelin Raider"
+		name="{=NordJavelinRaider}诺德投斧散兵"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
@@ -319,12 +319,12 @@
 	<!-- 弓箭线 -->
 	<!-- ============================================ -->
 	
-	<!-- T2: Nord Archer（诺德弓箭手） - 轻甲，基础弓，近战一般，有圆盾 -->
+	<!-- T2: Nord Skirmisher（诺德散兵） - 短弓+近战，和步兵一起冲锋 -->
 	<NPCCharacter
-		id="nord_archer"
-		default_group="Ranged"
-		level="16"
-		name="{=NordArcher}Nord Archer"
+		id="nord_skirmisher"
+		default_group="Infantry"
+		level="11"
+		name="{=NordSkirmisher}诺德投斧散兵"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
@@ -339,19 +339,216 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="70" />
+				value="65" />
 			<skill
 				id="Riding"
 				value="10" />
 			<skill
 				id="OneHanded"
-				value="50" />
+				value="60" />
 			<skill
 				id="TwoHanded"
-				value="25" />
+				value="35" />
 			<skill
 				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="60" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_veteran_skirmisher" />
+		</upgrade_targets>
+		<Equipments>
+			<!-- 短弓散兵：短弓+近战武器+盾，和步兵一起冲锋 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.nord_hatchett_3_t1" />
+				<equipment
+					slot="Item3"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Body"
+					id="Item.northern_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.northman_raider_boot" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.naval_one_handed_axe_t1" />
+				<equipment
+					slot="Item3"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Body"
+					id="Item.heavy_nordic_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.nord_casual_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.roughtied_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="nord_troop_civilian_template_t2"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T3: Nord Veteran Skirmisher（诺德熟练散兵） - 短弓+近战，和步兵一起冲锋 -->
+	<NPCCharacter
+		id="nord_veteran_skirmisher"
+		default_group="Infantry"
+		level="16"
+		name="{=NordVeteranSkirmisher}诺德投斧散兵"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="75" />
+			<skill
+				id="TwoHanded"
+				value="45" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="75" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="65" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 熟练短弓散兵：短弓+近战武器+盾，和步兵一起冲锋 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.barbed_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.nord_sword_2_t3" />
+				<equipment
+					slot="Item3"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Body"
+					id="Item.heavy_nordic_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.nord_casual_boots" />
+				<equipment
+					slot="Gloves"
+					id="Item.roughtied_leather_bracers" />
+			</EquipmentRoster>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.nordic_shortbow" />
+				<equipment
+					slot="Item1"
+					id="Item.barbed_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.nord_hatchett_3_t1" />
+				<equipment
+					slot="Item3"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Body"
+					id="Item.double_belted_leather_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.northman_raider_boot" />
+				<equipment
+					slot="Cape"
+					id="Item.nord_casual_cloak" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="nord_troop_civilian_template_t2"
+				civilian="true" />
+		</Equipments>
+	</NPCCharacter>
+	
+	<!-- T2: Nord Archer（诺德弓箭手） - 轻甲，基础弓，近战一般，有圆盾 -->
+	<NPCCharacter
+		id="nord_archer"
+		default_group="Ranged"
+		level="16"
+		name="{=NordArcher}诺德弓箭手"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="55" />
+			<skill
+				id="TwoHanded"
 				value="30" />
+			<skill
+				id="Polearm"
+				value="35" />
 			<skill
 				id="Bow"
 				value="80" />
@@ -360,7 +557,7 @@
 				value="0" />
 			<skill
 				id="Throwing"
-				value="50" />
+				value="55" />
 		</skills>
 		<upgrade_targets>
 			<upgrade_target
@@ -373,9 +570,12 @@
 					id="Item.northern_round_shield" />
 				<equipment
 					slot="Item1"
-					id="Item.mountain_hunting_bow" />
+					id="Item.woodland_longbow" />
 				<equipment
 					slot="Item2"
+					id="Item.barbed_arrows" />
+				<equipment
+					slot="Item4"
 					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item3"
@@ -424,7 +624,7 @@
 		id="nord_veteran_archer"
 		default_group="Ranged"
 		level="21"
-		name="{=NordVeteranArcher}Nord Veteran Archer"
+		name="{=NordVeteranArcher}诺德弓箭手"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
@@ -471,9 +671,12 @@
 					id="Item.northern_round_shield" />
 				<equipment
 					slot="Item1"
-					id="Item.mountain_hunting_bow" />
+					id="Item.woodland_longbow" />
 				<equipment
 					slot="Item2"
+					id="Item.bodkin_arrows_a" />
+				<equipment
+					slot="Item4"
 					id="Item.bodkin_arrows_a" />
 				<equipment
 					slot="Item3"
@@ -500,9 +703,12 @@
 					id="Item.northern_round_shield" />
 				<equipment
 					slot="Item1"
-					id="Item.mountain_hunting_bow" />
+					id="Item.woodland_longbow" />
 				<equipment
 					slot="Item2"
+					id="Item.bodkin_arrows_a" />
+				<equipment
+					slot="Item4"
 					id="Item.bodkin_arrows_a" />
 				<equipment
 					slot="Item3"
@@ -538,7 +744,7 @@
 		id="nord_warrior"
 		default_group="Infantry"
 		level="16"
-		name="{=NordWarrior}Nord Warrior"
+		name="{=NordWarrior}诺德盾墙步兵"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
@@ -553,16 +759,16 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="70" />
+				value="60" />
 			<skill
 				id="Riding"
 				value="10" />
 			<skill
 				id="OneHanded"
-				value="70" />
+				value="75" />
 			<skill
 				id="TwoHanded"
-				value="40" />
+				value="45" />
 			<skill
 				id="Polearm"
 				value="40" />
@@ -581,6 +787,8 @@
 				id="NPCCharacter.nord_linebreaker" />
 			<upgrade_target
 				id="NPCCharacter.nord_shieldwall_infantry" />
+			<upgrade_target
+				id="NPCCharacter.nord_skirmisher" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -652,7 +860,7 @@
 		id="nord_linebreaker"
 		default_group="Infantry"
 		level="21"
-		name="{=NordLinebreaker}Nord Linebreaker"
+		name="{=NordLinebreaker}诺德战斧兵"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
@@ -756,7 +964,7 @@
 		id="nord_shieldwall_infantry"
 		default_group="Infantry"
 		level="21"
-		name="{=NordShieldwallInfantry}Nord Shieldwall Infantry"
+		name="{=NordShieldwallInfantry}诺德盾墙步兵"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
