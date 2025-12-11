@@ -2652,10 +2652,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_2_t3" />
@@ -2684,10 +2684,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_3_t3" />
@@ -2878,10 +2878,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_4_t4" />
@@ -2910,10 +2910,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_5_t4" />
@@ -3097,10 +3097,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_4_t4" />
@@ -3132,10 +3132,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.default_arrows" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_4_t4" />
