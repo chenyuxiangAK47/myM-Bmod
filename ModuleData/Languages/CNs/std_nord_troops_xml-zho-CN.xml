@@ -29,6 +29,15 @@
   <string id="VlandianBillman" text="瓦兰迪亚戟兵"/>
   <string id="VlandianFootman" text="瓦兰迪亚步兵"/>
   <string id="VlandianMountedSerjeant" text="瓦兰迪亚骑乘军士"/>
+  <string id="BattanianTribesman" text="巴丹部族民"/>
+  <string id="BattanianWoodsBowman" text="巴丹森林弓手"/>
+  <string id="BattanianWildMarksman" text="巴丹野猎射手"/>
+  <string id="BattanianWildfighter" text="巴丹野性战士"/>
+  <string id="BattanianBerserker" text="巴丹狂野斗士"/>
+  <string id="BattanianSpearWarrior" text="巴丹矛战士"/>
+  <string id="BattanianShieldWarrior" text="巴丹盾战士"/>
+  <string id="BattanianJavelinRaider" text="巴丹标枪突袭者"/>
+  <string id="BattanianHorseRaider" text="巴丹森林轻骑兵"/>
  </strings>
 </base>
 
