@@ -21,6 +21,14 @@
   <string id="SturgianHorseSkirmisher" text="斯特吉亚标枪轻骑"/>
   <string id="SturgianHorseArcher" text="斯特吉亚弓骑兵"/>
   <string id="SturgianMountedSkirmisher" text="斯特吉亚中甲标枪骑兵"/>
+  <string id="VlandianSerfLevy" text="瓦兰迪亚农奴征召兵"/>
+  <string id="VlandianPeasantArcher" text="瓦兰迪亚农弓兵"/>
+  <string id="VlandianYeomanArcher" text="瓦兰迪亚自耕农长弓手"/>
+  <string id="VlandianCrossbowLevy" text="瓦兰迪亚弩兵征召队"/>
+  <string id="VlandianFootPeasant" text="瓦兰迪亚农奴步兵"/>
+  <string id="VlandianBillman" text="瓦兰迪亚戟兵"/>
+  <string id="VlandianFootman" text="瓦兰迪亚步兵"/>
+  <string id="VlandianMountedSerjeant" text="瓦兰迪亚骑乘军士"/>
  </strings>
 </base>
 

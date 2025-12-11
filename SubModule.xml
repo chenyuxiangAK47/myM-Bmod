@@ -61,6 +61,28 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
+		<!-- 新Sturgia兵种定义 -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="sturgia_troops_new"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- 新Vlandia兵种定义 -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="vlandia_troops_new"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
 		<!-- 旧装备替换（保留兼容性） -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="nord_throwing_axe" type="XSLT"/>
