@@ -48,6 +48,21 @@
   <string id="KhergitRaiderCavalry" text="库吉特突袭骑兵"/>
   <string id="KhergitLightLancer" text="库吉特轻装枪骑兵"/>
   <string id="KhergitHeavyLancer" text="库吉特重装枪骑兵"/>
+  <string id="DesertTribesman" text="沙漠部族民"/>
+  <string id="DesertSpearman" text="沙漠长矛兵"/>
+  <string id="DesertGuard" text="沙漠守卫步兵"/>
+  <string id="DesertLineInfantry" text="沙漠线步军"/>
+  <string id="DesertJavelinier" text="沙漠标枪兵"/>
+  <string id="DesertVeteranSkirmisher" text="沙漠精锐标枪兵"/>
+  <string id="DesertBowmen" text="沙漠弓兵"/>
+  <string id="DesertArcher" text="沙漠弓箭手"/>
+  <string id="DesertRider" text="沙漠骑手"/>
+  <string id="DesertLightCavalry" text="沙漠轻骑兵"/>
+  <string id="DesertJundCavalry" text="沙漠军士骑兵"/>
+  <string id="DesertHorseArcher" text="沙漠弓骑兵"/>
+  <string id="DesertFarisRanger" text="沙漠法里斯游骑兵"/>
+  <string id="DesertCamelRider" text="沙漠骆驼骑手"/>
+  <string id="DesertCamelLancer" text="沙漠骆驼枪骑兵"/>
  </strings>
 </base>
 
