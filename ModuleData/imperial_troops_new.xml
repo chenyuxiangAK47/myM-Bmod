@@ -292,7 +292,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_2_t3" />
@@ -318,7 +318,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_2_t3" />
@@ -399,7 +399,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_3_t3" />
@@ -425,7 +425,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_4_t4" />
@@ -504,7 +504,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_4_t4" />
@@ -530,7 +530,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_5_t4" />
@@ -1711,7 +1711,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_1_t2" />
@@ -1737,7 +1737,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_1_t2" />
@@ -1815,7 +1815,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_2_t3" />
@@ -1841,7 +1841,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_2_t3" />
@@ -1917,7 +1917,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_3_t3" />
@@ -1943,7 +1943,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_3_t3" />
@@ -2017,7 +2017,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_4_t4" />
@@ -2043,7 +2043,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_5_t4" />
@@ -2652,10 +2652,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_2_t3" />
@@ -2684,10 +2684,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_3_t3" />
@@ -2878,10 +2878,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_4_t4" />
@@ -2910,10 +2910,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_5_t4" />
@@ -3097,10 +3097,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_4_t4" />
@@ -3132,10 +3132,10 @@
 					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item3"
 					id="Item.empire_sword_4_t4" />
@@ -3737,7 +3737,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_lance_1_t3" />
@@ -3769,7 +3769,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_lance_1_t3" />
@@ -3941,7 +3941,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_4_t4" />
@@ -3964,7 +3964,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_5_t4" />
@@ -4147,7 +4147,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_lance_2_t4" />
@@ -4179,7 +4179,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_lance_2_t4" />
@@ -4351,7 +4351,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_sword_6_t5" />
@@ -4374,7 +4374,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_noble_sword_1_t5" />
@@ -4551,7 +4551,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_lance_3_t5" />
@@ -4583,7 +4583,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_lance_3_t5" />
@@ -4751,7 +4751,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_noble_sword_2_t5" />
@@ -4774,7 +4774,7 @@
 					id="Item.lowland_longbow" />
 				<equipment
 					slot="Item1"
-					id="Item.empire_arrows" />
+					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
 					id="Item.empire_noble_sword_3_t5" />
