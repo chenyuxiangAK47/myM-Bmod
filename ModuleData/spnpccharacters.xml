@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <NPCCharacters>
-
+	
 <!-- Skolder Veteran Broda - 把标枪替换成飞斧 -->
 	<NPCCharacter
 		id="skolderbrotva_tier_3"
@@ -110,7 +110,7 @@
 				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-
+	
 <!-- Sturgian Spearman (斯特吉亚矛兵) - 把标枪替换成飞斧 -->
 	<NPCCharacter
 		id="sturgian_spearman"
@@ -218,7 +218,7 @@
 				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-
+	
 <!-- Nord Spear Warrior (诺德持矛勇士) - 把标枪替换成飞斧 -->
 	<NPCCharacter
 		id="nord_spear_warrior"
@@ -332,5 +332,5 @@
 				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-
+	
 </NPCCharacters>

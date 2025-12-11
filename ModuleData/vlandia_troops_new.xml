@@ -459,17 +459,11 @@
 				id="NPCCharacter.vlandia_t3_footman" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 农奴步兵：矛+盾+剑，整齐装备 -->
+			<!-- 农奴步兵：钩镰，无盾无单手 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.western_spear_2_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_1_t2" />
+					id="Item.billhook_polearm_t2" />
 				<equipment
 					slot="Body"
 					id="Item.aketon" />
@@ -486,13 +480,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.western_spear_2_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_1_t2" />
+					id="Item.billhook_polearm_t2" />
 				<equipment
 					slot="Body"
 					id="Item.aketon" />
@@ -553,17 +541,11 @@
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 戟兵：戟+剑+盾，整齐装备 -->
+			<!-- 戟兵：斧枪，无盾无单手 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.billhook_polearm_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Item2"
-					id="Item.heater_shield_with_cutout" />
+					id="Item.vlandia_polearm_1_t5" />
 				<equipment
 					slot="Head"
 					id="Item.peaked_helmet_over_laced_coif" />
@@ -580,13 +562,7 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.billhook_polearm_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Item2"
-					id="Item.flat_heater_shield" />
+					id="Item.vlandia_polearm_1_t5" />
 				<equipment
 					slot="Head"
 					id="Item.arming_coif" />
