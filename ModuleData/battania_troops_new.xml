@@ -141,6 +141,9 @@
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -381,6 +384,9 @@
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -497,6 +503,9 @@
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -911,6 +920,9 @@
 				<equipment
 					slot="Cape"
 					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1104,6 +1116,9 @@
 				<equipment
 					slot="Body"
 					id="Item.battania_noble_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
