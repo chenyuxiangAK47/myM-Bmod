@@ -2311,7 +2311,7 @@
 	<!-- 帝国贵族弓骑兵 -->
 	<NPCCharacter
 		id="imperial_noble_t2_noble_bow_lancer"
-		default_group="HorseArcher"
+		default_group="Cavalry"
 		level="11"
 		name="{=imperial_noble_t2_noble_bow_lancer}帝国贵族弓骑兵"
 		occupation="Soldier"
@@ -2349,6 +2349,10 @@
 		<upgrade_targets>
 			<upgrade_target
 				id="NPCCharacter.imperial_noble_t3_heavy_bow_cavalry" />
+			<upgrade_target
+				id="NPCCharacter.imperial_horse_archer_t3" />
+			<upgrade_target
+				id="NPCCharacter.imperial_crossbow_cavalry_t3" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
