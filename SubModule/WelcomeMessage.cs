@@ -4,16 +4,13 @@ using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Library;
-using TaleWorlds.CampaignSystem.GameComponents;
-using TaleWorlds.CampaignSystem.CharacterCreationContent;
-using TaleWorlds.CampaignSystem.CharacterCreation;
+using TaleWorlds.CampaignSystem.Actions;
 
 namespace NordThrowingAxeMod
 {
     public class WelcomeMessageSubModule : MBSubModuleBase
     {
         private static bool _hasGivenQuickStartGold = false;
-        private static bool _isQuickStartMode = false;
         private static Harmony _harmony = null;
 
         protected override void OnSubModuleLoad()
@@ -54,7 +51,7 @@ namespace NordThrowingAxeMod
             base.OnGameStart(game, gameStarterObject);
         }
 
-        protected override void OnCampaignStart(Game game, object starterObject)
+        public override void OnCampaignStart(Game game, object starterObject)
         {
             base.OnCampaignStart(game, starterObject);
             
@@ -64,24 +61,32 @@ namespace NordThrowingAxeMod
                 // 检查是否启用了快速开局模式（通过 Harmony 补丁设置）
                 if (QuickStartHelper.IsQuickStartMode && !_hasGivenQuickStartGold)
                 {
-                    Campaign.Current.AddMoneyToPlayerParty(QuickStartHelper.QuickStartGold);
-                    InformationManager.DisplayMessage(new InformationMessage(
-                        $"快速开局：已获得 {QuickStartHelper.QuickStartGold:N0} 金币用于测试"));
-                    _hasGivenQuickStartGold = true;
-                    QuickStartHelper.IsQuickStartMode = false; // 重置标志
+                    var hero = Hero.MainHero;
+                    if (hero != null)
+                    {
+                        GiveGoldAction.ApplyBetweenCharacters(null, hero, QuickStartHelper.QuickStartGold, false);
+                        InformationManager.DisplayMessage(new InformationMessage(
+                            $"快速开局：已获得 {QuickStartHelper.QuickStartGold:N0} 金币用于测试"));
+                        _hasGivenQuickStartGold = true;
+                        QuickStartHelper.IsQuickStartMode = false; // 重置标志
+                    }
                 }
                 // 兼容旧版本：如果没有通过 Harmony 设置，使用原来的逻辑
                 else if (!_hasGivenQuickStartGold && !QuickStartHelper.IsQuickStartMode)
                 {
-                    Campaign.Current.AddMoneyToPlayerParty(100000);
-                    InformationManager.DisplayMessage(new InformationMessage("快速开局：已获得 100,000 金币用于测试"));
-                    _hasGivenQuickStartGold = true;
+                    var hero = Hero.MainHero;
+                    if (hero != null)
+                    {
+                        GiveGoldAction.ApplyBetweenCharacters(null, hero, 100000, false);
+                        InformationManager.DisplayMessage(new InformationMessage("快速开局：已获得 100,000 金币用于测试"));
+                        _hasGivenQuickStartGold = true;
+                    }
                 }
             }
         }
 
         // 这个方法会在角色创建完成后调用
-        protected override void OnNewGameCreated(Game game, object initializerObject)
+        public override void OnNewGameCreated(Game game, object initializerObject)
         {
             base.OnNewGameCreated(game, initializerObject);
             

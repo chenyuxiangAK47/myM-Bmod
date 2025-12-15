@@ -5,11 +5,7 @@ using HarmonyLib;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.CharacterCreation;
-using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Library;
-using TaleWorlds.ScreenSystem;
-using TaleWorlds.CampaignSystem.GameState;
 
 namespace NordThrowingAxeMod
 {
@@ -128,18 +124,29 @@ namespace NordThrowingAxeMod
     }
 
     // 补丁：跳过角色创建流程（如果启用了快速开局）
-    [HarmonyPatch(typeof(CharacterCreationState), "OnNextStage")]
+    // 注意：CharacterCreationState 可能在不同的 DLL 中，使用反射查找
+    [HarmonyPatch]
     public class SkipCharacterCreationPatch
     {
+        static System.Reflection.MethodBase TargetMethod()
+        {
+            var type = AccessTools.TypeByName("TaleWorlds.CampaignSystem.CharacterCreation.CharacterCreationState");
+            if (type != null)
+            {
+                return AccessTools.Method(type, "OnNextStage");
+            }
+            return null;
+        }
+
         [HarmonyPrefix]
-        static bool Prefix(CharacterCreationState __instance)
+        static bool Prefix(object __instance)
         {
             if (!QuickStartHelper.IsQuickStartMode) return true;
             
             try
             {
                 // 尝试直接完成角色创建
-                var finalizeMethod = AccessTools.Method(typeof(CharacterCreationState), "OnFinalize");
+                var finalizeMethod = AccessTools.Method(__instance.GetType(), "OnFinalize");
                 if (finalizeMethod != null)
                 {
                     finalizeMethod.Invoke(__instance, null);
@@ -156,16 +163,27 @@ namespace NordThrowingAxeMod
     }
 
     // 补丁：在角色创建完成后给予金币
-    [HarmonyPatch(typeof(CharacterCreationState), "OnFinalize")]
+    // 注意：使用反射查找 CharacterCreationState
+    [HarmonyPatch]
     public class QuickStartGoldPatch
     {
+        static System.Reflection.MethodBase TargetMethod()
+        {
+            var type = AccessTools.TypeByName("TaleWorlds.CampaignSystem.CharacterCreation.CharacterCreationState");
+            if (type != null)
+            {
+                return AccessTools.Method(type, "OnFinalize");
+            }
+            return null;
+        }
+
         [HarmonyPostfix]
         static void Postfix()
         {
             // 金币会在 OnCampaignStart 中给予，这里只显示提示
             if (QuickStartHelper.IsQuickStartMode)
             {
-                MBInformationManager.ShowInformativeMessage(new InformationMessage(
+                InformationManager.DisplayMessage(new InformationMessage(
                     $"快速开局：将在进入游戏后获得 {QuickStartHelper.QuickStartGold:N0} 金币"));
             }
         }
