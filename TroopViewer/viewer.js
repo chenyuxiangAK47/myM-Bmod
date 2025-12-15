@@ -514,14 +514,25 @@ class TroopViewer {
                 console.log('开始验证', troops.length, '个兵种');
                 const startTime = performance.now();
                 
-                // 运行验证
-                const validationResults = equipmentValidator.validateAllTroops(troops);
+                // 运行验证（默认忽略原版和测试兵种）
+                const validationResults = equipmentValidator.validateAllTroops(troops, {
+                    ignoreVanillaTroops: true,
+                    ignoreTestTroops: true
+                });
                 
                 const endTime = performance.now();
                 console.log('验证完成，耗时:', (endTime - startTime).toFixed(2), 'ms');
                 
+                // 计算被忽略的数量
+                let ignoredCount = 0;
+                for (let troop of troops) {
+                    if (equipmentValidator.shouldIgnoreTroop(troop)) {
+                        ignoredCount++;
+                    }
+                }
+                
                 // 显示验证面板
-                this.showValidationResults(validationResults, troops.length);
+                this.showValidationResults(validationResults, troops.length, ignoredCount);
             } catch (error) {
                 console.error('验证过程出错:', error);
                 summaryDiv.innerHTML = '<h3 style="color: #e74c3c;">验证出错</h3><p>' + error.message + '</p>';
@@ -531,14 +542,14 @@ class TroopViewer {
     }
 
     // 显示验证结果
-    showValidationResults(validationResults, totalTroops) {
+    showValidationResults(validationResults, totalTroops, ignoredCount = 0) {
         const panel = document.getElementById('validationPanel');
         const summaryDiv = document.getElementById('validationSummary');
         const resultsDiv = document.getElementById('validationResults');
         const reportTextarea = document.getElementById('validationReport');
 
         // 生成报告
-        const report = equipmentValidator.generateReport(validationResults);
+        const report = equipmentValidator.generateReport(validationResults, ignoredCount);
         reportTextarea.value = report;
 
         // 显示摘要
@@ -558,6 +569,12 @@ class TroopViewer {
                     <div class="summary-stat-value">${totalTroops}</div>
                     <div class="summary-stat-label">总兵种数</div>
                 </div>
+                ${ignoredCount > 0 ? `
+                <div class="summary-stat">
+                    <div class="summary-stat-value" style="color: #6c757d;">${ignoredCount}</div>
+                    <div class="summary-stat-label">已忽略（原版/测试）</div>
+                </div>
+                ` : ''}
                 <div class="summary-stat">
                     <div class="summary-stat-value" style="color: #e74c3c;">${validationResults.length}</div>
                     <div class="summary-stat-label">存在问题</div>

@@ -29,6 +29,19 @@ class EquipmentValidator {
         // 原版装备ID集合（从原版XML文件中加载）
         this.vanillaItemIds = new Set();
         this.itemIdValidationEnabled = false;
+        
+        // 过滤选项
+        this.filterOptions = {
+            ignoreVanillaTroops: true,  // 忽略原版兵种（通过ID模式识别）
+            ignoreTestTroops: true      // 忽略测试兵种（test_开头）
+        };
+        
+        // 原版兵种ID模式（常见的原版兵种ID模式）
+        this.vanillaTroopPatterns = [
+            /^imperial_(recruit|infantryman|trained_infantryman|veteran_infantryman|legionary|menavliaton|elite_menavliaton|archer|trained_archer|veteran_archer|palatine_guard|crossbowman|sergeant_crossbowman|horseman|equite|heavy_horseman|cataphract|elite_cataphract|vigla_recruit|militia_archer|militia_veteran_archer|militia_spearman|militia_veteran_spearman)$/,
+            /^nord_(youngling|drengr|huntsman|axe_warrior|spear_warrior|freeman_archer|vargr|ungmann|berserker|huscarl|raider|veteran_raider|archer|veteran_archer|skirmisher|veteran_skirmisher|warrior|veteran_warrior|elite_warrior|chieftain|elite_chieftain|noble_son|noble_warrior|noble_huscarl|noble_archer|noble_veteran_archer|noble_raider|noble_veteran_raider)$/,
+            /^bucellarii$/
+        ];
     }
     
     // 加载原版装备ID列表（从XML文件）
@@ -82,11 +95,45 @@ class EquipmentValidator {
         return this.vanillaItemIds.has(itemId);
     }
 
+    // 检查是否应该忽略该兵种
+    shouldIgnoreTroop(troop) {
+        // 检查测试兵种
+        if (this.filterOptions.ignoreTestTroops && troop.id.startsWith('test_')) {
+            return true;
+        }
+        
+        // 检查原版兵种
+        if (this.filterOptions.ignoreVanillaTroops) {
+            for (let pattern of this.vanillaTroopPatterns) {
+                if (pattern.test(troop.id)) {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
+
     // 验证所有兵种
-    validateAllTroops(troops) {
+    validateAllTroops(troops, options = {}) {
+        // 合并过滤选项
+        if (options.ignoreVanillaTroops !== undefined) {
+            this.filterOptions.ignoreVanillaTroops = options.ignoreVanillaTroops;
+        }
+        if (options.ignoreTestTroops !== undefined) {
+            this.filterOptions.ignoreTestTroops = options.ignoreTestTroops;
+        }
+        
         const results = [];
+        let ignoredCount = 0;
         
         for (let troop of troops) {
+            // 检查是否应该忽略
+            if (this.shouldIgnoreTroop(troop)) {
+                ignoredCount++;
+                continue;
+            }
+            
             const issues = this.validateTroop(troop);
             if (issues.length > 0) {
                 results.push({
@@ -94,6 +141,10 @@ class EquipmentValidator {
                     issues: issues
                 });
             }
+        }
+        
+        if (ignoredCount > 0) {
+            console.log(`已忽略 ${ignoredCount} 个原版/测试兵种`);
         }
         
         return results;
@@ -348,13 +399,20 @@ class EquipmentValidator {
     }
 
     // 生成验证报告（文本格式，方便复制）
-    generateReport(validationResults) {
+    generateReport(validationResults, ignoredCount = 0) {
         if (validationResults.length === 0) {
-            return '✅ 所有兵种装备检查通过！没有发现问题。';
+            let message = '✅ 所有兵种装备检查通过！没有发现问题。';
+            if (ignoredCount > 0) {
+                message += `\n（已忽略 ${ignoredCount} 个原版/测试兵种）`;
+            }
+            return message;
         }
 
         let report = `装备验证报告\n`;
         report += `发现 ${validationResults.length} 个兵种存在问题\n`;
+        if (ignoredCount > 0) {
+            report += `（已忽略 ${ignoredCount} 个原版/测试兵种）\n`;
+        }
         report += `生成时间: ${new Date().toLocaleString('zh-CN')}\n\n`;
         report += '='.repeat(60) + '\n\n';
 

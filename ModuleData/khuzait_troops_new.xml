@@ -352,6 +352,9 @@
 					slot="HorseHarness"
 					id="Item.steppe_harness" />
 				<equipment
+					slot="Head"
+					id="Item.steppe_helmet" />
+				<equipment
 					slot="Body"
 					id="Item.khuzait_sturdy_armor" />
 			</EquipmentRoster>
@@ -417,6 +420,9 @@
 				<equipment
 					slot="HorseHarness"
 					id="Item.studded_steppe_barding" />
+				<equipment
+					slot="Head"
+					id="Item.steppe_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.khuzait_heavy_armor" />
@@ -547,6 +553,9 @@
 				<equipment
 					slot="HorseHarness"
 					id="Item.steppe_half_barding" />
+				<equipment
+					slot="Head"
+					id="Item.steppe_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.khuzait_heavy_armor" />

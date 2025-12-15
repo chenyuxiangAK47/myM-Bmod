@@ -60,6 +60,9 @@
 				<equipment
 					slot="Body"
 					id="Item.cloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 			<!-- 装备池2: 简易盾 + 单手武器 -->
 			<EquipmentRoster>
@@ -72,6 +75,9 @@
 				<equipment
 					slot="Body"
 					id="Item.cloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 			<!-- 装备池3: 单手武器（无盾） -->
 			<EquipmentRoster>
@@ -81,6 +87,9 @@
 				<equipment
 					slot="Body"
 					id="Item.cloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -138,6 +147,9 @@
 				<equipment
 					slot="Item2"
 					id="Item.battania_sword_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.thinhide_coif" />
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
@@ -500,6 +512,9 @@
 				<equipment
 					slot="Item2"
 					id="Item.northern_javelin_2_t3" />
+				<equipment
+					slot="Head"
+					id="Item.thinhide_coif" />
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />

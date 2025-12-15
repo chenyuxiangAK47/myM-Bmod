@@ -104,6 +104,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -343,6 +346,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sleeveless_padded_short_coat" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
