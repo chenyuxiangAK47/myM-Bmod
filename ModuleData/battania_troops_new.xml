@@ -457,6 +457,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sleeveless_studded_fur_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1197,6 +1200,9 @@
 				<equipment
 					slot="Cape"
 					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

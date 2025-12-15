@@ -63,6 +63,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 			<!-- 装备池2: 简陋长枪 -->
 			<EquipmentRoster>
@@ -72,6 +75,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 			<!-- 装备池3: 破弓 + 少量箭 -->
 			<EquipmentRoster>
@@ -84,6 +90,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 			<!-- 装备池4: 单手刀（无盾） -->
 			<EquipmentRoster>
@@ -151,6 +160,9 @@
 				<equipment
 					slot="Body"
 					id="Item.khuzait_sturdy_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

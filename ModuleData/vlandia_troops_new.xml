@@ -71,6 +71,9 @@
 				<equipment
 					slot="Cape"
 					id="Item.hood" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
 			</EquipmentRoster>
 			<!-- 装备池2: 破长枪（无盾） -->
 			<EquipmentRoster>
@@ -83,6 +86,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
 			</EquipmentRoster>
 			<!-- 装备池3: 盾 + 破枪 -->
 			<EquipmentRoster>
@@ -95,6 +101,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
 			</EquipmentRoster>
 			<!-- 装备池4: 农业镰刀/农具 -->
 			<EquipmentRoster>
