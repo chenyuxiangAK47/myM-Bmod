@@ -6,7 +6,7 @@ class EquipmentValidator {
             sword: ['sword', 'blade', 'sabre'],
             axe: ['axe', 'hatchet'],
             mace: ['mace', 'club', 'hammer'],
-            polearm: ['spear', 'lance', 'pike', 'polearm', 'glaive', 'billhook'],
+            polearm: ['spear', 'lance', 'pike', 'polearm', 'glaive', 'billhook', 'pitchfork', 'fork'],
             bow: ['bow', 'longbow', 'shortbow', 'composite', 'yew'],
             crossbow: ['crossbow'],
             throwing: ['javelin', 'throwing', 'knife'],
