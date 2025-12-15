@@ -200,9 +200,25 @@ class EquipmentValidator {
 
     // 判断是否为骑兵
     isCavalry(troop) {
-        return troop.defaultGroup === 'Cavalry' || 
-               troop.defaultGroup === 'HorseArcher' ||
-               (troop.skills && troop.skills.Riding > 50);
+        // 如果 defaultGroup 明确是骑兵，直接返回 true
+        if (troop.defaultGroup === 'Cavalry' || troop.defaultGroup === 'HorseArcher') {
+            return true;
+        }
+        // 否则需要检查装备中是否有马，以及技能是否足够高
+        // 避免误判（比如步兵有 Riding=60 但没有马）
+        if (troop.skills && troop.skills.Riding > 50) {
+            // 需要检查装备中是否真的有马
+            if (troop.equipment && troop.equipment.length > 0) {
+                const mainEquipment = troop.equipment[0];
+                const items = mainEquipment.items || [];
+                for (let item of items) {
+                    if (item.slot === 'Horse') {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     // 判断是否为步兵
@@ -215,9 +231,27 @@ class EquipmentValidator {
 
     // 判断是否为远程单位
     isRanged(troop) {
-        return troop.defaultGroup === 'Ranged' || 
-               troop.defaultGroup === 'HorseArcher' ||
-               (troop.skills && (troop.skills.Bow > 50 || troop.skills.Crossbow > 50));
+        // 如果 defaultGroup 明确是远程单位，直接返回 true
+        if (troop.defaultGroup === 'Ranged' || troop.defaultGroup === 'HorseArcher') {
+            return true;
+        }
+        // 否则需要检查装备中是否有弓或弩，以及技能是否足够高
+        // 避免误判（比如步兵有 Bow=60 但没有弓）
+        if (troop.skills && (troop.skills.Bow > 50 || troop.skills.Crossbow > 50)) {
+            // 需要检查装备中是否真的有弓或弩
+            if (troop.equipment && troop.equipment.length > 0) {
+                const mainEquipment = troop.equipment[0];
+                const items = mainEquipment.items || [];
+                for (let item of items) {
+                    const lowerId = item.id.toLowerCase();
+                    if (this.weaponKeywords.bow.some(k => lowerId.includes(k)) ||
+                        this.weaponKeywords.crossbow.some(k => lowerId.includes(k))) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     // 检查是否有武器
@@ -283,16 +317,7 @@ class EquipmentValidator {
             }
         }
 
-        // 检查弓手
-        if (hasBow && !hasArrows) {
-            issues.push({
-                type: 'error',
-                slot: 'Item1',
-                message: '弓箭手缺少箭矢'
-            });
-        }
-
-        // 检查弩手
+        // 优先检查弩手（因为弩手不会同时有弓）
         if (hasCrossbow && !hasBolts) {
             issues.push({
                 type: 'error',
@@ -301,7 +326,16 @@ class EquipmentValidator {
             });
         }
 
-        // 检查是否有远程武器
+        // 检查弓手（只有在没有弩的情况下才检查）
+        if (hasBow && !hasCrossbow && !hasArrows) {
+            issues.push({
+                type: 'error',
+                slot: 'Item1',
+                message: '弓箭手缺少箭矢'
+            });
+        }
+
+        // 检查是否有远程武器（只有在既没有弓也没有弩的情况下才报错）
         if (!hasBow && !hasCrossbow) {
             issues.push({
                 type: 'error',
