@@ -325,6 +325,9 @@
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
