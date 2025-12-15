@@ -85,7 +85,7 @@ class TroopParser {
             };
 
             troops.push(troop);
-            this.troopMap.set(troop.id, troop);
+            // 注意：不要在这里添加到 troopMap，应该由 addTroops 统一管理
         }
 
         return troops;

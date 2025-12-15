@@ -46,9 +46,14 @@ class TroopViewer {
                     console.log(`文件 ${file.name} 解析出 ${troops.length} 个兵种`);
                     
                     if (troops.length > 0) {
+                        const beforeCount = troopParser.getAllTroops().length;
                         troopParser.addTroops(troops);
+                        const afterCount = troopParser.getAllTroops().length;
+                        const addedCount = afterCount - beforeCount;
+                        console.log(`添加了 ${addedCount} 个新兵种到列表（总共 ${afterCount} 个）`);
+                        
                         totalTroops += troops.length;
-                        fileResults.push(`${file.name}: ${troops.length} 个兵种`);
+                        fileResults.push(`${file.name}: ${troops.length} 个兵种（已添加 ${addedCount} 个）`);
                     } else {
                         fileResults.push(`${file.name}: 0 个兵种 ⚠️`);
                         console.warn(`文件 ${file.name} 没有解析出任何兵种`);
@@ -59,6 +64,7 @@ class TroopViewer {
                 }
             }
             
+            console.log('所有文件加载完成，当前总兵种数:', troopParser.getAllTroops().length);
             this.updateTroopList();
             
             // 显示详细结果
