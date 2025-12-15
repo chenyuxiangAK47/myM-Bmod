@@ -62,6 +62,9 @@
 					slot="Item1"
 					id="Item.old_kite_shield" />
 				<equipment
+					slot="Head"
+					id="Item.arming_coif" />
+				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
 				<equipment
@@ -198,6 +201,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.wrapping_shoes" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -261,6 +267,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -322,6 +331,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_lamellar" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -385,6 +397,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_padded_cloth" />
+				<equipment
+					slot="Leg"
+					id="Item.wrapping_shoes" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -448,6 +463,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -569,6 +587,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_padded_cloth" />
+				<equipment
+					slot="Leg"
+					id="Item.wrapping_shoes" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -629,6 +650,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -689,6 +713,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_lamellar" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -810,6 +837,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.wrapping_shoes" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -873,6 +903,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_padded_cloth" />
+				<equipment
+					slot="Leg"
+					id="Item.wrapping_shoes" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -936,6 +969,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -2868,6 +2904,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -3070,6 +3109,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_scale_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
