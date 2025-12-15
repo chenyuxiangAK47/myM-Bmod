@@ -10,6 +10,7 @@ Design rules: MyMod/鏂囨槑鍏电璁捐钃濆浘.md
 - 鉁?Fixed missing leg armor (shoes) for multiple troops across all factions
 - 鉁?Added helmets for Khuzait T4 cavalry units (khuzait_t4_veteran_horse_archer, khuzait_t4_veteran_mounted_javelin_raider)
 - 鉁?Fixed Imperial noble T1 upgrade path to include crossbow/horse archer cavalry (imperial_crossbow_cavalry_t3, imperial_horse_archer_t3)
+- 鉁?Fixed Imperial noble bow lancer: changed from HorseArcher to Cavalry type, added upgrade paths to regular horse archer/crossbow cavalry
 
 
 Columns:
@@ -57,7 +58,7 @@ Columns:
 | imperial_noble_t3_heavy_noble_cavalry | 帝国重装贵族骑兵 | Cavalry | 16 | 30/135/85/10/145/20/0/10 | Item0=empire_lance_1_t3, Item1=reinforced_kite_shield, Item2=empire_sword_3_t3, Horse=t3_empire_horse, HorseHarness=half_mail_and_plate_barding, Head=imperial_goggled_helmet, Body=imperial_lamellar |
 | imperial_noble_t4_royal_heavy_cavalry | 帝国皇家重骑兵 | Cavalry | 21 | 35/160/110/10/170/20/0/10 | Item0=empire_lance_1_t3, Item1=reinforced_kite_shield, Item2=empire_sword_3_t3, Horse=t3_empire_horse, HorseHarness=mail_and_plate_barding, Head=imperial_goggled_helmet, Body=imperial_scale_armor |
 | imperial_noble_t5_palace_heavy_cavalry | 帝国宫廷重骑兵 | Cavalry | 26 | 40/200/140/10/220/20/0/10 | Item0=empire_lance_1_t3, Item1=reinforced_kite_shield, Item2=empire_sword_3_t3, Horse=t3_empire_horse, HorseHarness=mail_and_plate_barding, Head=imperial_goggled_helmet, Body=imperial_scale_armor |
-| imperial_noble_t2_noble_bow_lancer | 帝国贵族弓骑兵 | HorseArcher | 11 | 25/120/55/10/90/120/0/10 | Item0=composite_bow, Item1=bodkin_arrows_a, Item2=empire_lance_1_t3, Item3=worn_kite_shield, Horse=t2_empire_horse, HorseHarness=imperial_scale_barding, Head=imperial_mail_coif, Body=imperial_mail_over_leather |
+| imperial_noble_t2_noble_bow_lancer | 帝国贵族弓骑兵 | Cavalry | 11 | 25/120/55/10/90/120/0/10 | Item0=composite_bow, Item1=bodkin_arrows_a, Item2=empire_lance_1_t3, Item3=worn_kite_shield, Horse=t2_empire_horse, HorseHarness=imperial_scale_barding, Head=imperial_mail_coif, Body=imperial_mail_over_leather |
 | imperial_noble_t3_heavy_bow_cavalry | 帝国重装弓骑兵 | HorseArcher | 16 | 30/145/65/10/110/150/0/10 | Item0=composite_bow, Item1=bodkin_arrows_b, Item2=empire_lance_1_t3, Item3=worn_kite_shield, Horse=t3_empire_horse, HorseHarness=half_mail_and_plate_barding, Head=imperial_nasal_helm, Body=imperial_lamellar_over_leather |
 | imperial_noble_t4_elite_bow_lancer | 帝国精锐弓枪骑兵 | HorseArcher | 21 | 35/170/75/10/135/185/0/10 | Item0=composite_bow, Item1=bodkin_arrows_b, Item2=empire_lance_1_t3, Item3=reinforced_kite_shield, Horse=t3_empire_horse, HorseHarness=mail_and_plate_barding, Head=imperial_goggled_helmet, Body=imperial_lamellar |
 | imperial_noble_t5_palace_bow_lancer | 帝国宫廷弓枪骑兵 | HorseArcher | 26 | 40/200/90/10/160/220/0/10 | Item0=composite_bow, Item1=bodkin_arrows_b, Item2=empire_lance_1_t3, Item3=reinforced_kite_shield, Horse=t3_empire_horse, HorseHarness=mail_and_plate_barding, Head=imperial_goggled_helmet, Body=imperial_scale_armor |
