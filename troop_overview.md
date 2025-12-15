@@ -7,6 +7,9 @@ Design rules: MyMod/鏂囨槑鍏电璁捐钃濆浘.md
 - 鉁?All upgrade paths completed (all troops have upgrade targets defined, except top-tier units)
 - 鉁?All lowest-tier noble troops have been upgraded with well-equipped gear
 - 鉁?T1 recruit troops (khuzait_t1_nomad_levy, sturgia_t1_conscript, battania_t1_tribesman, vlandia_t1_serf_levy) have randomized equipment pools
+- 鉁?Fixed missing leg armor (shoes) for multiple troops across all factions
+- 鉁?Added helmets for Khuzait T4 cavalry units (khuzait_t4_veteran_horse_archer, khuzait_t4_veteran_mounted_javelin_raider)
+- 鉁?Fixed Imperial noble T1 upgrade path to include crossbow/horse archer cavalry (imperial_crossbow_cavalry_t3, imperial_horse_archer_t3)
 
 
 Columns:
