@@ -396,4 +396,159 @@
 		</Equipments>
 	</NPCCharacter>
 
+	<!-- ❌ 使用错误装备ID的兵种（错误：装备ID不存在于原版数据库） -->
+	<NPCCharacter
+		id="test_invalid_item_id_weapon"
+		default_group="Infantry"
+		level="11"
+		name="{=test_invalid_item_id_weapon}测试错误武器ID"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="50" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="70" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="20" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="10" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.longbow_t3" />
+				<!-- 错误：longbow_t3 不存在于原版数据库 -->
+				<equipment slot="Item1" id="Item.worn_kite_shield" />
+				<equipment slot="Head" id="Item.imperial_mail_coif" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 使用错误装备ID的兵种（错误：多个错误装备ID） -->
+	<NPCCharacter
+		id="test_invalid_item_id_multiple"
+		default_group="Cavalry"
+		level="16"
+		name="{=test_invalid_item_id_multiple}测试多个错误装备ID"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="30" />
+			<skill id="Riding" value="120" />
+			<skill id="OneHanded" value="90" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="120" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.empire_lance_1_t3" />
+				<equipment slot="Item1" id="Item.empire_sword_3_t3" />
+				<equipment slot="Item2" id="Item.reinforced_kite_shield" />
+				<equipment slot="Horse" id="Item.t3_empire_horse" />
+				<equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+				<equipment slot="Head" id="Item.imperial_helmet_t5" />
+				<!-- 错误：imperial_helmet_t5 不存在 -->
+				<equipment slot="Body" id="Item.imperial_armor_t6" />
+				<!-- 错误：imperial_armor_t6 不存在 -->
+				<equipment slot="Leg" id="Item.imperial_boots_t4" />
+				<!-- 错误：imperial_boots_t4 不存在 -->
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 使用错误装备ID的远程兵种（错误：错误的弓和箭矢ID） -->
+	<NPCCharacter
+		id="test_invalid_item_id_ranged"
+		default_group="Ranged"
+		level="16"
+		name="{=test_invalid_item_id_ranged}测试错误远程装备ID"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="70" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="60" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="10" />
+			<skill id="Bow" value="135" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.composite_bow_t4" />
+				<!-- 错误：composite_bow_t4 不存在 -->
+				<equipment slot="Item1" id="Item.bodkin_arrows_t3" />
+				<!-- 错误：bodkin_arrows_t3 不存在 -->
+				<equipment slot="Item2" id="Item.empire_sword_2_t3" />
+				<equipment slot="Head" id="Item.imperial_mail_coif" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 使用错误装备ID的骑兵（错误：错误的马具ID） -->
+	<NPCCharacter
+		id="test_invalid_item_id_mount"
+		default_group="Cavalry"
+		level="16"
+		name="{=test_invalid_item_id_mount}测试错误坐骑装备ID"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="30" />
+			<skill id="Riding" value="120" />
+			<skill id="OneHanded" value="90" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="120" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.empire_lance_1_t3" />
+				<equipment slot="Item1" id="Item.empire_sword_3_t3" />
+				<equipment slot="Item2" id="Item.reinforced_kite_shield" />
+				<equipment slot="Horse" id="Item.imperial_warhorse_t4" />
+				<!-- 错误：imperial_warhorse_t4 不存在 -->
+				<equipment slot="HorseHarness" id="Item.imperial_full_barding_t5" />
+				<!-- 错误：imperial_full_barding_t5 不存在 -->
+				<equipment slot="Head" id="Item.imperial_nasal_helm" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
 </NPCCharacters>
