@@ -1286,6 +1286,10 @@
 		<upgrade_targets>
 			<upgrade_target
 				id="NPCCharacter.imperial_lancer_t3" />
+			<upgrade_target
+				id="NPCCharacter.imperial_crossbow_cavalry_t3" />
+			<upgrade_target
+				id="NPCCharacter.imperial_horse_archer_t3" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
