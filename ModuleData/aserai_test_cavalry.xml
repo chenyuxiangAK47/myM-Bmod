@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- Aserai Test Cavalry - Cavalry Test Unit -->
+	<NPCCharacter
+		id="aserai_test_cavalry"
+		default_group="Cavalry"
+		level="16"
+		name="{=aserai_test_cavalry}Aserai Test Cavalry"
+		upgrade_requires="ItemCategory.horse"
+		occupation="Soldier"
+		culture="Culture.aserai">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_aserai" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="40" />
+			<skill
+				id="Riding"
+				value="70" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="30" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="10" />
+			<skill
+				id="Throwing"
+				value="50" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.aserai_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.bound_desert_round_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.aserai_javelin" />
+				<equipment
+					slot="Head"
+					id="Item.leather_cap" />
+				<equipment
+					slot="Body"
+					id="Item.desert_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.leather_shoes" />
+				<equipment
+					slot="Horse"
+					id="Item.sumpter_horse" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+</NPCCharacters>

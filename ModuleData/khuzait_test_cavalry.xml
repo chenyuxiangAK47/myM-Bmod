@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- Khuzait Test Cavalry - Cavalry Test Unit -->
+	<NPCCharacter
+		id="khuzait_test_cavalry"
+		default_group="Cavalry"
+		level="16"
+		name="{=khuzait_test_cavalry}Khuzait Test Cavalry"
+		upgrade_requires="ItemCategory.horse"
+		occupation="Soldier"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="70" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="70" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="20" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.hunting_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.range_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.simple_sabre_sword_t2" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.leather_shoes" />
+				<equipment
+					slot="Horse"
+					id="Item.sumpter_horse" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+</NPCCharacters>

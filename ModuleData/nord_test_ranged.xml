@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- Nord Test Ranged - Ranged Test Unit -->
+	<NPCCharacter
+		id="nord_test_ranged"
+		default_group="Ranged"
+		level="11"
+		name="{=nord_test_ranged}Nord Test Ranged"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<Traits>
+			<Trait
+				id="NavalSoldier"
+				value="1" />
+		</Traits>
+		<skills>
+			<skill
+				id="Athletics"
+				value="40" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="20" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="5" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.mountain_hunting_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.barbed_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.barbed_arrows" />
+				<equipment
+					slot="Item3"
+					id="Item.nord_hatchett_3_t1" />
+				<equipment
+					slot="Body"
+					id="Item.nordic_sloven" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+</NPCCharacters>

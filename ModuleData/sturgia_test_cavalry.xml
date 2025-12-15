@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- Sturgia Test Cavalry - Cavalry Test Unit -->
+	<NPCCharacter
+		id="sturgia_test_cavalry"
+		default_group="Cavalry"
+		level="16"
+		name="{=sturgia_test_cavalry}Sturgia Test Cavalry"
+		upgrade_requires="ItemCategory.horse"
+		occupation="Soldier"
+		culture="Culture.sturgia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_sturgia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="70" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="100" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="20" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.peasant_polearm_1_t1" />
+				<equipment
+					slot="Item1"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.peasant_hatchet_1_t1" />
+				<equipment
+					slot="Body"
+					id="Item.fur_trimmed_short_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.leather_shoes" />
+				<equipment
+					slot="Horse"
+					id="Item.sumpter_horse" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+</NPCCharacters>

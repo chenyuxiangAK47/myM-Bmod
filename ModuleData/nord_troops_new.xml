@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
-	<!-- ============================================ -->
-	<!-- Nord 平民兵种树重做 - T1到T3 -->
-	<!-- ============================================ -->
-	
-	<!-- T1: Nord Youth（诺德青年） - 比其他T1更强，近战属性偏高 -->
+	<!-- ================================================= -->
+	<!-- =============== Nord Troops =============== -->
+	<!-- ================================================= -->
+
+	<!-- 诺德新兵 -->
 	<NPCCharacter
 		id="nord_youth"
 		default_group="Infantry"
-		level="11"
-		name="{=NordYouth}诺德盾墙步兵"
+		level="6"
+		name="{=nord_youth}诺德新兵"
 		occupation="Soldier"
 		is_basic_troop="true"
 		culture="Culture.nord">
@@ -17,357 +17,206 @@
 			<face_key_template
 				value="BodyProperty.fighter_nord" />
 		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
-				value="35" />
-			<skill
-				id="Riding"
-				value="5" />
-			<skill
-				id="OneHanded"
-				value="45" />
-			<skill
-				id="TwoHanded"
 				value="25" />
 			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="25" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
 				id="Polearm"
-				value="45" />
+				value="25" />
 			<skill
 				id="Bow"
-				value="15" />
+				value="5" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="35" />
+				value="10" />
 		</skills>
 		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.nord_archer" />
-			<upgrade_target
-				id="NPCCharacter.nord_warrior" />
-			<upgrade_target
-				id="NPCCharacter.nord_javelin_raider" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 模板1：好斧头 + 好护甲 + 毛皮帽 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nord_hatchett_3_t1" />
+					id="Item.peasant_hatchet_1_t1" />
 				<equipment
 					slot="Item1"
 					id="Item.northern_round_shield" />
 				<equipment
-					slot="Item2"
-					id="Item.northern_throwing_axe_1_t1" />
-				<equipment
-					slot="Item3"
-					id="Item.nord_spear_1_t1" />
-				<equipment
 					slot="Body"
-					id="Item.heavy_nordic_tunic" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Head"
-					id="Item.northern_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.scarf" />
-				<equipment
-					slot="Gloves"
-					id="Item.roughtied_leather_bracers" />
+					id="Item.fur_trimmed_short_tunic" />
 			</EquipmentRoster>
-			<!-- 模板2：差斧头 + 差护甲 + 毛皮帽 -->
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 诺德盾兵 -->
+	<NPCCharacter
+		id="nord_t2_shieldman"
+		default_group="Infantry"
+		level="11"
+		name="{=nord_t2_shieldman}诺德盾兵"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="80" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="20" />
+			<skill
+				id="Bow"
+				value="10" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.naval_one_handed_axe_t1" />
+					id="Item.sturgia_axe_2_t2" />
 				<equipment
 					slot="Item1"
-					id="Item.sturgia_old_shield_b" />
-				<equipment
-					slot="Item2"
-					id="Item.northern_throwing_axe_1_t1" />
-				<equipment
-					slot="Body"
-					id="Item.northern_leather_vest" />
-				<equipment
-					slot="Leg"
-					id="Item.nord_casual_boots" />
-				<equipment
-					slot="Head"
-					id="Item.fur_hat" />
-				<equipment
-					slot="Cape"
-					id="Item.scarf" />
-			</EquipmentRoster>
-			<!-- 模板3：好斧头 + 差护甲 + 毛皮帽 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.nord_hatchett_3_t1" />
-				<equipment
-					slot="Item1"
-					id="Item.northern_round_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.northern_throwing_axe_1_t1" />
-				<equipment
-					slot="Item3"
-					id="Item.nord_spear_1_t1" />
-				<equipment
-					slot="Body"
-					id="Item.nordic_tunic" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_boots" />
-				<equipment
-					slot="Head"
-					id="Item.nordic_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.scarf" />
-			</EquipmentRoster>
-			<!-- 模板4：差斧头 + 好护甲 + 毛皮帽 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.naval_one_handed_axe_t1" />
-				<equipment
-					slot="Item1"
-					id="Item.sturgia_old_shield_a" />
-				<equipment
-					slot="Item2"
-					id="Item.northern_throwing_axe_1_t1" />
-				<equipment
-					slot="Body"
-					id="Item.heavy_nordic_tunic" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
+					id="Item.heavy_round_shield" />
 				<equipment
 					slot="Head"
 					id="Item.nordic_leather_cap" />
 				<equipment
-					slot="Cape"
-					id="Item.scarf" />
-				<equipment
-					slot="Gloves"
-					id="Item.roughtied_leather_bracers" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t1"
-				civilian="true" />
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- ============================================ -->
-	<!-- 标枪线 -->
-	<!-- ============================================ -->
-	
-	<!-- T2: Nord Javelin Raider（诺德标枪突袭者） - 专门丢标枪的 -->
-	<NPCCharacter
-		id="nord_javelin_raider"
-		default_group="Infantry"
-		level="16"
-		name="{=NordJavelinRaider}诺德投斧散兵"
-		occupation="Soldier"
-		culture="Culture.nord">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_nord" />
-		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
-		<skills>
-			<skill
-				id="Athletics"
-				value="70" />
-			<skill
-				id="Riding"
-				value="10" />
-			<skill
-				id="OneHanded"
-				value="50" />
-			<skill
-				id="TwoHanded"
-				value="25" />
-			<skill
-				id="Polearm"
-				value="30" />
-			<skill
-				id="Bow"
-				value="15" />
-			<skill
-				id="Crossbow"
-				value="0" />
-			<skill
-				id="Throwing"
-				value="80" />
-		</skills>
-		<upgrade_targets>
-			<!-- 标枪线暂时只到T2，后续可以扩展 -->
-		</upgrade_targets>
-		<Equipments>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.nord_spear_javelin_1_t3" />
-				<equipment
-					slot="Item1"
-					id="Item.nord_spear_javelin_1_t3" />
-				<equipment
-					slot="Item2"
-					id="Item.northern_javelin_1_t2" />
-				<equipment
-					slot="Item3"
-					id="Item.northern_javelin_1_t2" />
-				<equipment
-					slot="Item4"
-					id="Item.sturgia_sword_1_t2" />
-				<equipment
-					slot="Body"
-					id="Item.northern_leather_vest" />
-				<equipment
-					slot="Leg"
-					id="Item.nord_casual_boots" />
-				<equipment
-					slot="Head"
-					id="Item.northern_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.scarf" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.northern_javelin_2_t3" />
-				<equipment
-					slot="Item1"
-					id="Item.northern_javelin_2_t3" />
-				<equipment
-					slot="Item2"
-					id="Item.nord_spear_javelin_1_t3" />
-				<equipment
-					slot="Item3"
-					id="Item.nord_spear_javelin_1_t3" />
-				<equipment
-					slot="Item4"
-					id="Item.nord_hatchett_3_t1" />
-				<equipment
 					slot="Body"
 					id="Item.heavy_nordic_tunic" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Head"
-					id="Item.fur_hat" />
-				<equipment
-					slot="Cape"
-					id="Item.scarf" />
 			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.northern_javelin_1_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.northern_javelin_1_t2" />
-				<equipment
-					slot="Item2"
-					id="Item.northern_javelin_1_t2" />
-				<equipment
-					slot="Item3"
-					id="Item.northern_javelin_1_t2" />
-				<equipment
-					slot="Item4"
-					id="Item.naval_one_handed_axe_t1" />
-				<equipment
-					slot="Body"
-					id="Item.nordic_tunic" />
-				<equipment
-					slot="Leg"
-					id="Item.nord_casual_boots" />
-				<equipment
-					slot="Head"
-					id="Item.nordic_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.scarf" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t1"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-	
-	<!-- ============================================ -->
-	<!-- 弓箭线 -->
-	<!-- ============================================ -->
-	
-	<!-- T2: Nord Skirmisher（诺德散兵） - 短弓+近战，和步兵一起冲锋 -->
+
+	<!-- 诺德投斧战士 -->
 	<NPCCharacter
-		id="nord_skirmisher"
+		id="nord_t2_throwing_axeman"
 		default_group="Infantry"
 		level="11"
-		name="{=NordSkirmisher}诺德投斧散兵"
+		name="{=nord_t2_throwing_axeman}诺德投斧战士"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_nord" />
 		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="70" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="10" />
+			<skill
+				id="Bow"
+				value="10" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="100" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.northern_throwing_axe_1_t1" />
+				<equipment
+					slot="Item1"
+					id="Item.sturgia_axe_2_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_fur_cap" />
+				<equipment
+					slot="Body"
+					id="Item.northern_leather_vest" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 诺德短弓战士 -->
+	<NPCCharacter
+		id="nord_t2_shortbow_warrior"
+		default_group="Infantry"
+		level="11"
+		name="{=nord_t2_shortbow_warrior}诺德短弓战士"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
 		<skills>
 			<skill
 				id="Athletics"
 				value="65" />
 			<skill
 				id="Riding"
-				value="10" />
+				value="0" />
 			<skill
 				id="OneHanded"
-				value="60" />
+				value="70" />
 			<skill
 				id="TwoHanded"
-				value="35" />
+				value="20" />
 			<skill
 				id="Polearm"
-				value="40" />
+				value="20" />
 			<skill
 				id="Bow"
-				value="60" />
+				value="70" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="50" />
+				value="10" />
 		</skills>
 		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.nord_veteran_skirmisher" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 短弓散兵：短弓+近战武器+盾，和步兵一起冲锋 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -377,696 +226,1078 @@
 					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.nord_hatchett_3_t1" />
+					id="Item.northern_round_shield" />
 				<equipment
 					slot="Item3"
-					id="Item.northern_round_shield" />
+					id="Item.sturgia_axe_2_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_leather_cap" />
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
 			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 诺德长弓手 -->
+	<NPCCharacter
+		id="nord_t2_longbowman"
+		default_group="Ranged"
+		level="11"
+		name="{=nord_t2_longbowman}诺德长弓手"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="35" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="10" />
+			<skill
+				id="Bow"
+				value="95" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="0" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nordic_shortbow" />
+					id="Item.woodland_longbow" />
 				<equipment
 					slot="Item1"
 					id="Item.default_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.naval_one_handed_axe_t1" />
+					id="Item.peasant_hatchet_1_t1" />
 				<equipment
-					slot="Item3"
-					id="Item.northern_round_shield" />
-				<equipment
-					slot="Body"
-					id="Item.heavy_nordic_tunic" />
-				<equipment
-					slot="Leg"
-					id="Item.nord_casual_boots" />
-				<equipment
-					slot="Gloves"
-					id="Item.roughtied_leather_bracers" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t2"
-				civilian="true" />
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- T3: Nord Veteran Skirmisher（诺德熟练散兵） - 短弓+近战，和步兵一起冲锋 -->
-	<NPCCharacter
-		id="nord_veteran_skirmisher"
-		default_group="Infantry"
-		level="16"
-		name="{=NordVeteranSkirmisher}诺德投斧散兵"
-		occupation="Soldier"
-		culture="Culture.nord">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_nord" />
-		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
-		<skills>
-			<skill
-				id="Athletics"
-				value="80" />
-			<skill
-				id="Riding"
-				value="10" />
-			<skill
-				id="OneHanded"
-				value="75" />
-			<skill
-				id="TwoHanded"
-				value="45" />
-			<skill
-				id="Polearm"
-				value="50" />
-			<skill
-				id="Bow"
-				value="75" />
-			<skill
-				id="Crossbow"
-				value="0" />
-			<skill
-				id="Throwing"
-				value="65" />
-		</skills>
-		<upgrade_targets>
-		</upgrade_targets>
-		<Equipments>
-			<!-- 熟练短弓散兵：短弓+近战武器+盾，和步兵一起冲锋 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.nordic_shortbow" />
-				<equipment
-					slot="Item1"
-					id="Item.barbed_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.nord_sword_2_t3" />
-				<equipment
-					slot="Item3"
-					id="Item.northern_round_shield" />
-				<equipment
-					slot="Body"
-					id="Item.heavy_nordic_tunic" />
-				<equipment
-					slot="Leg"
-					id="Item.nord_casual_boots" />
-				<equipment
-					slot="Gloves"
-					id="Item.roughtied_leather_bracers" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.nordic_shortbow" />
-				<equipment
-					slot="Item1"
-					id="Item.barbed_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.nord_hatchett_3_t1" />
-				<equipment
-					slot="Item3"
-					id="Item.northern_round_shield" />
-				<equipment
-					slot="Body"
-					id="Item.double_belted_leather_armor" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Cape"
-					id="Item.nord_casual_cloak" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t2"
-				civilian="true" />
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- T2: Nord Archer（诺德弓箭手） - 轻甲，基础弓，近战一般，有圆盾 -->
-	<NPCCharacter
-		id="nord_archer"
-		default_group="Ranged"
-		level="16"
-		name="{=NordArcher}诺德弓箭手"
-		occupation="Soldier"
-		culture="Culture.nord">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_nord" />
-		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
-		<skills>
-			<skill
-				id="Athletics"
-				value="60" />
-			<skill
-				id="Riding"
-				value="10" />
-			<skill
-				id="OneHanded"
-				value="55" />
-			<skill
-				id="TwoHanded"
-				value="30" />
-			<skill
-				id="Polearm"
-				value="35" />
-			<skill
-				id="Bow"
-				value="80" />
-			<skill
-				id="Crossbow"
-				value="0" />
-			<skill
-				id="Throwing"
-				value="55" />
-		</skills>
-		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.nord_veteran_archer" />
-		</upgrade_targets>
-		<Equipments>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.northern_round_shield" />
-				<equipment
-					slot="Item1"
-					id="Item.woodland_longbow" />
-				<equipment
-					slot="Item2"
-					id="Item.barbed_arrows" />
-				<equipment
-					slot="Item4"
-					id="Item.barbed_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.nord_hatchett_3_t1" />
+					slot="Head"
+					id="Item.nordic_fur_cap" />
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Cape"
-					id="Item.scarf" />
 			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.northern_round_shield" />
-				<equipment
-					slot="Item1"
-					id="Item.mountain_hunting_bow" />
-				<equipment
-					slot="Item2"
-					id="Item.barbed_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.naval_one_handed_axe_t1" />
-				<equipment
-					slot="Body"
-					id="Item.heavy_nordic_tunic" />
-				<equipment
-					slot="Leg"
-					id="Item.nord_casual_boots" />
-				<equipment
-					slot="Gloves"
-					id="Item.roughtied_leather_bracers" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t2"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-	
-	<!-- T3: Nord Veteran Archer（诺德熟练弓箭手） - 中等弓，轻/中甲，少量近战防身能力，有圆盾 -->
+
+	<!-- 诺德盾墙老兵 -->
 	<NPCCharacter
-		id="nord_veteran_archer"
-		default_group="Ranged"
-		level="21"
-		name="{=NordVeteranArcher}诺德弓箭手"
-		occupation="Soldier"
-		culture="Culture.nord">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_nord" />
-		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
-		<skills>
-			<skill
-				id="Athletics"
-				value="100" />
-			<skill
-				id="Riding"
-				value="15" />
-			<skill
-				id="OneHanded"
-				value="60" />
-			<skill
-				id="TwoHanded"
-				value="40" />
-			<skill
-				id="Polearm"
-				value="50" />
-			<skill
-				id="Bow"
-				value="100" />
-			<skill
-				id="Crossbow"
-				value="0" />
-			<skill
-				id="Throwing"
-				value="70" />
-		</skills>
-		<upgrade_targets></upgrade_targets>
-		<Equipments>
-			<!-- 防御型蛮子：T3弓箭手+熊皮装备 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.northern_round_shield" />
-				<equipment
-					slot="Item1"
-					id="Item.woodland_longbow" />
-				<equipment
-					slot="Item2"
-					id="Item.bodkin_arrows_a" />
-				<equipment
-					slot="Item4"
-					id="Item.bodkin_arrows_a" />
-				<equipment
-					slot="Item3"
-					id="Item.nord_sword_2_t3" />
-				<equipment
-					slot="Body"
-					id="Item.double_belted_leather_armor" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Head"
-					id="Item.nordic_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.bearskin" />
-				<equipment
-					slot="Gloves"
-					id="Item.studded_arm_guards" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.northern_round_shield" />
-				<equipment
-					slot="Item1"
-					id="Item.woodland_longbow" />
-				<equipment
-					slot="Item2"
-					id="Item.bodkin_arrows_a" />
-				<equipment
-					slot="Item4"
-					id="Item.bodkin_arrows_a" />
-				<equipment
-					slot="Item3"
-					id="Item.nord_hatchett_3_t1" />
-				<equipment
-					slot="Body"
-					id="Item.double_belted_leather_armor" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Head"
-					id="Item.nordic_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.armored_bearskin" />
-				<equipment
-					slot="Gloves"
-					id="Item.studded_arm_guards" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t2"
-				civilian="true" />
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- ============================================ -->
-	<!-- 近战线 -->
-	<!-- ============================================ -->
-	
-	<!-- T2: Nord Warrior（诺德战士） - 中甲+单手斧+中盾+飞斧 -->
-	<NPCCharacter
-		id="nord_warrior"
+		id="nord_t3_shieldwall_veteran"
 		default_group="Infantry"
 		level="16"
-		name="{=NordWarrior}诺德盾墙步兵"
+		name="{=nord_t3_shieldwall_veteran}诺德盾墙老兵"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_nord" />
 		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
-				value="60" />
+				value="100" />
 			<skill
 				id="Riding"
-				value="10" />
+				value="0" />
 			<skill
 				id="OneHanded"
-				value="75" />
+				value="120" />
 			<skill
 				id="TwoHanded"
-				value="45" />
-			<skill
-				id="Polearm"
 				value="40" />
 			<skill
-				id="Bow"
+				id="Polearm"
 				value="30" />
+			<skill
+				id="Bow"
+				value="10" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="70" />
+				value="10" />
 		</skills>
 		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.nord_linebreaker" />
-			<upgrade_target
-				id="NPCCharacter.nord_shieldwall_infantry" />
-			<upgrade_target
-				id="NPCCharacter.nord_skirmisher" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.nord_shield_tier_3_b" />
+					id="Item.sturgia_axe_3_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.northern_throwing_axe_1_t1" />
-				<equipment
-					slot="Item2"
-					id="Item.nord_sword_2_t3" />
-				<equipment
-					slot="Item3"
-					id="Item.nord_hatchett_3_t1" />
-				<equipment
-					slot="Body"
-					id="Item.double_belted_leather_armor" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Head"
-					id="Item.nasalhelm_over_leather" />
-				<equipment
-					slot="Cape"
-					id="Item.nord_fur_shoulder" />
-				<equipment
-					slot="Gloves"
-					id="Item.studded_arm_guards" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.nord_shield_tier_3_a" />
-				<equipment
-					slot="Item1"
-					id="Item.northern_throwing_axe_1_t1" />
-				<equipment
-					slot="Item2"
-					id="Item.nord_sword_2_t3" />
-				<equipment
-					slot="Item3"
-					id="Item.naval_one_handed_axe_t1" />
-				<equipment
-					slot="Body"
-					id="Item.double_belted_leather_armor" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
+					id="Item.heavy_round_shield" />
 				<equipment
 					slot="Head"
 					id="Item.nasal_helmet" />
 				<equipment
-					slot="Cape"
-					id="Item.scarf" />
-				<equipment
-					slot="Gloves"
-					id="Item.studded_arm_guards" />
+					slot="Body"
+					id="Item.sturgian_chainmale_shortsleeve" />
 			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t2"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-	
-	<!-- T3分支1: Nord Linebreaker（诺德破阵战士） - 双手大斧或双手剑，中甲，无盾，有飞斧 -->
+
+	<!-- 诺德狂战士 -->
 	<NPCCharacter
-		id="nord_linebreaker"
+		id="nord_t3_berserker"
 		default_group="Infantry"
-		level="21"
-		name="{=NordLinebreaker}诺德战斧兵"
+		level="16"
+		name="{=nord_t3_berserker}诺德狂战士"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_nord" />
 		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
-				value="100" />
+				value="110" />
 			<skill
 				id="Riding"
-				value="15" />
+				value="0" />
 			<skill
 				id="OneHanded"
-				value="60" />
+				value="40" />
 			<skill
 				id="TwoHanded"
-				value="100" />
+				value="120" />
 			<skill
 				id="Polearm"
-				value="80" />
+				value="20" />
 			<skill
 				id="Bow"
-				value="45" />
+				value="10" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="80" />
+				value="90" />
 		</skills>
-		<upgrade_targets></upgrade_targets>
+		<upgrade_targets>
+		</upgrade_targets>
 		<Equipments>
-			<!-- 防御型蛮子：T3破阵战士+熊皮装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.northern_throwing_axe_1_t1" />
+					id="Item.black_heart_2haxe_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.sturgia_2haxe_1_t4" />
-				<equipment
-					slot="Item2"
-					id="Item.nord_sword_2_t3" />
-				<equipment
-					slot="Body"
-					id="Item.nordic_padded_cloth" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Head"
-					id="Item.nordic_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.bearskin" />
-				<equipment
-					slot="Gloves"
-					id="Item.studded_arm_guards" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
 					id="Item.northern_throwing_axe_1_t1" />
 				<equipment
-					slot="Item1"
-					id="Item.sturgia_2haxe_1_t4" />
-				<equipment
-					slot="Item2"
-					id="Item.nord_sword_2_t3" />
-				<equipment
 					slot="Body"
-					id="Item.nordic_padded_cloth" />
-				<equipment
-					slot="Leg"
-					id="Item.northman_raider_boot" />
-				<equipment
-					slot="Head"
-					id="Item.nordic_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.armored_bearskin" />
-				<equipment
-					slot="Gloves"
-					id="Item.studded_arm_guards" />
+					id="Item.sleeveless_studded_fur_armor" />
 			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t2"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-	
-	<!-- T3分支2: Nord Shieldwall Infantry（诺德盾墙战士） - 大圆盾+单手斧，重甲，有飞斧 -->
+
+	<!-- 诺德短弓老兵 -->
 	<NPCCharacter
-		id="nord_shieldwall_infantry"
+		id="nord_t3_veteran_shortbow_warrior"
 		default_group="Infantry"
-		level="21"
-		name="{=NordShieldwallInfantry}诺德盾墙步兵"
+		level="16"
+		name="{=nord_t3_veteran_shortbow_warrior}诺德短弓老兵"
 		occupation="Soldier"
 		culture="Culture.nord">
 		<face>
 			<face_key_template
 				value="BodyProperty.fighter_nord" />
 		</face>
-		<Traits>
-			<Trait
-				id="NavalSoldier"
-				value="1" />
-		</Traits>
 		<skills>
 			<skill
 				id="Athletics"
-				value="100" />
+				value="90" />
 			<skill
 				id="Riding"
-				value="15" />
+				value="0" />
 			<skill
 				id="OneHanded"
-				value="100" />
+				value="95" />
 			<skill
 				id="TwoHanded"
-				value="60" />
+				value="30" />
 			<skill
 				id="Polearm"
-				value="100" />
+				value="20" />
 			<skill
 				id="Bow"
-				value="45" />
+				value="90" />
 			<skill
 				id="Crossbow"
 				value="0" />
 			<skill
 				id="Throwing"
-				value="80" />
+				value="10" />
 		</skills>
-		<upgrade_targets></upgrade_targets>
+		<upgrade_targets>
+		</upgrade_targets>
 		<Equipments>
-			<!-- 防御型蛮子：T3盾墙战士+大圆盾+熊皮装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.heavy_round_shield" />
+					id="Item.nordic_shortbow" />
 				<equipment
 					slot="Item1"
-					id="Item.northern_throwing_axe_1_t1" />
+					id="Item.barbed_arrows" />
 				<equipment
 					slot="Item2"
-					id="Item.nord_sword_2_t3" />
+					id="Item.heavy_round_shield" />
 				<equipment
 					slot="Item3"
-					id="Item.nord_hatchett_3_t1" />
-				<equipment
-					slot="Body"
-					id="Item.nordic_hauberk" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
+					id="Item.sturgia_axe_3_t3" />
 				<equipment
 					slot="Head"
-					id="Item.nordic_fur_cap" />
-				<equipment
-					slot="Cape"
-					id="Item.bearskin" />
-				<equipment
-					slot="Gloves"
-					id="Item.highland_gloves" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.heavy_round_shield" />
-				<equipment
-					slot="Item1"
-					id="Item.northern_throwing_axe_1_t1" />
-				<equipment
-					slot="Item2"
-					id="Item.nord_sword_2_t3" />
-				<equipment
-					slot="Item3"
-					id="Item.naval_one_handed_axe_t1" />
+					id="Item.nasal_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.sturgian_chainmale_shortsleeve" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 诺德资深长弓手 -->
+	<NPCCharacter
+		id="nord_t3_veteran_longbowman"
+		default_group="Ranged"
+		level="16"
+		name="{=nord_t3_veteran_longbowman}诺德资深长弓手"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="80" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="45" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="10" />
+			<skill
+				id="Bow"
+				value="130" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="0" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
 				<equipment
-					slot="Leg"
-					id="Item.strapped_mail_chausses" />
+					slot="Item0"
+					id="Item.woodland_longbow" />
+				<equipment
+					slot="Item1"
+					id="Item.bodkin_arrows_a" />
+				<equipment
+					slot="Item2"
+					id="Item.sturgia_axe_2_t2" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.heavy_nordic_tunic" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 诺德贵胄之子 -->
+	<NPCCharacter
+		id="nord_noble_t1_scion"
+		default_group="Infantry"
+		level="6"
+		name="{=nord_noble_t1_scion}诺德贵胄之子"
+		occupation="Soldier"
+		is_basic_troop="true"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="90" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_axe_2_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_leather_cap" />
+				<equipment
+					slot="Body"
+					id="Item.northern_leather_vest" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 盾卫 -->
+	<NPCCharacter
+		id="nord_noble_t2_shield_guard"
+		default_group="Infantry"
+		level="11"
+		name="{=nord_noble_t2_shield_guard}盾卫"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="90" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="120" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="50" />
+			<skill
+				id="Bow"
+				value="30" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="60" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_axe_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasalhelm_over_leather" />
+				<equipment
+					slot="Body"
+					id="Item.sturgian_chainmale_shortsleeve" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 百战盾卫 -->
+	<NPCCharacter
+		id="nord_noble_t3_veteran_shield_guard"
+		default_group="Infantry"
+		level="16"
+		name="{=nord_noble_t3_veteran_shield_guard}百战盾卫"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="110" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="150" />
+			<skill
+				id="TwoHanded"
+				value="60" />
+			<skill
+				id="Polearm"
+				value="60" />
+			<skill
+				id="Bow"
+				value="35" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="70" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_axe_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_round_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.nordic_hauberk" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 先锋盾卫 -->
+	<NPCCharacter
+		id="nord_noble_t4_vanguard_shield_guard"
+		default_group="Infantry"
+		level="21"
+		name="{=nord_noble_t4_vanguard_shield_guard}先锋盾卫"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="130" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="180" />
+			<skill
+				id="TwoHanded"
+				value="70" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="80" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_sword_4_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_round_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.decorated_nordic_hauberk" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 首领亲选 -->
+	<NPCCharacter
+		id="nord_noble_t5_chosen_shield_guard"
+		default_group="Infantry"
+		level="26"
+		name="{=nord_noble_t5_chosen_shield_guard}首领亲选"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="150" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="220" />
+			<skill
+				id="TwoHanded"
+				value="90" />
+			<skill
+				id="Polearm"
+				value="80" />
+			<skill
+				id="Bow"
+				value="40" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="90" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_sword_4_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_round_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.sturgian_fortified_armor" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 犬神侍从 -->
+	<NPCCharacter
+		id="nord_noble_t2_hound_attendant"
+		default_group="Infantry"
+		level="11"
+		name="{=nord_noble_t2_hound_attendant}犬神侍从"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="90" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="30" />
+			<skill
+				id="TwoHanded"
+				value="120" />
+			<skill
+				id="Polearm"
+				value="30" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="30" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.black_heart_2haxe_t3" />
+				<equipment
+					slot="Head"
+					id="Item.nasalhelm_over_leather" />
+				<equipment
+					slot="Body"
+					id="Item.heavy_nordic_tunic" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 犬神眷徒 -->
+	<NPCCharacter
+		id="nord_noble_t3_hound_devotee"
+		default_group="Infantry"
+		level="16"
+		name="{=nord_noble_t3_hound_devotee}犬神眷徒"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="110" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="35" />
+			<skill
+				id="TwoHanded"
+				value="160" />
+			<skill
+				id="Polearm"
+				value="35" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="35" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_2haxe_1_t4" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.nordic_hauberk" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 犬神狂信者 -->
+	<NPCCharacter
+		id="nord_noble_t4_hound_zealot"
+		default_group="Infantry"
+		level="21"
+		name="{=nord_noble_t4_hound_zealot}犬神狂信者"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="130" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="40" />
+			<skill
+				id="TwoHanded"
+				value="200" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="40" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.avalanche_2haxe" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.decorated_nordic_hauberk" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 犬神神选 -->
+	<NPCCharacter
+		id="nord_noble_t5_hound_chosen"
+		default_group="Infantry"
+		level="26"
+		name="{=nord_noble_t5_hound_chosen}犬神神选"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="150" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="45" />
+			<skill
+				id="TwoHanded"
+				value="240" />
+			<skill
+				id="Polearm"
+				value="45" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="45" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_2haxe_2_t5" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.sturgian_fortified_armor" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 龙船战士 -->
+	<NPCCharacter
+		id="nord_noble_t2_longship_warrior"
+		default_group="Infantry"
+		level="11"
+		name="{=nord_noble_t2_longship_warrior}龙船战士"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="95" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="120" />
+			<skill
+				id="TwoHanded"
+				value="40" />
+			<skill
+				id="Polearm"
+				value="30" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="90" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_axe_2_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.northern_throwing_axe_1_t1" />
 				<equipment
 					slot="Head"
 					id="Item.nordic_fur_cap" />
 				<equipment
-					slot="Cape"
-					id="Item.armored_bearskin" />
-				<equipment
-					slot="Gloves"
-					id="Item.guarded_armwraps" />
+					slot="Body"
+					id="Item.heavy_nordic_tunic" />
 			</EquipmentRoster>
-			<EquipmentSet
-				id="nord_troop_civilian_template_t2"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-</NPCCharacters>
 
+	<!-- 龙船突击者 -->
+	<NPCCharacter
+		id="nord_noble_t3_longship_raider"
+		default_group="Infantry"
+		level="16"
+		name="{=nord_noble_t3_longship_raider}龙船突击者"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="115" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="150" />
+			<skill
+				id="TwoHanded"
+				value="50" />
+			<skill
+				id="Polearm"
+				value="35" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="120" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_axe_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_round_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.northern_throwing_axe_1_t1" />
+				<equipment
+					slot="Head"
+					id="Item.nasal_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.nordic_hauberk" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 龙船先锋 -->
+	<NPCCharacter
+		id="nord_noble_t4_longship_vanguard"
+		default_group="Infantry"
+		level="21"
+		name="{=nord_noble_t4_longship_vanguard}龙船先锋"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="135" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="180" />
+			<skill
+				id="TwoHanded"
+				value="60" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="160" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_axe_3_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_round_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.northern_throwing_axe_1_t1" />
+				<equipment
+					slot="Item3"
+					id="Item.northern_throwing_axe_1_t1" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.decorated_nordic_hauberk" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 龙船冠军 -->
+	<NPCCharacter
+		id="nord_noble_t5_longship_champion"
+		default_group="Infantry"
+		level="26"
+		name="{=nord_noble_t5_longship_champion}龙船冠军"
+		occupation="Soldier"
+		culture="Culture.nord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_nord" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="150" />
+			<skill
+				id="Riding"
+				value="0" />
+			<skill
+				id="OneHanded"
+				value="220" />
+			<skill
+				id="TwoHanded"
+				value="70" />
+			<skill
+				id="Polearm"
+				value="40" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="200" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.sturgia_sword_4_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.heavy_round_shield" />
+				<equipment
+					slot="Item2"
+					id="Item.northern_throwing_axe_1_t1" />
+				<equipment
+					slot="Item3"
+					id="Item.northern_throwing_axe_1_t1" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_helmet" />
+				<equipment
+					slot="Body"
+					id="Item.sturgian_fortified_armor" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+</NPCCharacters>

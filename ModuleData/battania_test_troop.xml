@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- Battania Test Troop - Minimal Test Unit -->
+	<NPCCharacter
+		id="battania_test_troop"
+		default_group="Infantry"
+		level="6"
+		name="{=battania_test_troop}Battania Test Troop"
+		occupation="Soldier"
+		is_basic_troop="true"
+		culture="Culture.battania">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_battania" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="20" />
+			<skill
+				id="Riding"
+				value="5" />
+			<skill
+				id="OneHanded"
+				value="20" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="20" />
+			<skill
+				id="Bow"
+				value="10" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_test_t2_infantry" />
+			<upgrade_target
+				id="NPCCharacter.battania_test_ranged" />
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.peasant_hatchet_1_t1" />
+				<equipment
+					slot="Body"
+					id="Item.battania_civil_a" />
+				<equipment
+					slot="Leg"
+					id="Item.highland_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+</NPCCharacters>

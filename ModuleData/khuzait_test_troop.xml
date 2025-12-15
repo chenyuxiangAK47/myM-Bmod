@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- Khuzait Test Troop - Minimal Test Unit -->
+	<NPCCharacter
+		id="khuzait_test_troop"
+		default_group="Infantry"
+		level="6"
+		name="{=khuzait_test_troop}Khuzait Test Troop"
+		occupation="Soldier"
+		is_basic_troop="true"
+		culture="Culture.khuzait">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="20" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="20" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="15" />
+			<skill
+				id="Bow"
+				value="20" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_test_t2_infantry" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_test_ranged" />
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.simple_sabre_sword_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.tribal_steppe_shield" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.leather_shoes" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+</NPCCharacters>

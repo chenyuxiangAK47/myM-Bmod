@@ -9,19 +9,22 @@
 		<DependedModule Id="Native"/>
 		<DependedModule Id="SandBoxCore"/>
 		<DependedModule Id="Sandbox"/>
+		<DependedModule Id="CustomBattle"/>
 		<DependedModule Id="StoryMode"/>
-		<DependedModule Id="NavalDLC" Optional="true"/>
+		<DependedModule Id="NavalDLC" Optional="false"/>
 	</DependedModules>
 	<ModulesToLoadAfterThis>
 		<Module Id="WarlordsBattlefield"/>
-		<Module Id="NavalDLC"/>
 	</ModulesToLoadAfterThis>
 	<!-- SubModuleClass暂时注释，等C#代码编译成DLL后再启用 -->
 	<!-- <SubModuleClass>NordThrowingAxeMod.WelcomeMessageSubModule</SubModuleClass> -->
 	<Xmls>
-		<!-- 隐藏所有原版兵种（使用DeReMilitari方式，不删除而是隐藏） -->
+		<!-- ============================================ -->
+		<!-- Test Troops - Minimal Test Units -->
+		<!-- ============================================ -->
+		<!-- Nord Test Troop -->
 		<XmlNode>
-			<XmlName id="NPCCharacters" path="hide_old_troops"/>
+			<XmlName id="NPCCharacters" path="nord_test_troop"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -30,6 +33,341 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
+		<!-- Imperial Test Troop -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="imperial_test_troop"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Battania Test Troop -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="battania_test_troop"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Sturgia Test Troop -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="sturgia_test_troop"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Vlandia Test Troop -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="vlandia_test_troop"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Khuzait Test Troop -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="khuzait_test_troop"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Aserai Test Troop -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="aserai_test_troop"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		
+		<!-- ============================================ -->
+		<!-- Test T2 Infantry Units - Upgrade Targets -->
+		<!-- ============================================ -->
+		<!-- Nord Test T2 Infantry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="nord_test_t2_infantry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Imperial Test T2 Infantry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="imperial_test_t2_infantry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Battania Test T2 Infantry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="battania_test_t2_infantry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Sturgia Test T2 Infantry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="sturgia_test_t2_infantry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Vlandia Test T2 Infantry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="vlandia_test_t2_infantry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Khuzait Test T2 Infantry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="khuzait_test_t2_infantry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Aserai Test T2 Infantry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="aserai_test_t2_infantry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		
+		<!-- ============================================ -->
+		<!-- Test Ranged Units -->
+		<!-- ============================================ -->
+		<!-- Nord Test Ranged -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="nord_test_ranged"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Imperial Test Ranged -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="imperial_test_ranged"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Battania Test Ranged -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="battania_test_ranged"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Sturgia Test Ranged -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="sturgia_test_ranged"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Vlandia Test Ranged -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="vlandia_test_ranged"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Khuzait Test Ranged -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="khuzait_test_ranged"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Aserai Test Ranged -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="aserai_test_ranged"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		
+		<!-- ============================================ -->
+		<!-- Test Cavalry Units -->
+		<!-- ============================================ -->
+		<!-- Nord Test Cavalry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="nord_test_cavalry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Imperial Test Cavalry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="imperial_test_cavalry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Battania Test Cavalry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="battania_test_cavalry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Sturgia Test Cavalry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="sturgia_test_cavalry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Vlandia Test Cavalry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="vlandia_test_cavalry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Khuzait Test Cavalry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="khuzait_test_cavalry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		<!-- Aserai Test Cavalry -->
+		<XmlNode>
+			<XmlName id="NPCCharacters" path="aserai_test_cavalry"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode>
+		
+		<!-- ============================================ -->
+		<!-- 以下内容已注释，仅用于测试 -->
+		<!-- ============================================ -->
+		<!-- 不再隐藏原版兵种，而是通过XSLT替换升级路径来取代它们 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="hide_old_troops"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- 隐藏旧Nord兵种（按照DRM方式，使用XML包含所有必需属性） -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="nord_hide_old_troops"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
 		<!-- 新Nord兵种定义 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="nord_troops_new"/>
@@ -42,7 +380,7 @@
 			</IncludedGameTypes>
 		</XmlNode>
 		<!-- 修改农民升级路径 -->
-		<XmlNode>
+		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="nord_upgrade_paths" type="XSLT"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
@@ -51,10 +389,10 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode>
-		<!-- 修改Nord文化的基础兵种设置（取代招募） -->
-		<XmlNode>
-			<XmlName id="SPCultures" path="nord_culture_change" type="XSLT"/>
+		</XmlNode> -->
+		<!-- 修改Nord文化的基础兵种设置（按照DRM方式，使用XML而不是XSLT） -->
+		<!-- <XmlNode>
+			<XmlName id="SPCultures" path="nord_culture_setting"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -62,7 +400,18 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode>
+		</XmlNode> -->
+		<!-- 删除旧Sturgia兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="sturgia_replace_old_troops" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
 		<!-- 新Sturgia兵种定义 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="sturgia_troops_new"/>
@@ -74,6 +423,17 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
+		<!-- 删除旧Vlandia兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="vlandia_replace_old_troops" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
 		<!-- 新Vlandia兵种定义 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="vlandia_troops_new"/>
@@ -85,6 +445,17 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
+		<!-- 删除旧Battania兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="battania_replace_old_troops" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
 		<!-- 新Battania兵种定义 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="battania_troops_new"/>
@@ -96,6 +467,17 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
+		<!-- 删除旧Khuzait兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="khuzait_replace_old_troops" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
 		<!-- 新Khuzait兵种定义 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="khuzait_troops_new"/>
@@ -107,6 +489,17 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
+		<!-- 删除旧Aserai兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="aserai_replace_old_troops" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
 		<!-- 新Aserai兵种定义 -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="aserai_troops_new"/>
@@ -118,7 +511,7 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
-		<!-- 新Imperial兵种定义 -->
+		<!-- 新Imperial兵种定义（直接复制CJOverhaul的兵种） -->
 		<XmlNode>
 			<XmlName id="NPCCharacters" path="imperial_troops_new"/>
 			<IncludedGameTypes>
@@ -129,118 +522,8 @@
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
 		</XmlNode>
-		<!-- Sturgia农民升级路径 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="sturgia_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Sturgia文化基础兵种 -->
-		<XmlNode>
-			<XmlName id="SPCultures" path="sturgia_culture_change" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Vlandia农民升级路径 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="vlandia_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Vlandia文化基础兵种 -->
-		<XmlNode>
-			<XmlName id="SPCultures" path="vlandia_culture_change" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Battania农民升级路径 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="battania_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Battania文化基础兵种 -->
-		<XmlNode>
-			<XmlName id="SPCultures" path="battania_culture_change" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Khuzait农民升级路径 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="khuzait_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Khuzait文化基础兵种 -->
-		<XmlNode>
-			<XmlName id="SPCultures" path="khuzait_culture_change" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Aserai农民升级路径 -->
-		<XmlNode>
-			<XmlName id="NPCCharacters" path="aserai_upgrade_paths" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Aserai文化基础兵种 -->
-		<XmlNode>
-			<XmlName id="SPCultures" path="aserai_culture_change" type="XSLT"/>
-			<IncludedGameTypes>
-				<GameType value="Campaign"/>
-				<GameType value="CampaignStoryMode"/>
-				<GameType value="Sandbox"/>
-				<GameType value="CustomGame"/>
-				<GameType value="EditorGame"/>
-			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Imperial农民升级路径 -->
-		<XmlNode>
+		<!-- Imperial农民升级路径（按照CJOverhaul方式） -->
+		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="imperial_upgrade_paths" type="XSLT"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
@@ -249,10 +532,10 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode>
-		<!-- Imperial文化基础兵种 -->
-		<XmlNode>
-			<XmlName id="SPCultures" path="imperial_culture_change" type="XSLT"/>
+		</XmlNode> -->
+		<!-- Imperial隐藏旧兵种（按照DRM方式，使用XML包含所有必需属性） -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="imperial_hide_old_troops"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -260,9 +543,130 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode>
+		</XmlNode> -->
+		<!-- Imperial文化基础兵种（按照DRM方式，使用XML而不是XSLT） -->
+		<!-- <XmlNode>
+			<XmlName id="SPCultures" path="imperial_culture_setting"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Sturgia农民升级路径 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="sturgia_upgrade_paths" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Sturgia文化基础兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="SPCultures" path="sturgia_culture_change" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Vlandia农民升级路径 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="vlandia_upgrade_paths" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Vlandia文化基础兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="SPCultures" path="vlandia_culture_change" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Battania农民升级路径 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="battania_upgrade_paths" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Battania文化基础兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="SPCultures" path="battania_culture_change" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Khuzait农民升级路径 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="khuzait_upgrade_paths" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Khuzait文化基础兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="SPCultures" path="khuzait_culture_change" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Aserai农民升级路径 -->
+		<!-- <XmlNode>
+			<XmlName id="NPCCharacters" path="aserai_upgrade_paths" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
+		<!-- Aserai文化基础兵种 -->
+		<!-- <XmlNode>
+			<XmlName id="SPCultures" path="aserai_culture_change" type="XSLT"/>
+			<IncludedGameTypes>
+				<GameType value="Campaign"/>
+				<GameType value="CampaignStoryMode"/>
+				<GameType value="Sandbox"/>
+				<GameType value="CustomGame"/>
+				<GameType value="EditorGame"/>
+			</IncludedGameTypes>
+		</XmlNode> -->
 		<!-- 旧装备替换（保留兼容性） -->
-		<XmlNode>
+		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="nord_throwing_axe" type="XSLT"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
@@ -271,6 +675,6 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode>
+		</XmlNode> -->
 	</Xmls>
 </Module>

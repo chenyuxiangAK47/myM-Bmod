@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
 	<!-- ================================================= -->
-	<!-- ==================== TIER 1 ==================== -->
+	<!-- =============== Vlandia Troops =============== -->
 	<!-- ================================================= -->
-	
-	<!-- T1: Vlandian Serf Levy（瓦兰迪亚农奴征召兵） -->
+
+	<!-- 瓦兰农奴征召兵 -->
 	<NPCCharacter
 		id="vlandia_t1_serf_levy"
 		default_group="Infantry"
 		level="6"
-		name="{=VlandianSerfLevy}瓦兰步兵"
+		name="{=vlandia_t1_serf_levy}瓦兰农奴征召兵"
 		occupation="Soldier"
 		is_basic_troop="true"
 		culture="Culture.vlandia">
@@ -20,19 +20,19 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="15" />
+				value="20" />
 			<skill
 				id="Riding"
+				value="5" />
+			<skill
+				id="OneHanded"
+				value="20" />
+			<skill
+				id="TwoHanded"
 				value="10" />
 			<skill
-				id="OneHanded"
-				value="15" />
-			<skill
-				id="TwoHanded"
-				value="8" />
-			<skill
 				id="Polearm"
-				value="18" />
+				value="20" />
 			<skill
 				id="Bow"
 				value="5" />
@@ -44,457 +44,34 @@
 				value="5" />
 		</skills>
 		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.vlandia_t2_peasant_archer" />
-			<upgrade_target
-				id="NPCCharacter.vlandia_t2_foot_peasant" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 农奴征召兵：昨天是农奴，今天被迫上战场，装备杂乱但起码是个兵 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.vlandia_sword_1_t2" />
+					id="Item.peasant_hatchet_1_t1" />
 				<equipment
 					slot="Item1"
-					id="Item.western_spear_1_t2" />
+					id="Item.strapped_round_shield" />
 				<equipment
 					slot="Head"
-					id="Item.arming_coif" />
+					id="Item.head_wrapping" />
 				<equipment
 					slot="Body"
-					id="Item.aketon" />
+					id="Item.sackcloth_tunic" />
 				<equipment
-					slot="Leg"
-					id="Item.empire_horseman_boots" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.empire_sword_1_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.oval_shield" />
-				<equipment
-					slot="Head"
-					id="Item.open_padded_coif" />
-				<equipment
-					slot="Body"
-					id="Item.aketon" />
-				<equipment
-					slot="Leg"
-					id="Item.empire_horseman_boots" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.western_spear_1_t2" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_mace_1_t2" />
-				<equipment
-					slot="Head"
-					id="Item.leather_cap" />
-				<equipment
-					slot="Body"
-					id="Item.aketon" />
-				<equipment
-					slot="Leg"
-					id="Item.empire_horseman_boots" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="vlandia_troop_civilian_template_t1"
-				civilian="true" />
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- ================================================= -->
-	<!-- ==================== 远程线 ===================== -->
-	<!-- ================================================= -->
-	
-	<!-- T2: Vlandian Peasant Archer（瓦兰迪亚农弓兵） -->
-	<NPCCharacter
-		id="vlandia_t2_peasant_archer"
-		default_group="Ranged"
-		level="11"
-		name="{=VlandianPeasantArcher}瓦兰长弓手"
-		occupation="Soldier"
-		culture="Culture.vlandia">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_vlandia" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="40" />
-			<skill
-				id="Riding"
-				value="10" />
-			<skill
-				id="OneHanded"
-				value="35" />
-			<skill
-				id="TwoHanded"
-				value="20" />
-			<skill
-				id="Polearm"
-				value="30" />
-			<skill
-				id="Bow"
-				value="50" />
-			<skill
-				id="Crossbow"
-				value="30" />
-			<skill
-				id="Throwing"
-				value="20" />
-		</skills>
-		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.vlandia_t3_yeoman_archer" />
-			<upgrade_target
-				id="NPCCharacter.vlandia_t3_crossbow_levy" />
-		</upgrade_targets>
-		<Equipments>
-			<!-- 农弓兵：基础弓+双箭袋+剑+盾（参考原版巴丹尼亚弓箭民兵） -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.lowland_longbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_sword_1_t2" />
-				<equipment
-					slot="Head"
-					id="Item.padded_cap" />
-				<equipment
-					slot="Body"
-					id="Item.aketon" />
-				<equipment
-					slot="Leg"
-					id="Item.empire_horseman_boots" />
-				<equipment
-					slot="Gloves"
-					id="Item.buttoned_leather_bracers" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.lowland_longbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_sword_1_t2" />
-				<equipment
-					slot="Head"
-					id="Item.open_padded_coif" />
-				<equipment
-					slot="Body"
-					id="Item.aketon" />
-				<equipment
-					slot="Leg"
-					id="Item.empire_horseman_boots" />
-			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.lowland_longbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_sword_1_t2" />
-				<equipment
-					slot="Head"
-					id="Item.padded_cap" />
-				<equipment
-					slot="Body"
-					id="Item.aketon" />
-				<equipment
-					slot="Leg"
-					id="Item.empire_horseman_boots" />
-				<equipment
-					slot="Gloves"
-					id="Item.buttoned_leather_bracers" />
+					slot="Cape"
+					id="Item.hood" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
-	
-	<!-- T3: Vlandian Yeoman Archer（瓦兰迪亚自耕农长弓手）- 英格兰风格 -->
-	<NPCCharacter
-		id="vlandia_t3_yeoman_archer"
-		default_group="Ranged"
-		level="16"
-		name="{=VlandianYeomanArcher}瓦兰长弓手"
-		occupation="Soldier"
-		culture="Culture.vlandia">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_vlandia" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="70" />
-			<skill
-				id="Riding"
-				value="15" />
-			<skill
-				id="OneHanded"
-				value="50" />
-			<skill
-				id="TwoHanded"
-				value="30" />
-			<skill
-				id="Polearm"
-				value="40" />
-			<skill
-				id="Bow"
-				value="100" />
-			<skill
-				id="Crossbow"
-				value="20" />
-			<skill
-				id="Throwing"
-				value="30" />
-		</skills>
-		<upgrade_targets>
-		</upgrade_targets>
-		<Equipments>
-			<!-- 长弓手：长弓+双箭袋+剑+盾（参考原版巴丹尼亚弓箭民兵） -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.longbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Head"
-					id="Item.arming_coif" />
-				<equipment
-					slot="Body"
-					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.longbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Head"
-					id="Item.open_padded_coif" />
-				<equipment
-					slot="Body"
-					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.longbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item2"
-					id="Item.bodkin_arrows" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Head"
-					id="Item.arming_coif" />
-				<equipment
-					slot="Body"
-					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-			</EquipmentRoster>
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- T3: Vlandian Crossbow Levy（瓦兰迪亚弩兵征召队）- 法兰西风格 -->
-	<NPCCharacter
-		id="vlandia_t3_crossbow_levy"
-		default_group="Ranged"
-		level="16"
-		name="{=VlandianCrossbowLevy}瓦兰弩兵"
-		occupation="Soldier"
-		culture="Culture.vlandia">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_vlandia" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="60" />
-			<skill
-				id="Riding"
-				value="15" />
-			<skill
-				id="OneHanded"
-				value="50" />
-			<skill
-				id="TwoHanded"
-				value="30" />
-			<skill
-				id="Polearm"
-				value="40" />
-			<skill
-				id="Bow"
-				value="20" />
-			<skill
-				id="Crossbow"
-				value="90" />
-			<skill
-				id="Throwing"
-				value="30" />
-		</skills>
-		<upgrade_targets>
-		</upgrade_targets>
-		<Equipments>
-			<!-- 弩兵：弩+弩箭+剑+盾，整齐装备 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.light_crossbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bolts" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Item3"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Head"
-					id="Item.peaked_helmet_over_laced_coif" />
-				<equipment
-					slot="Body"
-					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.light_crossbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bolts" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Item3"
-					id="Item.heater_shield_with_cutout" />
-				<equipment
-					slot="Head"
-					id="Item.arming_coif" />
-				<equipment
-					slot="Body"
-					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.light_crossbow" />
-				<equipment
-					slot="Item1"
-					id="Item.bolts" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Item3"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Head"
-					id="Item.peaked_helmet_over_laced_coif" />
-				<equipment
-					slot="Body"
-					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-			</EquipmentRoster>
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- ================================================= -->
-	<!-- ==================== 近战线 ===================== -->
-	<!-- ================================================= -->
-	
-	<!-- T2: Vlandian Foot Peasant（瓦兰迪亚农奴步兵） -->
+
+	<!-- 瓦兰农奴剑盾兵 -->
 	<NPCCharacter
 		id="vlandia_t2_foot_peasant"
 		default_group="Infantry"
 		level="11"
-		name="{=VlandianFootPeasant}瓦兰长矛兵"
+		name="{=vlandia_t2_foot_peasant}瓦兰农奴剑盾兵"
 		occupation="Soldier"
 		culture="Culture.vlandia">
 		<face>
@@ -504,83 +81,110 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="30" />
+				value="40" />
 			<skill
 				id="Riding"
-				value="20" />
+				value="10" />
 			<skill
 				id="OneHanded"
-				value="35" />
+				value="55" />
 			<skill
 				id="TwoHanded"
-				value="15" />
+				value="20" />
 			<skill
 				id="Polearm"
-				value="35" />
+				value="25" />
 			<skill
 				id="Bow"
 				value="5" />
 			<skill
 				id="Crossbow"
-				value="18" />
+				value="10" />
 			<skill
 				id="Throwing"
-				value="12" />
+				value="10" />
 		</skills>
 		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.vlandia_t3_billman" />
-			<upgrade_target
-				id="NPCCharacter.vlandia_t3_footman" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 农奴步兵：破破烂烂的长枪，无盾无单手 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.western_spear_1_t2" />
+					id="Item.vlandia_sword_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.strapped_round_shield" />
+				<equipment
+					slot="Head"
+					id="Item.kettle_hat_over_padded_cloth" />
 				<equipment
 					slot="Body"
 					id="Item.aketon" />
-				<equipment
-					slot="Leg"
-					id="Item.empire_horseman_boots" />
-				<equipment
-					slot="Head"
-					id="Item.open_padded_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.buttoned_leather_bracers" />
 			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.western_spear_1_t2" />
-				<equipment
-					slot="Body"
-					id="Item.aketon" />
-				<equipment
-					slot="Leg"
-					id="Item.empire_horseman_boots" />
-				<equipment
-					slot="Head"
-					id="Item.arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.buttoned_leather_bracers" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="vlandia_troop_civilian_template_t1"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-	
-	<!-- T3: Vlandian Billman（瓦兰迪亚戟兵）- 英格兰反骑兵特色 -->
+
+	<!-- 瓦兰农奴长矛兵 -->
 	<NPCCharacter
-		id="vlandia_t3_billman"
+		id="vlandia_t2_serf_spearman"
+		default_group="Infantry"
+		level="11"
+		name="{=vlandia_t2_serf_spearman}瓦兰农奴长矛兵"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="40" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="10" />
+			<skill
+				id="TwoHanded"
+				value="15" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="0" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="0" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.western_spear_2_t2" />
+				<equipment
+					slot="Head"
+					id="Item.head_wrapping" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰正式步兵 -->
+	<NPCCharacter
+		id="vlandia_t3_footman"
 		default_group="Infantry"
 		level="16"
-		name="{=VlandianBillman}瓦兰长戟兵"
+		name="{=vlandia_t3_footman}瓦兰正式步兵"
 		occupation="Soldier"
 		culture="Culture.vlandia">
 		<face>
@@ -593,76 +197,107 @@
 				value="70" />
 			<skill
 				id="Riding"
-				value="20" />
+				value="15" />
 			<skill
 				id="OneHanded"
-				value="50" />
+				value="85" />
 			<skill
 				id="TwoHanded"
-				value="40" />
+				value="25" />
 			<skill
 				id="Polearm"
-				value="90" />
+				value="20" />
 			<skill
 				id="Bow"
 				value="10" />
 			<skill
 				id="Crossbow"
-				value="30" />
+				value="10" />
 			<skill
 				id="Throwing"
-				value="30" />
+				value="10" />
 		</skills>
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 戟兵：斧枪和钩镰混用，无盾无单手 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.vlandia_polearm_1_t5" />
+					id="Item.vlandia_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.studded_round_shield" />
 				<equipment
 					slot="Head"
-					id="Item.peaked_helmet_over_laced_coif" />
+					id="Item.nasal_cervelliere_over_padded_cap" />
 				<equipment
 					slot="Body"
 					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
 			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰农奴戟兵 -->
+	<NPCCharacter
+		id="vlandia_t3_billman"
+		default_group="Infantry"
+		level="16"
+		name="{=vlandia_t3_billman}瓦兰农奴戟兵"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="10" />
+			<skill
+				id="TwoHanded"
+				value="35" />
+			<skill
+				id="Polearm"
+				value="110" />
+			<skill
+				id="Bow"
+				value="0" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="0" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
 					id="Item.billhook_polearm_t2" />
 				<equipment
 					slot="Head"
-					id="Item.arming_coif" />
+					id="Item.nasal_cervelliere_over_padded_cap" />
 				<equipment
 					slot="Body"
 					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
 			</EquipmentRoster>
-			<EquipmentSet
-				id="vlandia_troop_civilian_template_t1"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-	
-	<!-- T3: Vlandian Footman（瓦兰迪亚步兵）- 可升级到T4骑兵 -->
+
+	<!-- 瓦兰农奴长弓手 -->
 	<NPCCharacter
-		id="vlandia_t3_footman"
-		default_group="Infantry"
-		level="16"
-		name="{=VlandianFootman}瓦兰步兵"
+		id="vlandia_t2_peasant_archer"
+		default_group="Ranged"
+		level="11"
+		name="{=vlandia_t2_peasant_archer}瓦兰农奴长弓手"
 		occupation="Soldier"
 		culture="Culture.vlandia">
 		<face>
@@ -672,16 +307,523 @@
 		<skills>
 			<skill
 				id="Athletics"
-				value="50" />
+				value="40" />
 			<skill
 				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="20" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="10" />
+			<skill
+				id="Bow"
 				value="60" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.hunting_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Item2"
+					id="Item.peasant_hatchet_1_t1" />
+				<equipment
+					slot="Head"
+					id="Item.head_wrapping" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰农奴弩兵 -->
+	<NPCCharacter
+		id="vlandia_t2_serf_crossbowman"
+		default_group="Ranged"
+		level="11"
+		name="{=vlandia_t2_serf_crossbowman}瓦兰农奴弩兵"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="40" />
+			<skill
+				id="Riding"
+				value="10" />
+			<skill
+				id="OneHanded"
+				value="20" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="10" />
+			<skill
+				id="Bow"
+				value="0" />
+			<skill
+				id="Crossbow"
+				value="60" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.crossbow_h" />
+				<equipment
+					slot="Item1"
+					id="Item.bolt_d" />
+				<equipment
+					slot="Item2"
+					id="Item.peasant_hatchet_1_t1" />
+				<equipment
+					slot="Head"
+					id="Item.head_wrapping" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰农奴熟练弓手 -->
+	<NPCCharacter
+		id="vlandia_t3_yeoman_archer"
+		default_group="Ranged"
+		level="16"
+		name="{=vlandia_t3_yeoman_archer}瓦兰农奴熟练弓手"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="70" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="30" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="10" />
+			<skill
+				id="Bow"
+				value="110" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.mountain_hunting_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.bodkin_arrows_a" />
+				<equipment
+					slot="Item2"
+					id="Item.peasant_hatchet_1_t1" />
+				<equipment
+					slot="Head"
+					id="Item.head_wrapping" />
+				<equipment
+					slot="Body"
+					id="Item.aketon" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰农奴熟练弩兵 -->
+	<NPCCharacter
+		id="vlandia_t3_crossbow_levy"
+		default_group="Ranged"
+		level="16"
+		name="{=vlandia_t3_crossbow_levy}瓦兰农奴熟练弩兵"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="60" />
+			<skill
+				id="Riding"
+				value="15" />
+			<skill
+				id="OneHanded"
+				value="30" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="10" />
+			<skill
+				id="Bow"
+				value="0" />
+			<skill
+				id="Crossbow"
+				value="110" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.crossbow_a" />
+				<equipment
+					slot="Item1"
+					id="Item.bolt_d" />
+				<equipment
+					slot="Item2"
+					id="Item.peasant_hatchet_1_t1" />
+				<equipment
+					slot="Head"
+					id="Item.head_wrapping" />
+				<equipment
+					slot="Body"
+					id="Item.aketon" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰贵族侍从 -->
+	<NPCCharacter
+		id="vlandia_noble_t1_page"
+		default_group="Infantry"
+		level="6"
+		name="{=vlandia_noble_t1_page}瓦兰贵族侍从"
+		occupation="Soldier"
+		is_basic_troop="true"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="30" />
+			<skill
+				id="Riding"
+				value="30" />
+			<skill
+				id="OneHanded"
+				value="45" />
+			<skill
+				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="25" />
+			<skill
+				id="Bow"
+				value="10" />
+			<skill
+				id="Crossbow"
+				value="10" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.vlandia_sword_2_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.steel_round_shield" />
+				<equipment
+					slot="Head"
+					id="Item.arming_coif" />
+				<equipment
+					slot="Body"
+					id="Item.aketon" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰贵族扈从骑士 -->
+	<NPCCharacter
+		id="vlandia_noble_t2_squire"
+		default_group="Cavalry"
+		level="11"
+		name="{=vlandia_noble_t2_squire}瓦兰贵族扈从骑士"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="30" />
+			<skill
+				id="Riding"
+				value="90" />
 			<skill
 				id="OneHanded"
 				value="60" />
 			<skill
 				id="TwoHanded"
+				value="10" />
+			<skill
+				id="Polearm"
+				value="70" />
+			<skill
+				id="Bow"
+				value="10" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.vlandia_lance_1_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.vlandia_sword_2_t3" />
+				<equipment
+					slot="Item2"
+					id="Item.steel_round_shield" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_vlandia_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.light_harness" />
+				<equipment
+					slot="Head"
+					id="Item.kettle_hat_over_padded_cloth" />
+				<equipment
+					slot="Body"
+					id="Item.mail_shirt" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰骑士 -->
+	<NPCCharacter
+		id="vlandia_noble_t3_knight"
+		default_group="Cavalry"
+		level="16"
+		name="{=vlandia_noble_t3_knight}瓦兰骑士"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
 				value="35" />
+			<skill
+				id="Riding"
+				value="120" />
+			<skill
+				id="OneHanded"
+				value="90" />
+			<skill
+				id="TwoHanded"
+				value="20" />
+			<skill
+				id="Polearm"
+				value="120" />
+			<skill
+				id="Bow"
+				value="10" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.vlandia_lance_1_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.vlandia_sword_3_t4" />
+				<equipment
+					slot="Item2"
+					id="Item.steel_round_shield" />
+				<equipment
+					slot="Horse"
+					id="Item.t2_vlandia_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.light_harness" />
+				<equipment
+					slot="Head"
+					id="Item.kettle_hat_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.mail_shirt" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰冠军骑士 -->
+	<NPCCharacter
+		id="vlandia_noble_t4_champion_knight"
+		default_group="Cavalry"
+		level="21"
+		name="{=vlandia_noble_t4_champion_knight}瓦兰冠军骑士"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="40" />
+			<skill
+				id="Riding"
+				value="150" />
+			<skill
+				id="OneHanded"
+				value="120" />
+			<skill
+				id="TwoHanded"
+				value="25" />
+			<skill
+				id="Polearm"
+				value="150" />
+			<skill
+				id="Bow"
+				value="10" />
+			<skill
+				id="Crossbow"
+				value="0" />
+			<skill
+				id="Throwing"
+				value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.vlandia_lance_2_t4" />
+				<equipment
+					slot="Item1"
+					id="Item.vlandia_sword_3_t4" />
+				<equipment
+					slot="Item2"
+					id="Item.steel_round_shield" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_vlandia_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.chain_horse_harness" />
+				<equipment
+					slot="Head"
+					id="Item.kettle_hat_over_mail_coif" />
+				<equipment
+					slot="Body"
+					id="Item.coat_of_plates_over_mail" />
+				<equipment
+					slot="Cape"
+					id="Item.noble_pauldron_with_cape" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- 瓦兰领军骑士（步战） -->
+	<NPCCharacter
+		id="vlandia_noble_t5_foot_commander_knight"
+		default_group="Infantry"
+		level="26"
+		name="{=vlandia_noble_t5_foot_commander_knight}瓦兰领军骑士（步战）"
+		occupation="Soldier"
+		culture="Culture.vlandia">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_vlandia" />
+		</face>
+		<skills>
+			<skill
+				id="Athletics"
+				value="140" />
+			<skill
+				id="Riding"
+				value="40" />
+			<skill
+				id="OneHanded"
+				value="140" />
+			<skill
+				id="TwoHanded"
+				value="160" />
 			<skill
 				id="Polearm"
 				value="60" />
@@ -690,80 +832,43 @@
 				value="10" />
 			<skill
 				id="Crossbow"
-				value="25" />
+				value="0" />
 			<skill
 				id="Throwing"
-				value="25" />
+				value="10" />
 		</skills>
 		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.vlandia_t4_mounted_serjeant" />
 		</upgrade_targets>
 		<Equipments>
-			<!-- 步兵：矛+盾+剑，整齐装备 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.western_spear_3_t3" />
+					id="Item.northern_2hsword_t4" />
 				<equipment
 					slot="Item1"
-					id="Item.heater_shield_with_cutout" />
+					id="Item.vlandia_sword_3_t4" />
 				<equipment
 					slot="Item2"
-					id="Item.vlandia_sword_2_t3" />
+					id="Item.steel_round_shield" />
 				<equipment
 					slot="Head"
-					id="Item.peaked_helmet_over_laced_coif" />
+					id="Item.full_helm_over_padded_cap" />
 				<equipment
 					slot="Body"
-					id="Item.sleeveless_padded_short_coat" />
+					id="Item.coat_of_plates_over_mail" />
 				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
+					slot="Cape"
+					id="Item.noble_pauldron_with_cape" />
 			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.western_spear_3_t3" />
-				<equipment
-					slot="Item1"
-					id="Item.heater_shield_with_cutout" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_2_t3" />
-				<equipment
-					slot="Head"
-					id="Item.arming_coif" />
-				<equipment
-					slot="Body"
-					id="Item.sleeveless_padded_short_coat" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="vlandia_troop_civilian_template_t1"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-	
-	<!-- ================================================= -->
-	<!-- ==================== 骑兵线 ===================== -->
-	<!-- ================================================= -->
-	
-	<!-- T4: Vlandian Mounted Serjeant（瓦兰迪亚骑乘军士）- 唯一平民T4 -->
+
+	<!-- 瓦兰冠军先锋骑士 -->
 	<NPCCharacter
-		id="vlandia_t4_mounted_serjeant"
+		id="vlandia_noble_t5_champion_vanguard_knight"
 		default_group="Cavalry"
-		level="21"
-		name="{=VlandianMountedSerjeant}瓦兰轻骑兵"
-		upgrade_requires="ItemCategory.horse"
+		level="26"
+		name="{=vlandia_noble_t5_champion_vanguard_knight}瓦兰冠军先锋骑士"
 		occupation="Soldier"
 		culture="Culture.vlandia">
 		<face>
@@ -776,930 +881,56 @@
 				value="50" />
 			<skill
 				id="Riding"
-				value="110" />
-			<skill
-				id="OneHanded"
-				value="75" />
-			<skill
-				id="TwoHanded"
-				value="45" />
-			<skill
-				id="Polearm"
-				value="85" />
-			<skill
-				id="Bow"
-				value="20" />
-			<skill
-				id="Crossbow"
-				value="35" />
-			<skill
-				id="Throwing"
-				value="35" />
-		</skills>
-		<upgrade_targets>
-		</upgrade_targets>
-		<Equipments>
-			<!-- 骑乘军士：长矛+剑+盾+马，整齐精锐装备 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.western_spear_4_t4" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_sword_3_t4" />
-				<equipment
-					slot="Item2"
-					id="Item.heater_shield_with_cutout" />
-				<equipment
-					slot="Head"
-					id="Item.pointed_skullcap_over_laced_coif" />
-				<equipment
-					slot="Body"
-					id="Item.western_mail_shirt" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-				<equipment
-					slot="Horse"
-					id="Item.empire_horse" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.western_harness" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.western_spear_4_t4" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_sword_3_t4" />
-				<equipment
-					slot="Item2"
-					id="Item.heater_shield_with_cutout" />
-				<equipment
-					slot="Head"
-					id="Item.pointed_skullcap_over_laced_coif" />
-				<equipment
-					slot="Body"
-					id="Item.western_mail_shirt" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-				<equipment
-					slot="Horse"
-					id="Item.empire_horse" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.western_harness" />
-			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_sword_3_t4" />
-				<equipment
-					slot="Item1"
-					id="Item.western_spear_4_t4" />
-				<equipment
-					slot="Item2"
-					id="Item.heater_shield_with_cutout" />
-				<equipment
-					slot="Head"
-					id="Item.pointed_skullcap_over_laced_coif" />
-				<equipment
-					slot="Body"
-					id="Item.western_mail_shirt" />
-				<equipment
-					slot="Leg"
-					id="Item.leather_shoes" />
-				<equipment
-					slot="Gloves"
-					id="Item.padded_mitten" />
-				<equipment
-					slot="Horse"
-					id="Item.empire_horse" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.western_harness" />
-			</EquipmentRoster>
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- ================================================= -->
-	<!-- ==================== 贵族骑士线 ================== -->
-	<!-- ================================================= -->
-	
-	<!-- T3: Vlandian Esquire（瓦兰绅士）- 贵族兵起点 -->
-	<NPCCharacter
-		id="vlandia_t3_squire_knight"
-		default_group="Cavalry"
-		level="16"
-		name="{=VlandianEsquire}瓦兰绅士"
-		upgrade_requires="ItemCategory.war_horse"
-		occupation="Soldier"
-		is_basic_troop="true"
-		culture="Culture.vlandia">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_vlandia_noble" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="100" />
-			<skill
-				id="Riding"
-				value="120" />
-			<skill
-				id="OneHanded"
-				value="120" />
-			<skill
-				id="TwoHanded"
-				value="120" />
-			<skill
-				id="Polearm"
-				value="120" />
-			<skill
-				id="Bow"
-				value="30" />
-			<skill
-				id="Crossbow"
-				value="30" />
-			<skill
-				id="Throwing"
-				value="20" />
-		</skills>
-		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.vlandia_t4_chevalier" />
-		</upgrade_targets>
-		<Equipments>
-			<!-- 侍从骑士：顶级装备，骑枪+双手剑+单手剑+盾 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_5_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_1_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_noble_sword_1_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_2_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.visored_helmet_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_mace_3_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_1_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_sword_5_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item2"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- T4: Vlandian Chevalier（瓦兰骑士）- 正式骑士 -->
-	<NPCCharacter
-		id="vlandia_t4_chevalier"
-		default_group="Cavalry"
-		level="21"
-		name="{=VlandianChevalier}瓦兰骑士"
-		upgrade_requires="ItemCategory.war_horse"
-		occupation="Soldier"
-		culture="Culture.vlandia">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_vlandia_noble" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="130" />
-			<skill
-				id="Riding"
-				value="180" />
-			<skill
-				id="OneHanded"
-				value="180" />
-			<skill
-				id="TwoHanded"
-				value="180" />
-			<skill
-				id="Polearm"
-				value="180" />
-			<skill
-				id="Bow"
-				value="40" />
-			<skill
-				id="Crossbow"
-				value="40" />
-			<skill
-				id="Throwing"
-				value="30" />
-		</skills>
-		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.vlandia_t5_champion" />
-		</upgrade_targets>
-		<Equipments>
-			<!-- 瓦兰骑士：装备不变，熟练度提升 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_5_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_1_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_noble_sword_2_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_2_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.visored_helmet_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_mace_3_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_1_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_sword_5_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item2"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- T5: Vlandian Champion（瓦兰冠军骑士）- 熟练度极高 -->
-	<NPCCharacter
-		id="vlandia_t5_champion"
-		default_group="Cavalry"
-		level="26"
-		name="{=VlandianChampion}瓦兰冠军骑士"
-		upgrade_requires="ItemCategory.war_horse"
-		occupation="Soldier"
-		culture="Culture.vlandia">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_vlandia_noble" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="160" />
-			<skill
-				id="Riding"
-				value="220" />
-			<skill
-				id="OneHanded"
-				value="220" />
-			<skill
-				id="TwoHanded"
-				value="220" />
-			<skill
-				id="Polearm"
-				value="220" />
-			<skill
-				id="Bow"
-				value="50" />
-			<skill
-				id="Crossbow"
-				value="50" />
-			<skill
-				id="Throwing"
-				value="40" />
-		</skills>
-		<upgrade_targets>
-			<upgrade_target
-				id="NPCCharacter.vlandia_t6_banneret" />
-			<upgrade_target
-				id="NPCCharacter.vlandia_t6_lord_knight" />
-		</upgrade_targets>
-		<Equipments>
-			<!-- 骑士先锋：装备不变，熟练度极高 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_sword_5_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_1_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_noble_sword_3_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_2_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.visored_helmet_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_mace_3_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_1_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster
-				civilian="true">
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_sword_5_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item2"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- T6: Vlandian Banneret（瓦兰方旗骑士）- 分支1：更精良的骑兵 -->
-	<NPCCharacter
-		id="vlandia_t6_banneret"
-		default_group="Cavalry"
-		level="31"
-		name="{=VlandianBanneret}瓦兰方旗骑士"
-		upgrade_requires="ItemCategory.war_horse"
-		occupation="Soldier"
-		culture="Culture.vlandia">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_vlandia_noble" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
-				value="180" />
-			<skill
-				id="Riding"
-				value="250" />
-			<skill
-				id="OneHanded"
-				value="250" />
-			<skill
-				id="TwoHanded"
-				value="250" />
-			<skill
-				id="Polearm"
-				value="250" />
-			<skill
-				id="Bow"
-				value="60" />
-			<skill
-				id="Crossbow"
-				value="60" />
-			<skill
-				id="Throwing"
-				value="50" />
-		</skills>
-		<upgrade_targets>
-		</upgrade_targets>
-		<Equipments>
-			<!-- 方旗骑士：装备更精良，使用装饰武器 -->
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_noble_sword_4_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_2_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_lance_3_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Item2"
-					id="Item.vlandia_noble_sword_3_t5" />
-				<equipment
-					slot="Item3"
-					id="Item.vlandia_2hsword_2_t5" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-				<equipment
-					slot="Horse"
-					id="Item.noble_horse_western" />
-				<equipment
-					slot="HorseHarness"
-					id="Item.chain_barding" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="vlandia_troop_civilian_template_t2"
-				civilian="true" />
-		</Equipments>
-	</NPCCharacter>
-	
-	<!-- T6: Vlandian Lord Knight（瓦兰领军骑士）- 分支2：步兵领袖 -->
-	<NPCCharacter
-		id="vlandia_t6_lord_knight"
-		default_group="Infantry"
-		level="31"
-		name="{=VlandianLordKnight}瓦兰领军骑士"
-		occupation="Soldier"
-		culture="Culture.vlandia">
-		<face>
-			<face_key_template
-				value="BodyProperty.fighter_vlandia_noble" />
-		</face>
-		<skills>
-			<skill
-				id="Athletics"
 				value="200" />
 			<skill
-				id="Riding"
-				value="80" />
-			<skill
 				id="OneHanded"
-				value="250" />
+				value="160" />
 			<skill
 				id="TwoHanded"
-				value="250" />
+				value="30" />
 			<skill
 				id="Polearm"
-				value="250" />
+				value="220" />
 			<skill
 				id="Bow"
-				value="60" />
+				value="10" />
 			<skill
 				id="Crossbow"
-				value="60" />
+				value="0" />
 			<skill
 				id="Throwing"
-				value="70" />
+				value="10" />
 		</skills>
 		<upgrade_targets>
 		</upgrade_targets>
 		<Equipments>
-			<!-- 领军步战骑士：放弃骑枪，成为步兵领袖，装备双手剑+单手剑+盾 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.vlandia_2hsword_2_t5" />
+					id="Item.vlandia_lance_3_t5" />
 				<equipment
 					slot="Item1"
-					id="Item.vlandia_sword_5_t5" />
+					id="Item.vlandia_sword_3_t4" />
 				<equipment
 					slot="Item2"
-					id="Item.heavy_heater_shield" />
+					id="Item.steel_round_shield" />
+				<equipment
+					slot="Horse"
+					id="Item.t3_vlandia_horse" />
+				<equipment
+					slot="HorseHarness"
+					id="Item.halfchain_barding" />
+				<equipment
+					slot="Head"
+					id="Item.full_helm_over_padded_cap" />
 				<equipment
 					slot="Body"
 					id="Item.coat_of_plates_over_mail" />
 				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_arming_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
 					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
+					id="Item.pauldron_over_scale_armor" />
 			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_2hsword_1_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_noble_sword_1_t5" />
-				<equipment
-					slot="Item2"
-					id="Item.flat_heater_shield" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.visored_helmet_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-			</EquipmentRoster>
-			<EquipmentRoster>
-				<equipment
-					slot="Item0"
-					id="Item.vlandia_2hsword_2_t5" />
-				<equipment
-					slot="Item1"
-					id="Item.vlandia_mace_3_t5" />
-				<equipment
-					slot="Item2"
-					id="Item.heavy_heater_shield" />
-				<equipment
-					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
-				<equipment
-					slot="Leg"
-					id="Item.mail_chausses" />
-				<equipment
-					slot="Head"
-					id="Item.full_helm_over_laced_coif" />
-				<equipment
-					slot="Gloves"
-					id="Item.mail_mitten" />
-				<equipment
-					slot="Cape"
-					id="Item.noble_pauldron_with_cape" />
-			</EquipmentRoster>
-			<EquipmentSet
-				id="vlandia_troop_civilian_template_t2"
-				civilian="true" />
 		</Equipments>
 	</NPCCharacter>
-	
-</NPCCharacters>
 
+</NPCCharacters>
