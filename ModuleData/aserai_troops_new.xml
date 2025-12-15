@@ -68,6 +68,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.eastern_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -131,6 +134,9 @@
 				<equipment
 					slot="Body"
 					id="Item.aserai_armor_02" />
+				<equipment
+					slot="Leg"
+					id="Item.eastern_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -197,6 +203,9 @@
 				<equipment
 					slot="Body"
 					id="Item.aserai_archer_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.eastern_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -330,6 +339,9 @@
 				<equipment
 					slot="Body"
 					id="Item.southern_lamellar_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.eastern_plated_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
