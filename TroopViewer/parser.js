@@ -47,14 +47,25 @@ class TroopParser {
 
     extractTroops(xmlDoc) {
         const troops = [];
-        const npcCharacters = xmlDoc.getElementsByTagName('NPCCharacter');
         
-        // 调试：检查是否找到节点
+        // 尝试多种方式查找 NPCCharacter 节点
+        let npcCharacters = xmlDoc.getElementsByTagName('NPCCharacter');
+        
+        // 如果没找到，尝试使用 querySelectorAll
+        if (npcCharacters.length === 0) {
+            npcCharacters = xmlDoc.querySelectorAll('NPCCharacter');
+        }
+        
+        // 如果还是没找到，尝试查找所有节点
         if (npcCharacters.length === 0) {
             console.warn('未找到NPCCharacter节点');
-            // 尝试查找所有可能的节点
             const allNodes = xmlDoc.getElementsByTagName('*');
-            console.log('XML中的所有节点:', Array.from(allNodes).map(n => n.tagName));
+            const nodeNames = Array.from(allNodes).map(n => n.tagName);
+            console.log('XML中的所有节点标签:', [...new Set(nodeNames)]);
+            console.log('XML根节点:', xmlDoc.documentElement?.tagName);
+            console.log('XML文档类型:', xmlDoc.documentElement?.namespaceURI);
+        } else {
+            console.log(`找到 ${npcCharacters.length} 个NPCCharacter节点`);
         }
 
         for (let npc of npcCharacters) {
