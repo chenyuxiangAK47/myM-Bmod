@@ -19,7 +19,7 @@
 	</ModulesToLoadAfterThis>
 	<!-- SubModuleClass暂时注释，等C#代码编译成DLL后再启用 -->
 	<!-- 注意：启用 Harmony 补丁需要先编译 C# 代码生成 DLL -->
-	<!-- <SubModuleClass>NordThrowingAxeMod.WelcomeMessageSubModule</SubModuleClass> -->
+	<SubModuleClass>NordThrowingAxeMod.WelcomeMessageSubModule</SubModuleClass>
 	<Xmls>
 		<!-- ============================================ -->
 		<!-- Test Troops - Minimal Test Units -->
