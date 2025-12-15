@@ -12,11 +12,15 @@
             <h1>🎮 Bannerlord 兵种查看器</h1>
             <div class="controls">
                 <input type="file" id="xmlFileInput" accept=".xml" multiple>
-                <button id="loadBtn">加载XML文件</button>
-                <button id="loadFolderBtn">加载整个文件夹</button>
+                <button id="loadBtn">📁 加载XML文件（支持多选）</button>
+                <button id="clearFilesBtn" style="background: #6c757d; color: white;">🗑️ 清除已加载</button>
                 <input type="file" id="vanillaItemsInput" accept=".xml" style="display: none;">
                 <button id="loadVanillaItemsBtn" style="background: #17a2b8; color: white;" title="加载原版装备XML文件以启用装备ID验证">📦 加载原版装备</button>
                 <button id="validateBtn" style="background: #e74c3c; color: white;">🔍 验证装备</button>
+                <div id="loadedFilesInfo" style="font-size: 12px; color: #666; margin-top: 5px; display: none;">
+                    <span id="loadedFilesCount">0</span> 个文件已加载 | 
+                    <span id="loadedTroopsCount">0</span> 个兵种
+                </div>
                 <input type="text" id="searchInput" placeholder="搜索兵种名称、ID或文化...">
                 <select id="cultureFilter">
                     <option value="">所有文化</option>
@@ -42,6 +46,10 @@
         <div class="main-content">
             <aside class="sidebar">
                 <h2>兵种列表</h2>
+                <div id="fileList" class="file-list" style="display: none; margin-bottom: 10px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <div style="font-weight: bold; margin-bottom: 5px; font-size: 12px;">已加载的文件：</div>
+                    <div id="loadedFilesList" style="font-size: 11px; color: #666;"></div>
+                </div>
                 <div id="troopList" class="troop-list"></div>
             </aside>
 

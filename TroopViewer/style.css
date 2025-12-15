@@ -49,6 +49,33 @@ header h1 {
     transition: all 0.3s;
 }
 
+.controls input[type="file"] {
+    display: none; /* 隐藏原生文件输入，使用按钮触发 */
+}
+
+.file-list {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+
+.file-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.file-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.file-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.file-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .controls input[type="text"] {
     flex: 1;
     min-width: 200px;

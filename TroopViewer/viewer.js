@@ -2,17 +2,23 @@
 class TroopViewer {
     constructor() {
         this.currentTroop = null;
+        this.loadedFiles = new Map(); // 存储已加载的文件信息 {fileName: {troops: count, timestamp: Date}}
         this.init();
     }
 
     init() {
-        document.getElementById('loadBtn').addEventListener('click', () => this.loadFiles());
-        document.getElementById('loadFolderBtn').addEventListener('click', () => this.loadFolder());
+        document.getElementById('loadBtn').addEventListener('click', () => {
+            document.getElementById('xmlFileInput').click();
+        });
+        document.getElementById('clearFilesBtn').addEventListener('click', () => this.clearAllFiles());
         document.getElementById('xmlFileInput').addEventListener('change', (e) => {
             if (e.target.files.length > 0) {
                 this.loadFiles();
             }
         });
+        
+        // 添加拖拽支持
+        this.setupDragAndDrop();
         document.getElementById('loadVanillaItemsBtn').addEventListener('click', () => {
             document.getElementById('vanillaItemsInput').click();
         });
@@ -45,12 +51,15 @@ class TroopViewer {
         }
     }
 
-    async loadFiles() {
-        const input = document.getElementById('xmlFileInput');
-        const files = Array.from(input.files);
+    async loadFiles(files = null) {
+        // 如果没有传入文件，从input获取
+        if (!files) {
+            const input = document.getElementById('xmlFileInput');
+            files = Array.from(input.files);
+        }
 
         if (files.length === 0) {
-            alert('请选择XML文件');
+            alert('请选择XML文件或拖拽文件到页面');
             return;
         }
 
@@ -73,6 +82,12 @@ class TroopViewer {
                         
                         totalTroops += troops.length;
                         fileResults.push(`${file.name}: ${troops.length} 个兵种（已添加 ${addedCount} 个）`);
+                        
+                        // 记录已加载的文件
+                        this.loadedFiles.set(file.name, {
+                            troops: troops.length,
+                            timestamp: new Date()
+                        });
                     } else {
                         fileResults.push(`${file.name}: 0 个兵种 ⚠️`);
                         console.warn(`文件 ${file.name} 没有解析出任何兵种`);
@@ -85,6 +100,7 @@ class TroopViewer {
             
             console.log('所有文件加载完成，当前总兵种数:', troopParser.getAllTroops().length);
             this.updateTroopList();
+            this.updateLoadedFilesInfo();
             
             // 显示详细结果
             const message = `成功加载 ${files.length} 个文件，共 ${totalTroops} 个兵种\n\n详细:\n${fileResults.join('\n')}`;
@@ -95,9 +111,104 @@ class TroopViewer {
         }
     }
 
-    async loadFolder() {
-        // 注意：浏览器无法直接读取文件夹，需要用户选择文件
-        alert('由于浏览器限制，请使用"加载XML文件"按钮选择多个文件（按住Ctrl或Cmd键多选）');
+    // 设置拖拽支持
+    setupDragAndDrop() {
+        const container = document.querySelector('.container');
+        
+        container.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            container.style.backgroundColor = '#e3f2fd';
+        });
+        
+        container.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            container.style.backgroundColor = '';
+        });
+        
+        container.addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            container.style.backgroundColor = '';
+            
+            const files = Array.from(e.dataTransfer.files).filter(file => 
+                file.name.toLowerCase().endsWith('.xml')
+            );
+            
+            if (files.length === 0) {
+                alert('请拖拽XML文件');
+                return;
+            }
+            
+            // 创建FileList对象（模拟input.files）
+            const dataTransfer = new DataTransfer();
+            files.forEach(file => dataTransfer.items.add(file));
+            
+            // 更新input的files
+            const input = document.getElementById('xmlFileInput');
+            input.files = dataTransfer.files;
+            
+            // 加载文件
+            this.loadFiles(files);
+        });
+    }
+
+    // 更新已加载文件信息
+    updateLoadedFilesInfo() {
+        const totalTroops = troopParser.getAllTroops().length;
+        const fileCount = this.loadedFiles.size;
+        
+        document.getElementById('loadedFilesCount').textContent = fileCount;
+        document.getElementById('loadedTroopsCount').textContent = totalTroops;
+        document.getElementById('loadedFilesInfo').style.display = 'block';
+        
+        // 更新文件列表
+        const fileListDiv = document.getElementById('fileList');
+        const filesListDiv = document.getElementById('loadedFilesList');
+        
+        if (fileCount > 0) {
+            fileListDiv.style.display = 'block';
+            filesListDiv.innerHTML = Array.from(this.loadedFiles.entries())
+                .map(([name, info]) => 
+                    `<div style="margin: 2px 0;">
+                        <span style="color: #28a745;">✓</span> 
+                        ${this.escapeHtml(name)} 
+                        <span style="color: #666;">(${info.troops} 个兵种)</span>
+                    </div>`
+                ).join('');
+        } else {
+            fileListDiv.style.display = 'none';
+        }
+    }
+
+    // 清除所有已加载的文件
+    clearAllFiles() {
+        if (this.loadedFiles.size === 0) {
+            alert('没有已加载的文件');
+            return;
+        }
+        
+        if (confirm(`确定要清除所有已加载的文件吗？\n这将清除 ${this.loadedFiles.size} 个文件和 ${troopParser.getAllTroops().length} 个兵种。`)) {
+            // 清除解析器中的数据
+            troopParser.troops = [];
+            troopParser.troopMap.clear();
+            
+            // 清除已加载文件记录
+            this.loadedFiles.clear();
+            
+            // 清除input
+            document.getElementById('xmlFileInput').value = '';
+            
+            // 更新UI
+            this.updateTroopList();
+            this.updateLoadedFilesInfo();
+            
+            // 清除详情面板
+            document.getElementById('troopDetail').innerHTML = '<p class="placeholder">请选择一个兵种查看详情</p>';
+            
+            alert('已清除所有已加载的文件');
+        }
     }
 
     updateTroopList() {
