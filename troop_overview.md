@@ -11,6 +11,7 @@ Design rules: MyMod/鏂囨槑鍏电璁捐钃濆浘.md
 - 鉁?Added helmets for Khuzait T4 cavalry units (khuzait_t4_veteran_horse_archer, khuzait_t4_veteran_mounted_javelin_raider)
 - 鉁?Fixed Imperial noble T1 upgrade path to include crossbow/horse archer cavalry (imperial_crossbow_cavalry_t3, imperial_horse_archer_t3)
 - 鉁?Fixed Imperial noble bow lancer: changed from HorseArcher to Cavalry type, added upgrade paths to regular horse archer/crossbow cavalry
+- 鉁?Fixed Imperial noble bow lancer: changed from HorseArcher to Cavalry type, added upgrade paths to regular horse archer/crossbow cavalry
 
 
 Columns:
