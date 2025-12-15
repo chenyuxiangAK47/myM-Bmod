@@ -25,6 +25,61 @@ class EquipmentValidator {
             armor: ['Head', 'Body', 'Leg', 'Gloves', 'Cape'],
             mount: ['Horse', 'HorseHarness']
         };
+        
+        // 原版装备ID集合（从原版XML文件中加载）
+        this.vanillaItemIds = new Set();
+        this.itemIdValidationEnabled = false;
+    }
+    
+    // 加载原版装备ID列表（从XML文件）
+    async loadVanillaItems(xmlFile) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(e.target.result, 'text/xml');
+                    
+                    const parseError = xmlDoc.querySelector('parsererror');
+                    if (parseError) {
+                        reject(new Error('XML解析失败: ' + parseError.textContent));
+                        return;
+                    }
+                    
+                    // 查找所有Item节点
+                    const items = xmlDoc.getElementsByTagName('Item');
+                    this.vanillaItemIds.clear();
+                    
+                    for (let item of items) {
+                        const id = item.getAttribute('id');
+                        if (id) {
+                            // 存储ID（去掉Item.前缀，因为我们的装备ID已经去掉了）
+                            const cleanId = id.replace(/^Item\./, '');
+                            this.vanillaItemIds.add(cleanId);
+                        }
+                    }
+                    
+                    this.itemIdValidationEnabled = true;
+                    console.log(`已加载 ${this.vanillaItemIds.size} 个原版装备ID`);
+                    resolve(this.vanillaItemIds.size);
+                } catch (error) {
+                    console.error('加载原版装备ID时出错:', error);
+                    reject(error);
+                }
+            };
+            reader.onerror = (error) => {
+                reject(new Error('读取文件失败: ' + error));
+            };
+            reader.readAsText(xmlFile, 'UTF-8');
+        });
+    }
+    
+    // 检查装备ID是否存在
+    checkItemExists(itemId) {
+        if (!this.itemIdValidationEnabled) {
+            return null; // 未启用验证，返回null表示未知
+        }
+        return this.vanillaItemIds.has(itemId);
     }
 
     // 验证所有兵种
@@ -123,6 +178,21 @@ class EquipmentValidator {
                 slot: 'Body',
                 message: '缺少身体装备（护甲）'
             });
+        }
+
+        // 7. 检查装备ID是否在原版数据库中存在
+        if (this.itemIdValidationEnabled) {
+            for (let slot in equipmentBySlot) {
+                for (let itemId of equipmentBySlot[slot]) {
+                    if (!this.checkItemExists(itemId)) {
+                        issues.push({
+                            type: 'error',
+                            slot: slot,
+                            message: `装备ID不存在于原版数据库: ${itemId}`
+                        });
+                    }
+                }
+            }
         }
 
         return issues;

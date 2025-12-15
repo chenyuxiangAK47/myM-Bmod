@@ -1063,6 +1063,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.wrapping_shoes" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1129,6 +1132,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1193,6 +1199,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_lamellar" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

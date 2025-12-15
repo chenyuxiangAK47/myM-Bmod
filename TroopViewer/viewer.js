@@ -13,6 +13,14 @@ class TroopViewer {
                 this.loadFiles();
             }
         });
+        document.getElementById('loadVanillaItemsBtn').addEventListener('click', () => {
+            document.getElementById('vanillaItemsInput').click();
+        });
+        document.getElementById('vanillaItemsInput').addEventListener('change', async (e) => {
+            if (e.target.files.length > 0) {
+                await this.loadVanillaItems(e.target.files[0]);
+            }
+        });
         document.getElementById('searchInput').addEventListener('input', () => this.updateTroopList());
         document.getElementById('cultureFilter').addEventListener('change', () => this.updateTroopList());
         document.getElementById('tierFilter').addEventListener('change', () => this.updateTroopList());
@@ -24,6 +32,17 @@ class TroopViewer {
             document.getElementById('validationPanel').style.display = 'none';
         });
         document.getElementById('copyReportBtn').addEventListener('click', () => this.copyReport());
+    }
+    
+    // 加载原版装备XML
+    async loadVanillaItems(file) {
+        try {
+            const count = await equipmentValidator.loadVanillaItems(file);
+            alert(`成功加载 ${count} 个原版装备ID！\n装备ID验证已启用。`);
+        } catch (error) {
+            alert('加载原版装备文件失败: ' + error.message);
+            console.error(error);
+        }
     }
 
     async loadFiles() {
