@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
 	<!-- ================================================= -->
 	<!-- =============== Nord Troops =============== -->
@@ -44,6 +44,14 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_t2_shieldman" />
+			<upgrade_target
+				id="NPCCharacter.nord_t2_throwing_axeman" />
+			<upgrade_target
+				id="NPCCharacter.nord_t2_shortbow_warrior" />
+			<upgrade_target
+				id="NPCCharacter.nord_t2_longbowman" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -99,6 +107,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_t3_shieldwall_veteran" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -157,6 +167,8 @@
 				value="100" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_t3_berserker" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -215,6 +227,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_t3_veteran_shortbow_warrior" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -279,6 +293,8 @@
 				value="0" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_t3_veteran_longbowman" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -579,21 +595,36 @@
 				value="60" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t2_shield_guard" />
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t2_hound_attendant" />
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t2_longship_warrior" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.sturgia_axe_2_t2" />
+					id="Item.sturgia_axe_3_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.northern_round_shield" />
+					id="Item.heavy_round_shield" />
 				<equipment
 					slot="Head"
-					id="Item.nordic_leather_cap" />
+					id="Item.nordic_helmet" />
 				<equipment
 					slot="Body"
-					id="Item.northern_leather_vest" />
+					id="Item.nordic_hauberk" />
+				<equipment
+					slot="Cape"
+					id="Item.scale_shoulder_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -637,6 +668,8 @@
 				value="60" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t3_veteran_shield_guard" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -695,6 +728,8 @@
 				value="70" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t4_vanguard_shield_guard" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -753,6 +788,8 @@
 				value="80" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t5_chosen_shield_guard" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -825,7 +862,16 @@
 					id="Item.nordic_helmet" />
 				<equipment
 					slot="Body"
-					id="Item.sturgian_fortified_armor" />
+					id="Item.decorated_nordic_hauberk" />
+				<equipment
+					slot="Cape"
+					id="Item.scale_shoulder_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -869,6 +915,8 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t3_hound_devotee" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -924,6 +972,8 @@
 				value="35" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t4_hound_zealot" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -979,6 +1029,8 @@
 				value="40" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t5_hound_chosen" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -1045,7 +1097,16 @@
 					id="Item.nordic_helmet" />
 				<equipment
 					slot="Body"
-					id="Item.sturgian_fortified_armor" />
+					id="Item.decorated_nordic_hauberk" />
+				<equipment
+					slot="Cape"
+					id="Item.scale_shoulder_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1089,6 +1150,8 @@
 				value="90" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t3_longship_raider" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -1150,6 +1213,8 @@
 				value="120" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t4_longship_vanguard" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -1211,6 +1276,8 @@
 				value="160" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.nord_noble_t5_longship_champion" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -1295,7 +1362,16 @@
 					id="Item.nordic_helmet" />
 				<equipment
 					slot="Body"
-					id="Item.sturgian_fortified_armor" />
+					id="Item.decorated_nordic_hauberk" />
+				<equipment
+					slot="Cape"
+					id="Item.scale_shoulder_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

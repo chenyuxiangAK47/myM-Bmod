@@ -807,10 +807,10 @@
 					id="Item.steppe_guardian_shield" />
 				<equipment
 					slot="Head"
-					id="Item.khuzait_noble_helmet_with_feathers" />
+					id="Item.steppe_helmet" />
 				<equipment
 					slot="Body"
-					id="Item.khuzait_heavy_armor" />
+					id="Item.khuzait_sturdy_armor" />
 				<equipment
 					slot="Cape"
 					id="Item.fur_cloak_b" />
@@ -819,7 +819,7 @@
 					id="Item.eastern_plated_leather_vambraces" />
 				<equipment
 					slot="Leg"
-					id="Item.plated_strip_boots" />
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -879,10 +879,19 @@
 					id="Item.khuzait_polearm_1_t4" />
 				<equipment
 					slot="Head"
-					id="Item.spiked_helmet_with_facemask" />
+					id="Item.steppe_helmet" />
 				<equipment
 					slot="Body"
-					id="Item.khuzait_fortified_armor" />
+					id="Item.khuzait_heavy_armor" />
+				<equipment
+					slot="Cape"
+					id="Item.fur_cloak_b" />
+				<equipment
+					slot="Gloves"
+					id="Item.eastern_plated_leather_vambraces" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -940,13 +949,19 @@
 					id="Item.khuzait_polearm_1_t4" />
 				<equipment
 					slot="Head"
-					id="Item.spiked_helmet_with_facemask" />
+					id="Item.steppe_helmet" />
 				<equipment
 					slot="Body"
-					id="Item.khuzait_fortified_armor" />
+					id="Item.khuzait_heavy_armor" />
 				<equipment
 					slot="Cape"
 					id="Item.fur_cloak_b" />
+				<equipment
+					slot="Gloves"
+					id="Item.eastern_plated_leather_vambraces" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1075,10 +1090,19 @@
 					id="Item.studded_steppe_barding" />
 				<equipment
 					slot="Head"
-					id="Item.khuzait_noble_helmet_with_feathers" />
+					id="Item.steppe_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.khuzait_heavy_armor" />
+				<equipment
+					slot="Cape"
+					id="Item.fur_cloak_b" />
+				<equipment
+					slot="Gloves"
+					id="Item.eastern_plated_leather_vambraces" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1139,10 +1163,19 @@
 					id="Item.mail_and_plate_barding" />
 				<equipment
 					slot="Head"
-					id="Item.khuzait_noble_helmet_with_neckguard" />
+					id="Item.khuzait_noble_helmet_with_feathers" />
 				<equipment
 					slot="Body"
-					id="Item.khuzait_fortified_armor" />
+					id="Item.khuzait_heavy_armor" />
+				<equipment
+					slot="Cape"
+					id="Item.fur_cloak_b" />
+				<equipment
+					slot="Gloves"
+					id="Item.eastern_plated_leather_vambraces" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1208,10 +1241,19 @@
 					id="Item.studded_steppe_barding" />
 				<equipment
 					slot="Head"
-					id="Item.khuzait_noble_helmet_with_fur" />
+					id="Item.steppe_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.khuzait_heavy_armor" />
+				<equipment
+					slot="Cape"
+					id="Item.fur_cloak_b" />
+				<equipment
+					slot="Gloves"
+					id="Item.eastern_plated_leather_vambraces" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1277,10 +1319,19 @@
 					id="Item.half_mail_and_plate_barding" />
 				<equipment
 					slot="Head"
-					id="Item.khuzait_noble_helmet_with_feathers" />
+					id="Item.steppe_helmet" />
 				<equipment
 					slot="Body"
-					id="Item.khuzait_fortified_armor" />
+					id="Item.khuzait_heavy_armor" />
+				<equipment
+					slot="Cape"
+					id="Item.fur_cloak_b" />
+				<equipment
+					slot="Gloves"
+					id="Item.eastern_plated_leather_vambraces" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1344,10 +1395,19 @@
 					id="Item.mail_and_plate_barding" />
 				<equipment
 					slot="Head"
-					id="Item.khuzait_noble_helmet_with_neckguard" />
+					id="Item.khuzait_noble_helmet_with_feathers" />
 				<equipment
 					slot="Body"
-					id="Item.khuzait_fortified_armor" />
+					id="Item.khuzait_heavy_armor" />
+				<equipment
+					slot="Cape"
+					id="Item.fur_cloak_b" />
+				<equipment
+					slot="Gloves"
+					id="Item.eastern_plated_leather_vambraces" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

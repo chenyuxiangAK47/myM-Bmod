@@ -768,13 +768,19 @@
 					id="Item.battania_2hsword_4_t4" />
 				<equipment
 					slot="Head"
-					id="Item.battania_earmuff_helmet_c" />
+					id="Item.leather_studdedhelm_over_roughscale" />
 				<equipment
 					slot="Body"
 					id="Item.battania_noble_armor" />
 				<equipment
 					slot="Cape"
 					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Gloves"
+					id="Item.battania_noble_bracers" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -832,13 +838,19 @@
 					id="Item.battania_2hsword_5_t5" />
 				<equipment
 					slot="Head"
-					id="Item.battania_earmuff_helmet_c_brnz" />
+					id="Item.battania_earmuff_helmet_c" />
 				<equipment
 					slot="Body"
 					id="Item.battania_warlord_armor" />
 				<equipment
 					slot="Cape"
 					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Gloves"
+					id="Item.battania_noble_bracers" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -952,13 +964,19 @@
 					id="Item.sturgia_2haxe_1_t4" />
 				<equipment
 					slot="Head"
-					id="Item.battania_earmuff_helmet_d" />
+					id="Item.battania_earmuff_helmet_c" />
 				<equipment
 					slot="Body"
 					id="Item.battania_warlord_armor" />
 				<equipment
 					slot="Cape"
 					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Gloves"
+					id="Item.battania_noble_bracers" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1010,13 +1028,19 @@
 					id="Item.sturgia_2haxe_2_t5" />
 				<equipment
 					slot="Head"
-					id="Item.battania_earmuff_helmet_d_brnz" />
+					id="Item.battania_earmuff_helmet_d" />
 				<equipment
 					slot="Body"
-					id="Item.battania_brass_plate_armor" />
+					id="Item.battania_warlord_armor" />
 				<equipment
 					slot="Cape"
-					id="Item.armored_bearskin" />
+					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Gloves"
+					id="Item.battania_noble_bracers" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1197,13 +1221,19 @@
 					id="Item.battania_large_shield_c" />
 				<equipment
 					slot="Head"
-					id="Item.battania_earmuff_helmet_d_brnz" />
+					id="Item.battania_earmuff_helmet_d" />
 				<equipment
 					slot="Body"
-					id="Item.battania_brass_plate_armor" />
+					id="Item.battania_warlord_armor" />
 				<equipment
 					slot="Cape"
-					id="Item.mail_shoulders" />
+					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Gloves"
+					id="Item.battania_noble_bracers" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

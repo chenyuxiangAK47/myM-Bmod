@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
 	<!-- ================================================= -->
 	<!-- =============== Vlandia Troops =============== -->
@@ -44,8 +44,17 @@
 				value="5" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.vlandia_t2_foot_peasant" />
+			<upgrade_target
+				id="NPCCharacter.vlandia_t2_serf_spearman" />
+			<upgrade_target
+				id="NPCCharacter.vlandia_t2_peasant_archer" />
+			<upgrade_target
+				id="NPCCharacter.vlandia_t2_serf_crossbowman" />
 		</upgrade_targets>
 		<Equipments>
+			<!-- 装备池1: 破剑 + 破盾 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -62,6 +71,39 @@
 				<equipment
 					slot="Cape"
 					id="Item.hood" />
+			</EquipmentRoster>
+			<!-- 装备池2: 破长枪（无盾） -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.western_spear_1_t2" />
+				<equipment
+					slot="Head"
+					id="Item.head_wrapping" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池3: 盾 + 破枪 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.western_spear_1_t2" />
+				<equipment
+					slot="Item1"
+					id="Item.strapped_round_shield" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池4: 农业镰刀/农具 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.peasant_sickle_1_t1" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -105,6 +147,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.vlandia_t3_footman" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -163,6 +207,8 @@
 				value="0" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.vlandia_t3_billman" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -175,6 +221,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -331,6 +380,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.vlandia_t3_yeoman_archer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -345,10 +396,13 @@
 					id="Item.peasant_hatchet_1_t1" />
 				<equipment
 					slot="Head"
-					id="Item.head_wrapping" />
+					id="Item.padded_cap" />
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -392,6 +446,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.vlandia_t3_crossbow_levy" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -406,10 +462,13 @@
 					id="Item.peasant_hatchet_1_t1" />
 				<equipment
 					slot="Head"
-					id="Item.head_wrapping" />
+					id="Item.padded_cap" />
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -467,10 +526,13 @@
 					id="Item.peasant_hatchet_1_t1" />
 				<equipment
 					slot="Head"
-					id="Item.head_wrapping" />
+					id="Item.nasal_cervelliere_over_padded_cap" />
 				<equipment
 					slot="Body"
 					id="Item.aketon" />
+				<equipment
+					slot="Leg"
+					id="Item.padded_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -528,10 +590,13 @@
 					id="Item.peasant_hatchet_1_t1" />
 				<equipment
 					slot="Head"
-					id="Item.head_wrapping" />
+					id="Item.nasal_cervelliere_over_padded_cap" />
 				<equipment
 					slot="Body"
 					id="Item.aketon" />
+				<equipment
+					slot="Leg"
+					id="Item.padded_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -581,16 +646,25 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.vlandia_sword_2_t3" />
+					id="Item.vlandia_sword_3_t4" />
 				<equipment
 					slot="Item1"
 					id="Item.steel_round_shield" />
 				<equipment
 					slot="Head"
-					id="Item.arming_coif" />
+					id="Item.great_helm" />
 				<equipment
 					slot="Body"
-					id="Item.aketon" />
+					id="Item.coat_of_plates_over_mail" />
+				<equipment
+					slot="Cape"
+					id="Item.noble_pauldron_with_cape" />
+				<equipment
+					slot="Gloves"
+					id="Item.knight_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.knight_greaves" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -634,6 +708,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.vlandia_noble_t3_knight" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -642,22 +718,31 @@
 					id="Item.vlandia_lance_1_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.vlandia_sword_2_t3" />
+					id="Item.vlandia_sword_3_t4" />
 				<equipment
 					slot="Item2"
 					id="Item.steel_round_shield" />
 				<equipment
 					slot="Horse"
-					id="Item.t2_vlandia_horse" />
+					id="Item.t3_vlandia_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.light_harness" />
+					id="Item.chain_horse_harness" />
 				<equipment
 					slot="Head"
-					id="Item.kettle_hat_over_padded_cloth" />
+					id="Item.great_helm" />
 				<equipment
 					slot="Body"
-					id="Item.mail_shirt" />
+					id="Item.coat_of_plates_over_mail" />
+				<equipment
+					slot="Cape"
+					id="Item.noble_pauldron_with_cape" />
+				<equipment
+					slot="Gloves"
+					id="Item.knight_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.knight_greaves" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -701,6 +786,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.vlandia_noble_t4_champion_knight" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -715,16 +802,25 @@
 					id="Item.steel_round_shield" />
 				<equipment
 					slot="Horse"
-					id="Item.t2_vlandia_horse" />
+					id="Item.t3_vlandia_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.light_harness" />
+					id="Item.chain_horse_harness" />
 				<equipment
 					slot="Head"
-					id="Item.kettle_hat_over_mail_coif" />
+					id="Item.great_helm" />
 				<equipment
 					slot="Body"
-					id="Item.mail_shirt" />
+					id="Item.coat_of_plates_over_mail" />
+				<equipment
+					slot="Cape"
+					id="Item.noble_pauldron_with_cape" />
+				<equipment
+					slot="Gloves"
+					id="Item.knight_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.knight_greaves" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -768,6 +864,10 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.vlandia_noble_t5_foot_commander_knight" />
+			<upgrade_target
+				id="NPCCharacter.vlandia_noble_t5_champion_vanguard_knight" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -788,13 +888,19 @@
 					id="Item.chain_horse_harness" />
 				<equipment
 					slot="Head"
-					id="Item.kettle_hat_over_mail_coif" />
+					id="Item.great_helm" />
 				<equipment
 					slot="Body"
 					id="Item.coat_of_plates_over_mail" />
 				<equipment
 					slot="Cape"
 					id="Item.noble_pauldron_with_cape" />
+				<equipment
+					slot="Gloves"
+					id="Item.knight_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.knight_greaves" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -929,6 +1035,12 @@
 				<equipment
 					slot="Cape"
 					id="Item.pauldron_over_scale_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.knight_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.knight_greaves" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

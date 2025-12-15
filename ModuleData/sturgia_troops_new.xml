@@ -625,7 +625,16 @@
 					id="Item.sturgian_helmet_closed" />
 				<equipment
 					slot="Body"
-					id="Item.sturgian_chainmale_longsleeve" />
+					id="Item.sturgian_lamellar_base" />
+				<equipment
+					slot="Cape"
+					id="Item.scale_shoulder_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -692,10 +701,19 @@
 					id="Item.chain_barding" />
 				<equipment
 					slot="Head"
-					id="Item.sturgia_heavy_cavalary_helmet" />
+					id="Item.sturgian_helmet_closed" />
 				<equipment
 					slot="Body"
-					id="Item.sturgian_fortified_armor" />
+					id="Item.sturgian_lamellar_base" />
+				<equipment
+					slot="Cape"
+					id="Item.scale_shoulder_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -834,10 +852,19 @@
 					id="Item.chain_barding" />
 				<equipment
 					slot="Head"
-					id="Item.sturgia_heavy_cavalary_helmet" />
+					id="Item.sturgian_helmet_closed" />
 				<equipment
 					slot="Body"
-					id="Item.sturgian_lamellar_fortified" />
+					id="Item.sturgian_lamellar_base" />
+				<equipment
+					slot="Cape"
+					id="Item.scale_shoulder_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
