@@ -4,6 +4,63 @@
 
 **Harmony** 是一个用于 .NET 程序的**运行时补丁库**（Runtime Patching Library），它允许你在不修改原始代码的情况下，动态修改已编译程序的行为。
 
+## 📥 如何获取 Harmony？
+
+### 方法 1：使用 Bannerlord.Harmony 模组（推荐）
+
+**Bannerlord.Harmony** 是 Bannerlord 社区开发的 Harmony 集成模组，已经为你准备好了所有必要的文件。
+
+#### 下载方式
+
+1. **Nexus Mods**（推荐）：
+   - 网址：https://www.nexusmods.com/mountandblade2bannerlord/mods/2006
+   - 直接下载并解压到 `Modules` 文件夹
+
+2. **Steam Workshop**：
+   - 在 Steam 创意工坊搜索 "Harmony" 或 "Bannerlord.Harmony"
+   - 订阅后自动安装到 `Modules` 文件夹
+
+3. **GitHub**：
+   - 源代码：https://github.com/BUTR/Bannerlord.Harmony
+   - 可以下载预编译版本或自己编译
+
+#### 安装位置
+
+安装后，Harmony 模组应该在：
+```
+Mount & Blade II Bannerlord\Modules\Bannerlord.Harmony\
+```
+
+#### 检查是否已安装
+
+你的系统已经安装了 `Bannerlord.Harmony`（在 `Modules\Bannerlord.Harmony\` 目录下），可以直接使用！
+
+### 方法 2：自己集成 Harmony 库（不推荐）
+
+理论上可以自己创建，但**不推荐**，因为：
+
+❌ **需要手动处理**：
+- 下载 Harmony 核心库（`0Harmony.dll`）
+- 下载 Mono.Cecil 等依赖库
+- 创建 SubModule 来加载这些库
+- 处理版本兼容性问题
+
+✅ **使用 Bannerlord.Harmony 的优势**：
+- 已经配置好所有依赖
+- 社区维护，及时更新
+- 与其他模组兼容性更好
+- 开箱即用
+
+#### 如果一定要自己创建
+
+需要：
+1. 从 NuGet 下载 `Lib.Harmony` 包
+2. 获取 `0Harmony.dll`
+3. 创建自己的 SubModule 加载它
+4. 处理所有依赖关系
+
+**结论：直接使用 Bannerlord.Harmony 模组更简单！**
+
 ### 核心概念
 
 1. **运行时补丁（Runtime Patching）**：
@@ -200,7 +257,76 @@ protected override void OnSubModuleLoad()
 
 ---
 
+## 📦 在你的模组中使用 Harmony
+
+### 1. 添加依赖
+
+在你的 `SubModule.xml` 中添加：
+
+```xml
+<DependedModules>
+    <DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.2.2" />
+</DependedModules>
+```
+
+### 2. 在 C# 代码中使用
+
+```csharp
+using HarmonyLib;
+using TaleWorlds.MountAndBlade;
+
+public class MySubModule : MBSubModuleBase
+{
+    private static Harmony? _harmony;
+    
+    protected override void OnSubModuleLoad()
+    {
+        base.OnSubModuleLoad();
+        
+        // 创建 Harmony 实例（使用你的模组 ID）
+        _harmony = new Harmony("com.yourname.yourmod");
+        
+        // 应用所有补丁
+        _harmony.PatchAll();
+    }
+    
+    protected override void OnSubModuleUnloaded()
+    {
+        base.OnSubModuleUnloaded();
+        
+        // 清理补丁
+        _harmony?.UnpatchAll();
+    }
+}
+```
+
+### 3. 创建补丁类
+
+```csharp
+using HarmonyLib;
+
+[HarmonyPatch(typeof(目标类), "目标方法")]
+public class MyPatch
+{
+    [HarmonyPrefix]
+    static bool Prefix()
+    {
+        // 你的代码
+        return true;
+    }
+}
+```
+
+## ✅ 总结
+
+- **下载方式**：从 Nexus Mods 或 Steam Workshop 下载 `Bannerlord.Harmony`
+- **自己创建**：理论上可以，但不推荐（复杂且没必要）
+- **推荐做法**：直接使用 Bannerlord.Harmony 模组
+
+---
+
 **参考资源：**
 - Harmony 官方文档：https://harmony.pardeike.net/
-- Bannerlord.Harmony：https://www.nexusmods.com/mountandblade2bannerlord/mods/2006
+- Bannerlord.Harmony（Nexus Mods）：https://www.nexusmods.com/mountandblade2bannerlord/mods/2006
+- Bannerlord.Harmony（GitHub）：https://github.com/BUTR/Bannerlord.Harmony
 - Bannerlord 模组开发社区：https://github.com/BUTR/Bannerlord.BUTRLoader
