@@ -48,6 +48,14 @@ class TroopParser {
     extractTroops(xmlDoc) {
         const troops = [];
         const npcCharacters = xmlDoc.getElementsByTagName('NPCCharacter');
+        
+        // 调试：检查是否找到节点
+        if (npcCharacters.length === 0) {
+            console.warn('未找到NPCCharacter节点');
+            // 尝试查找所有可能的节点
+            const allNodes = xmlDoc.getElementsByTagName('*');
+            console.log('XML中的所有节点:', Array.from(allNodes).map(n => n.tagName));
+        }
 
         for (let npc of npcCharacters) {
             const troop = {
