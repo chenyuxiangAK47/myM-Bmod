@@ -36,13 +36,34 @@ class TroopViewer {
         }
 
         try {
-            const troopPromises = files.map(file => troopParser.parseXMLFile(file));
-            const troopArrays = await Promise.all(troopPromises);
+            let totalTroops = 0;
+            let fileResults = [];
             
-            troopArrays.forEach(troops => troopParser.addTroops(troops));
+            for (let file of files) {
+                try {
+                    console.log('正在解析文件:', file.name);
+                    const troops = await troopParser.parseXMLFile(file);
+                    console.log(`文件 ${file.name} 解析出 ${troops.length} 个兵种`);
+                    
+                    if (troops.length > 0) {
+                        troopParser.addTroops(troops);
+                        totalTroops += troops.length;
+                        fileResults.push(`${file.name}: ${troops.length} 个兵种`);
+                    } else {
+                        fileResults.push(`${file.name}: 0 个兵种 ⚠️`);
+                        console.warn(`文件 ${file.name} 没有解析出任何兵种`);
+                    }
+                } catch (fileError) {
+                    console.error(`文件 ${file.name} 解析失败:`, fileError);
+                    fileResults.push(`${file.name}: 解析失败 - ${fileError.message}`);
+                }
+            }
             
             this.updateTroopList();
-            alert(`成功加载 ${files.length} 个文件，共 ${troopParser.getAllTroops().length} 个兵种`);
+            
+            // 显示详细结果
+            const message = `成功加载 ${files.length} 个文件，共 ${totalTroops} 个兵种\n\n详细:\n${fileResults.join('\n')}`;
+            alert(message);
         } catch (error) {
             alert('加载文件时出错: ' + error.message);
             console.error(error);
@@ -340,11 +361,37 @@ class TroopViewer {
             return;
         }
 
-        // 运行验证
-        const validationResults = equipmentValidator.validateAllTroops(troops);
+        // 显示加载提示
+        const panel = document.getElementById('validationPanel');
+        const summaryDiv = document.getElementById('validationSummary');
+        const resultsDiv = document.getElementById('validationResults');
+        const reportTextarea = document.getElementById('validationReport');
         
-        // 显示验证面板
-        this.showValidationResults(validationResults, troops.length);
+        panel.style.display = 'block';
+        summaryDiv.innerHTML = '<h3>正在验证...</h3><p>请稍候，正在检查 ' + troops.length + ' 个兵种...</p>';
+        resultsDiv.innerHTML = '';
+        reportTextarea.value = '';
+
+        // 使用 setTimeout 让UI先更新，避免阻塞
+        setTimeout(() => {
+            try {
+                console.log('开始验证', troops.length, '个兵种');
+                const startTime = performance.now();
+                
+                // 运行验证
+                const validationResults = equipmentValidator.validateAllTroops(troops);
+                
+                const endTime = performance.now();
+                console.log('验证完成，耗时:', (endTime - startTime).toFixed(2), 'ms');
+                
+                // 显示验证面板
+                this.showValidationResults(validationResults, troops.length);
+            } catch (error) {
+                console.error('验证过程出错:', error);
+                summaryDiv.innerHTML = '<h3 style="color: #e74c3c;">验证出错</h3><p>' + error.message + '</p>';
+                alert('验证过程出错: ' + error.message);
+            }
+        }, 10);
     }
 
     // 显示验证结果
@@ -390,13 +437,26 @@ class TroopViewer {
             </div>
         `;
 
-        // 显示详细结果
-        resultsDiv.innerHTML = '';
+        // 显示详细结果（分批处理，避免UI阻塞）
+        resultsDiv.innerHTML = '<p style="text-align: center; padding: 20px;">正在生成结果...</p>';
         
-        if (validationResults.length === 0) {
-            resultsDiv.innerHTML = '<p style="text-align: center; color: #28a745; font-size: 18px; padding: 40px;">✅ 所有兵种装备检查通过！</p>';
-        } else {
-            for (let result of validationResults) {
+        // 使用 requestAnimationFrame 分批渲染，避免阻塞UI
+        const renderResults = (index = 0) => {
+            if (index === 0) {
+                resultsDiv.innerHTML = '';
+            }
+            
+            if (validationResults.length === 0) {
+                resultsDiv.innerHTML = '<p style="text-align: center; color: #28a745; font-size: 18px; padding: 40px;">✅ 所有兵种装备检查通过！</p>';
+                return;
+            }
+            
+            // 每次处理10个，避免一次性渲染太多导致卡顿
+            const batchSize = 10;
+            const endIndex = Math.min(index + batchSize, validationResults.length);
+            
+            for (let i = index; i < endIndex; i++) {
+                const result = validationResults[i];
                 const troop = result.troop;
                 const hasErrors = result.issues.some(i => i.type === 'error');
                 const itemClass = hasErrors ? 'validation-result-item' : 'validation-result-item has-warnings';
@@ -411,7 +471,7 @@ class TroopViewer {
                     issuesHtml += `
                         <div class="validation-issue ${issueClass}">
                             <span class="issue-icon">${icon}</span>
-                            <span class="issue-slot">${issue.slot || 'N/A'}</span>
+                            <span class="issue-slot">${this.escapeHtml(issue.slot || 'N/A')}</span>
                             <span class="issue-message">${this.escapeHtml(issue.message)}</span>
                         </div>
                     `;
@@ -423,10 +483,10 @@ class TroopViewer {
                         <span style="font-size: 12px; color: #666;">${result.issues.length} 个问题</span>
                     </div>
                     <div class="validation-result-item-meta">
-                        ID: <code>${troop.id}</code> | 
-                        类型: ${troop.defaultGroup} | 
+                        ID: <code>${this.escapeHtml(troop.id)}</code> | 
+                        类型: ${this.escapeHtml(troop.defaultGroup)} | 
                         等级: T${troop.tier} | 
-                        文化: ${troop.culture}
+                        文化: ${this.escapeHtml(troop.culture)}
                     </div>
                     <div class="validation-issues">
                         ${issuesHtml}
@@ -435,7 +495,15 @@ class TroopViewer {
                 
                 resultsDiv.appendChild(itemDiv);
             }
-        }
+            
+            // 如果还有更多，继续分批处理
+            if (endIndex < validationResults.length) {
+                requestAnimationFrame(() => renderResults(endIndex));
+            }
+        };
+        
+        // 开始渲染
+        requestAnimationFrame(() => renderResults(0));
 
         // 显示面板
         panel.style.display = 'block';
