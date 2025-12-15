@@ -699,7 +699,7 @@
 					id="Item.leather_studdedhelm_over_headcloth" />
 				<equipment
 					slot="Body"
-					id="Item.battania_light_armor_d" />
+				id="Item.battania_noble_armor" />
 				<equipment
 					slot="Cape"
 					id="Item.battania_shoulder_furr" />
