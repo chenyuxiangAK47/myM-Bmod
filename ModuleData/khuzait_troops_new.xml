@@ -93,6 +93,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

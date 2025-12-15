@@ -64,6 +64,9 @@
 				<equipment
 					slot="Body"
 					id="Item.fur_trimmed_short_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -124,6 +127,9 @@
 				<equipment
 					slot="Body"
 					id="Item.heavy_nordic_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -184,6 +190,9 @@
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -250,6 +259,9 @@
 				<equipment
 					slot="Body"
 					id="Item.northern_leather_vest" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -426,6 +438,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sleeveless_studded_fur_armor" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -490,6 +505,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sturgian_chainmale_shortsleeve" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -685,6 +703,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sturgian_chainmale_shortsleeve" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -745,6 +766,9 @@
 				<equipment
 					slot="Body"
 					id="Item.nordic_hauberk" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -929,6 +953,9 @@
 				<equipment
 					slot="Body"
 					id="Item.heavy_nordic_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -986,6 +1013,9 @@
 				<equipment
 					slot="Body"
 					id="Item.nordic_hauberk" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1170,6 +1200,9 @@
 				<equipment
 					slot="Body"
 					id="Item.heavy_nordic_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1233,6 +1266,9 @@
 				<equipment
 					slot="Body"
 					id="Item.nordic_hauberk" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
