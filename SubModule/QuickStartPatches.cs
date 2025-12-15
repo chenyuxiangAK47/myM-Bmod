@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using HarmonyLib;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
@@ -19,57 +20,138 @@ namespace NordThrowingAxeMod
         public const int QuickStartGold = 100000;
     }
 
-    // 补丁：拦截"新战役"和"沙盒模式"的点击，检测是否启用快速开局
-    // 通过检测 Shift+点击 来启用快速开局模式
+    // 补丁：在主菜单添加"快速开始"按钮
     [HarmonyPatch]
-    public class MainMenuActionPatch
+    public class MainMenuQuickStartButtonPatch
     {
-        // 尝试找到主菜单执行动作的方法
-        static System.Reflection.MethodBase TargetMethod()
+        // 尝试找到 InitialMenuVM 的 RefreshMenuOptions 方法
+        static MethodBase TargetMethod()
         {
-            // 查找 InitialMenuState 或 InitialMenuVM 的 ExecuteAction 方法
+            // 查找 InitialMenuVM 类
             var type = AccessTools.TypeByName("TaleWorlds.MountAndBlade.ViewModelCollection.InitialMenuVM");
             if (type != null)
             {
-                var method = AccessTools.Method(type, "ExecuteAction");
+                // 尝试找到 RefreshMenuOptions 方法
+                var method = AccessTools.Method(type, "RefreshMenuOptions");
                 if (method != null) return method;
-            }
-            
-            // 备用：查找 GauntletUI 中的方法
-            type = AccessTools.TypeByName("TaleWorlds.MountAndBlade.GauntletUI.InitialMenuState");
-            if (type != null)
-            {
-                var method = AccessTools.Method(type, "ExecuteAction");
+                
+                // 备用：查找 InitializeMenuOptions 方法
+                method = AccessTools.Method(type, "InitializeMenuOptions");
                 if (method != null) return method;
             }
             
             return null;
         }
 
-        [HarmonyPrefix]
-        static void Prefix(object action)
+        [HarmonyPostfix]
+        static void Postfix(object __instance)
         {
-            // 检测是否是"新战役"或"沙盒模式"动作
-            // 如果检测到，设置快速开局标志
-            // 注意：这里需要根据实际的 action 类型来判断
             try
             {
-                var actionType = action?.GetType();
-                var actionName = actionType?.Name ?? "";
+                // 获取 MenuOptions 属性
+                var menuOptionsProperty = AccessTools.Property(__instance.GetType(), "MenuOptions");
+                if (menuOptionsProperty == null) return;
                 
-                // 如果是新游戏相关的动作，启用快速开局
-                if (actionName.Contains("SandBox") || actionName.Contains("StoryMode") || 
-                    actionName.Contains("NewGame") || actionName.Contains("Campaign"))
+                var menuOptions = menuOptionsProperty.GetValue(__instance);
+                if (menuOptions == null) return;
+                
+                // 获取 Add 方法
+                var addMethod = AccessTools.Method(menuOptions.GetType(), "Add");
+                if (addMethod == null) return;
+                
+                // 创建快速开始菜单选项
+                // 需要创建 InitialMenuOptionVM 对象
+                var optionVMType = AccessTools.TypeByName("TaleWorlds.MountAndBlade.ViewModelCollection.InitialMenu.InitialMenuOptionVM");
+                if (optionVMType == null) return;
+                
+                // 创建 InitialStateOption 对象
+                var stateOptionType = AccessTools.TypeByName("TaleWorlds.MountAndBlade.InitialStateOption");
+                if (stateOptionType == null) return;
+                
+                // 创建快速开始动作
+                Action quickStartAction = () =>
                 {
-                    // 检查是否按了 Shift 键（通过静态变量或全局状态）
-                    // 简化版本：直接启用快速开局（用户可以通过配置修改）
                     QuickStartHelper.IsQuickStartMode = true;
+                    // 执行新沙盒游戏动作
+                    ExecuteQuickStart();
+                };
+                
+                // 创建 InitialStateOption
+                var stateOption = Activator.CreateInstance(
+                    stateOptionType,
+                    "快速开始",
+                    quickStartAction,
+                    new Func<bool>(() => true)
+                );
+                
+                // 创建 InitialMenuOptionVM
+                var optionVM = Activator.CreateInstance(optionVMType, stateOption);
+                
+                // 添加到菜单选项列表
+                addMethod.Invoke(menuOptions, new[] { optionVM });
+            }
+            catch (Exception ex)
+            {
+                // 记录错误但不影响游戏运行
+                System.Diagnostics.Debug.WriteLine($"快速开始按钮添加失败: {ex.Message}");
+            }
+        }
+        
+        private static void ExecuteQuickStart()
+        {
+            try
+            {
+                // 直接启动新沙盒游戏
+                var gameType = AccessTools.TypeByName("TaleWorlds.Core.Game");
+                if (gameType != null)
+                {
+                    var currentProperty = AccessTools.Property(gameType, "Current");
+                    var game = currentProperty?.GetValue(null);
+                    
+                    if (game != null)
+                    {
+                        // 调用 StartNewGame 方法
+                        var startNewGameMethod = AccessTools.Method(gameType, "StartNewGame", new[] { typeof(bool) });
+                        if (startNewGameMethod != null)
+                        {
+                            startNewGameMethod.Invoke(game, new object[] { false }); // false = 沙盒模式
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"快速开始执行失败: {ex.Message}");
+                // 如果直接启动失败，至少设置标志，让后续流程处理
+            }
+        }
+    }
+
+    // 补丁：跳过角色创建流程（如果启用了快速开局）
+    [HarmonyPatch(typeof(CharacterCreationState), "OnNextStage")]
+    public class SkipCharacterCreationPatch
+    {
+        [HarmonyPrefix]
+        static bool Prefix(CharacterCreationState __instance)
+        {
+            if (!QuickStartHelper.IsQuickStartMode) return true;
+            
+            try
+            {
+                // 尝试直接完成角色创建
+                var finalizeMethod = AccessTools.Method(typeof(CharacterCreationState), "OnFinalize");
+                if (finalizeMethod != null)
+                {
+                    finalizeMethod.Invoke(__instance, null);
+                    return false; // 阻止原方法执行
                 }
             }
             catch
             {
-                // 忽略错误，继续正常流程
+                // 如果失败，继续正常流程
             }
+            
+            return true;
         }
     }
 
@@ -80,10 +162,9 @@ namespace NordThrowingAxeMod
         [HarmonyPostfix]
         static void Postfix()
         {
-            // 如果启用了快速开局模式，在角色创建完成后给金币
+            // 金币会在 OnCampaignStart 中给予，这里只显示提示
             if (QuickStartHelper.IsQuickStartMode)
             {
-                // 延迟执行，确保 Campaign 已初始化
                 MBInformationManager.ShowInformativeMessage(new InformationMessage(
                     $"快速开局：将在进入游戏后获得 {QuickStartHelper.QuickStartGold:N0} 金币"));
             }

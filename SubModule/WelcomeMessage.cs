@@ -25,7 +25,8 @@ namespace NordThrowingAxeMod
             {
                 _harmony = new Harmony("com.nordthrowingaxe.quickstart");
                 _harmony.PatchAll();
-                InformationManager.DisplayMessage(new InformationMessage("快速开局功能已启用（Harmony补丁）"));
+                // 不显示消息，避免干扰游戏启动
+                System.Diagnostics.Debug.WriteLine("快速开局功能已启用（Harmony补丁）");
             }
             catch (Exception ex)
             {
