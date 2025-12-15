@@ -730,10 +730,10 @@
 					id="Item.chain_horse_harness" />
 				<equipment
 					slot="Head"
-					id="Item.great_helm" />
+					id="Item.full_helm_over_padded_cap" />
 				<equipment
 					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
+					id="Item.white_coat_over_mail" />
 				<equipment
 					slot="Cape"
 					id="Item.noble_pauldron_with_cape" />
@@ -808,10 +808,10 @@
 					id="Item.chain_horse_harness" />
 				<equipment
 					slot="Head"
-					id="Item.great_helm" />
+					id="Item.full_helm_over_padded_cap" />
 				<equipment
 					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
+					id="Item.white_coat_over_mail" />
 				<equipment
 					slot="Cape"
 					id="Item.noble_pauldron_with_cape" />
@@ -888,10 +888,10 @@
 					id="Item.chain_horse_harness" />
 				<equipment
 					slot="Head"
-					id="Item.great_helm" />
+					id="Item.full_helm_over_padded_cap" />
 				<equipment
 					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
+					id="Item.white_coat_over_mail" />
 				<equipment
 					slot="Cape"
 					id="Item.noble_pauldron_with_cape" />
@@ -961,10 +961,16 @@
 					id="Item.full_helm_over_padded_cap" />
 				<equipment
 					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
+					id="Item.white_coat_over_mail" />
 				<equipment
 					slot="Cape"
 					id="Item.noble_pauldron_with_cape" />
+				<equipment
+					slot="Gloves"
+					id="Item.knight_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.knight_greaves" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -1031,10 +1037,10 @@
 					id="Item.full_helm_over_padded_cap" />
 				<equipment
 					slot="Body"
-					id="Item.coat_of_plates_over_mail" />
+					id="Item.white_coat_over_mail" />
 				<equipment
 					slot="Cape"
-					id="Item.pauldron_over_scale_armor" />
+					id="Item.noble_pauldron_with_cape" />
 				<equipment
 					slot="Gloves"
 					id="Item.knight_gauntlets" />
