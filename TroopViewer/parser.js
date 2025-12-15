@@ -12,14 +12,36 @@ class TroopParser {
                 try {
                     const parser = new DOMParser();
                     const xmlDoc = parser.parseFromString(e.target.result, 'text/xml');
+                    
+                    // 检查XML解析错误
+                    const parseError = xmlDoc.querySelector('parsererror');
+                    if (parseError) {
+                        console.error('XML解析错误:', parseError.textContent);
+                        console.error('文件内容:', e.target.result.substring(0, 500));
+                        reject(new Error('XML解析失败: ' + parseError.textContent));
+                        return;
+                    }
+                    
                     const troops = this.extractTroops(xmlDoc);
+                    
+                    // 调试信息
+                    if (troops.length === 0) {
+                        console.warn('文件', file.name, '未找到兵种');
+                        console.log('XML文档根节点:', xmlDoc.documentElement?.tagName);
+                        console.log('NPCCharacter节点数:', xmlDoc.getElementsByTagName('NPCCharacter').length);
+                    }
+                    
                     resolve(troops);
                 } catch (error) {
+                    console.error('解析文件时出错:', file.name, error);
                     reject(error);
                 }
             };
-            reader.onerror = reject;
-            reader.readAsText(file);
+            reader.onerror = (error) => {
+                console.error('读取文件时出错:', file.name, error);
+                reject(error);
+            };
+            reader.readAsText(file, 'UTF-8');
         });
     }
 
