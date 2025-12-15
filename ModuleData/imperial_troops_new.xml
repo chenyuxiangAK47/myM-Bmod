@@ -527,6 +527,9 @@
 				<equipment
 					slot="Body"
 					id="Item.imperial_mail_over_leather" />
+				<equipment
+					slot="Leg"
+					id="Item.imperial_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>

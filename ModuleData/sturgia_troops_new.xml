@@ -66,6 +66,9 @@
 				<equipment
 					slot="Body"
 					id="Item.fur_trimmed_short_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.sturgian_leather_boots" />
 			</EquipmentRoster>
 			<!-- 装备池2: 长矛（无盾） -->
 			<EquipmentRoster>
@@ -78,6 +81,9 @@
 				<equipment
 					slot="Body"
 					id="Item.fur_trimmed_short_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.sturgian_leather_boots" />
 			</EquipmentRoster>
 			<!-- 装备池3: 单手斧（无盾） -->
 			<EquipmentRoster>
@@ -87,6 +93,9 @@
 				<equipment
 					slot="Body"
 					id="Item.fur_trimmed_short_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.sturgian_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
