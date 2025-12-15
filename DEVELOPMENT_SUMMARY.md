@@ -163,6 +163,11 @@ MyMod/
   - `imperial_noble_t1_wealthy_citizen` 现在可以升级到：
     - `imperial_crossbow_cavalry_t3` (帝国弩骑兵)
     - `imperial_horse_archer_t3` (帝国弓骑兵)
+- ✅ 修复了帝国贵族弓骑兵的兵种类型和升级路径
+  - `imperial_noble_t2_noble_bow_lancer` 从 `HorseArcher` 改为 `Cavalry`（近战骑兵，因为装备有盾和长枪）
+  - 添加了升级路径到普通弓骑兵和弩骑兵：
+    - `imperial_horse_archer_t3` (帝国弓骑兵)
+    - `imperial_crossbow_cavalry_t3` (帝国弩骑兵)
 
 ### 快速开局功能
 - ✅ 实现了快速开局功能，每次新战役开始时自动给予玩家 100,000 金币用于测试
