@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<!-- ================================================= -->
+	<!-- =============== 验证测试兵种 =============== -->
+	<!-- ================================================= -->
+	<!-- 这个文件用于测试装备验证功能，包含各种有问题的兵种 -->
+
+	<!-- ✅ 完整骑兵（正常，用于对比） -->
+	<NPCCharacter
+		id="test_complete_cavalry"
+		default_group="Cavalry"
+		level="16"
+		name="{=test_complete_cavalry}测试完整骑兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="30" />
+			<skill id="Riding" value="120" />
+			<skill id="OneHanded" value="90" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="120" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.empire_lance_1_t3" />
+				<equipment slot="Item1" id="Item.empire_sword_3_t3" />
+				<equipment slot="Item2" id="Item.reinforced_kite_shield" />
+				<equipment slot="Horse" id="Item.t3_empire_horse" />
+				<equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+				<equipment slot="Head" id="Item.imperial_nasal_helm" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+				<equipment slot="Gloves" id="Item.imperial_mail_mitten" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 没马的骑兵（错误：骑兵缺少坐骑） -->
+	<NPCCharacter
+		id="test_cavalry_no_horse"
+		default_group="Cavalry"
+		level="16"
+		name="{=test_cavalry_no_horse}测试无马骑兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="30" />
+			<skill id="Riding" value="120" />
+			<skill id="OneHanded" value="90" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="120" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.empire_lance_1_t3" />
+				<equipment slot="Item1" id="Item.empire_sword_3_t3" />
+				<equipment slot="Item2" id="Item.reinforced_kite_shield" />
+				<!-- 故意缺少 Horse -->
+				<equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+				<equipment slot="Head" id="Item.imperial_nasal_helm" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 没武器的骑兵（错误：缺少武器） -->
+	<NPCCharacter
+		id="test_cavalry_no_weapon"
+		default_group="Cavalry"
+		level="16"
+		name="{=test_cavalry_no_weapon}测试无武器骑兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="30" />
+			<skill id="Riding" value="120" />
+			<skill id="OneHanded" value="90" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="120" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<!-- 故意缺少所有武器 Item0-3 -->
+				<equipment slot="Horse" id="Item.t3_empire_horse" />
+				<equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+				<equipment slot="Head" id="Item.imperial_nasal_helm" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 没弓箭的弓骑兵（错误：弓箭手缺少箭矢） -->
+	<NPCCharacter
+		id="test_bow_cavalry_no_arrows"
+		default_group="HorseArcher"
+		level="16"
+		name="{=test_bow_cavalry_no_arrows}测试无箭弓骑兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="30" />
+			<skill id="Riding" value="120" />
+			<skill id="OneHanded" value="50" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="30" />
+			<skill id="Bow" value="150" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.composite_bow" />
+				<!-- 故意缺少箭矢 Item1 -->
+				<equipment slot="Item2" id="Item.empire_sword_2_t3" />
+				<equipment slot="Horse" id="Item.t3_empire_horse" />
+				<equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+				<equipment slot="Head" id="Item.imperial_mail_coif" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 没弩箭的弩手（错误：弩手缺少弩箭） -->
+	<NPCCharacter
+		id="test_crossbow_no_bolts"
+		default_group="Ranged"
+		level="16"
+		name="{=test_crossbow_no_bolts}测试无弩箭弩手"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="70" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="60" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="10" />
+			<skill id="Bow" value="0" />
+			<skill id="Crossbow" value="130" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.crossbow_a" />
+				<!-- 故意缺少弩箭 Item1 -->
+				<equipment slot="Item2" id="Item.empire_sword_2_t3" />
+				<equipment slot="Head" id="Item.imperial_mail_coif" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 没武器的步兵（错误：缺少武器） -->
+	<NPCCharacter
+		id="test_infantry_no_weapon"
+		default_group="Infantry"
+		level="11"
+		name="{=test_infantry_no_weapon}测试无武器步兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="50" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="70" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="20" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="10" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<!-- 故意缺少所有武器 Item0-3 -->
+				<equipment slot="Head" id="Item.imperial_mail_coif" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ⚠️ 没鞋子的步兵（警告：步兵缺少腿部装备） -->
+	<NPCCharacter
+		id="test_infantry_no_shoes"
+		default_group="Infantry"
+		level="11"
+		name="{=test_infantry_no_shoes}测试无鞋子步兵"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="50" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="70" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="20" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="10" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.empire_sword_2_t3" />
+				<equipment slot="Item1" id="Item.worn_kite_shield" />
+				<equipment slot="Head" id="Item.imperial_mail_coif" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<!-- 故意缺少 Leg -->
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 没身体装备的兵种（错误：缺少身体装备） -->
+	<NPCCharacter
+		id="test_no_body_armor"
+		default_group="Infantry"
+		level="11"
+		name="{=test_no_body_armor}测试无身体装备"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="50" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="70" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="20" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="10" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.empire_sword_2_t3" />
+				<equipment slot="Item1" id="Item.worn_kite_shield" />
+				<equipment slot="Head" id="Item.imperial_mail_coif" />
+				<!-- 故意缺少 Body -->
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ⚠️ 没头盔的兵种（警告：缺少头部装备） -->
+	<NPCCharacter
+		id="test_no_helmet"
+		default_group="Infantry"
+		level="11"
+		name="{=test_no_helmet}测试无头盔"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="50" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="70" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="20" />
+			<skill id="Bow" value="10" />
+			<skill id="Crossbow" value="10" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment slot="Item0" id="Item.empire_sword_2_t3" />
+				<equipment slot="Item1" id="Item.worn_kite_shield" />
+				<!-- 故意缺少 Head -->
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 远程单位没弓也没弩（错误：远程单位缺少弓或弩） -->
+	<NPCCharacter
+		id="test_ranged_no_bow"
+		default_group="Ranged"
+		level="16"
+		name="{=test_ranged_no_bow}测试无弓远程"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="70" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="60" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="10" />
+			<skill id="Bow" value="135" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<EquipmentRoster>
+				<!-- 故意缺少弓和弩 -->
+				<equipment slot="Item1" id="Item.bodkin_arrows_a" />
+				<equipment slot="Item2" id="Item.empire_sword_2_t3" />
+				<equipment slot="Head" id="Item.imperial_mail_coif" />
+				<equipment slot="Body" id="Item.imperial_mail_over_leather" />
+				<equipment slot="Leg" id="Item.imperial_mail_boots" />
+			</EquipmentRoster>
+		</Equipments>
+	</NPCCharacter>
+
+	<!-- ❌ 完全没装备的兵种（错误：没有装备配置） -->
+	<NPCCharacter
+		id="test_no_equipment"
+		default_group="Infantry"
+		level="6"
+		name="{=test_no_equipment}测试无装备"
+		occupation="Soldier"
+		culture="Culture.empire">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_empire" />
+		</face>
+		<skills>
+			<skill id="Athletics" value="20" />
+			<skill id="Riding" value="0" />
+			<skill id="OneHanded" value="20" />
+			<skill id="TwoHanded" value="10" />
+			<skill id="Polearm" value="20" />
+			<skill id="Bow" value="5" />
+			<skill id="Crossbow" value="0" />
+			<skill id="Throwing" value="10" />
+		</skills>
+		<upgrade_targets>
+		</upgrade_targets>
+		<Equipments>
+			<!-- 故意留空，没有 EquipmentRoster -->
+		</Equipments>
+	</NPCCharacter>
+
+</NPCCharacters>
