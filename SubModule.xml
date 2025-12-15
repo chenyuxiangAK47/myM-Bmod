@@ -12,11 +12,13 @@
 		<DependedModule Id="CustomBattle"/>
 		<DependedModule Id="StoryMode"/>
 		<DependedModule Id="NavalDLC" Optional="false"/>
+		<DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.2.2"/>
 	</DependedModules>
 	<ModulesToLoadAfterThis>
 		<Module Id="WarlordsBattlefield"/>
 	</ModulesToLoadAfterThis>
 	<!-- SubModuleClass暂时注释，等C#代码编译成DLL后再启用 -->
+	<!-- 注意：启用 Harmony 补丁需要先编译 C# 代码生成 DLL -->
 	<!-- <SubModuleClass>NordThrowingAxeMod.WelcomeMessageSubModule</SubModuleClass> -->
 	<Xmls>
 		<!-- ============================================ -->
@@ -391,7 +393,7 @@
 			</IncludedGameTypes>
 		</XmlNode> -->
 		<!-- 修改Nord文化的基础兵种设置（按照DRM方式，使用XML而不是XSLT） -->
-		<!-- <XmlNode>
+		<XmlNode>
 			<XmlName id="SPCultures" path="nord_culture_setting"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
@@ -400,7 +402,7 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode> -->
+		</XmlNode>
 		<!-- 删除旧Sturgia兵种 -->
 		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="sturgia_replace_old_troops" type="XSLT"/>
@@ -545,7 +547,7 @@
 			</IncludedGameTypes>
 		</XmlNode> -->
 		<!-- Imperial文化基础兵种（按照DRM方式，使用XML而不是XSLT） -->
-		<!-- <XmlNode>
+		<XmlNode>
 			<XmlName id="SPCultures" path="imperial_culture_setting"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
@@ -554,7 +556,7 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode> -->
+		</XmlNode>
 		<!-- Sturgia农民升级路径 -->
 		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="sturgia_upgrade_paths" type="XSLT"/>
@@ -567,8 +569,8 @@
 			</IncludedGameTypes>
 		</XmlNode> -->
 		<!-- Sturgia文化基础兵种 -->
-		<!-- <XmlNode>
-			<XmlName id="SPCultures" path="sturgia_culture_change" type="XSLT"/>
+		<XmlNode>
+			<XmlName id="SPCultures" path="sturgia_culture_setting"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -576,7 +578,7 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode> -->
+		</XmlNode>
 		<!-- Vlandia农民升级路径 -->
 		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="vlandia_upgrade_paths" type="XSLT"/>
@@ -589,8 +591,8 @@
 			</IncludedGameTypes>
 		</XmlNode> -->
 		<!-- Vlandia文化基础兵种 -->
-		<!-- <XmlNode>
-			<XmlName id="SPCultures" path="vlandia_culture_change" type="XSLT"/>
+		<XmlNode>
+			<XmlName id="SPCultures" path="vlandia_culture_setting"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -598,7 +600,7 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode> -->
+		</XmlNode>
 		<!-- Battania农民升级路径 -->
 		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="battania_upgrade_paths" type="XSLT"/>
@@ -611,8 +613,8 @@
 			</IncludedGameTypes>
 		</XmlNode> -->
 		<!-- Battania文化基础兵种 -->
-		<!-- <XmlNode>
-			<XmlName id="SPCultures" path="battania_culture_change" type="XSLT"/>
+		<XmlNode>
+			<XmlName id="SPCultures" path="battania_culture_setting"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -620,7 +622,7 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode> -->
+		</XmlNode>
 		<!-- Khuzait农民升级路径 -->
 		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="khuzait_upgrade_paths" type="XSLT"/>
@@ -633,8 +635,8 @@
 			</IncludedGameTypes>
 		</XmlNode> -->
 		<!-- Khuzait文化基础兵种 -->
-		<!-- <XmlNode>
-			<XmlName id="SPCultures" path="khuzait_culture_change" type="XSLT"/>
+		<XmlNode>
+			<XmlName id="SPCultures" path="khuzait_culture_setting"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -642,7 +644,7 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode> -->
+		</XmlNode>
 		<!-- Aserai农民升级路径 -->
 		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="aserai_upgrade_paths" type="XSLT"/>
@@ -655,8 +657,8 @@
 			</IncludedGameTypes>
 		</XmlNode> -->
 		<!-- Aserai文化基础兵种 -->
-		<!-- <XmlNode>
-			<XmlName id="SPCultures" path="aserai_culture_change" type="XSLT"/>
+		<XmlNode>
+			<XmlName id="SPCultures" path="aserai_culture_setting"/>
 			<IncludedGameTypes>
 				<GameType value="Campaign"/>
 				<GameType value="CampaignStoryMode"/>
@@ -664,7 +666,7 @@
 				<GameType value="CustomGame"/>
 				<GameType value="EditorGame"/>
 			</IncludedGameTypes>
-		</XmlNode> -->
+		</XmlNode>
 		<!-- 旧装备替换（保留兼容性） -->
 		<!-- <XmlNode>
 			<XmlName id="NPCCharacters" path="nord_throwing_axe" type="XSLT"/>

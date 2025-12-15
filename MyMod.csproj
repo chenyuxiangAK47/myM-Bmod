@@ -28,5 +28,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SubModule\WelcomeMessage.cs" />
+    <Compile Include="SubModule\QuickStartPatches.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(BANNERLORD_INSTALL_DIR)\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
 </Project>

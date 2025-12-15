@@ -1,4 +1,5 @@
 using System;
+using HarmonyLib;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
@@ -13,10 +14,33 @@ namespace NordThrowingAxeMod
     {
         private static bool _hasGivenQuickStartGold = false;
         private static bool _isQuickStartMode = false;
+        private static Harmony _harmony = null;
 
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
+            
+            // 初始化 Harmony 补丁
+            try
+            {
+                _harmony = new Harmony("com.nordthrowingaxe.quickstart");
+                _harmony.PatchAll();
+                InformationManager.DisplayMessage(new InformationMessage("快速开局功能已启用（Harmony补丁）"));
+            }
+            catch (Exception ex)
+            {
+                // 如果 Harmony 不可用，记录错误但继续运行
+                System.Diagnostics.Debug.WriteLine($"Harmony 补丁加载失败: {ex.Message}");
+            }
+        }
+
+        protected override void OnSubModuleUnloaded()
+        {
+            base.OnSubModuleUnloaded();
+            
+            // 清理 Harmony 补丁
+            _harmony?.UnpatchAll();
+            _harmony = null;
         }
 
         protected override void OnBeforeInitialModuleScreenSetAsRoot()
@@ -36,9 +60,17 @@ namespace NordThrowingAxeMod
             // 快速开局模式：给玩家10万金币
             if (Campaign.Current != null)
             {
-                // 检查是否是通过快速开局进入的
-                // 如果是新游戏且没有角色创建流程，则认为是快速开局
-                if (!_hasGivenQuickStartGold)
+                // 检查是否启用了快速开局模式（通过 Harmony 补丁设置）
+                if (QuickStartHelper.IsQuickStartMode && !_hasGivenQuickStartGold)
+                {
+                    Campaign.Current.AddMoneyToPlayerParty(QuickStartHelper.QuickStartGold);
+                    InformationManager.DisplayMessage(new InformationMessage(
+                        $"快速开局：已获得 {QuickStartHelper.QuickStartGold:N0} 金币用于测试"));
+                    _hasGivenQuickStartGold = true;
+                    QuickStartHelper.IsQuickStartMode = false; // 重置标志
+                }
+                // 兼容旧版本：如果没有通过 Harmony 设置，使用原来的逻辑
+                else if (!_hasGivenQuickStartGold && !QuickStartHelper.IsQuickStartMode)
                 {
                     Campaign.Current.AddMoneyToPlayerParty(100000);
                     InformationManager.DisplayMessage(new InformationMessage("快速开局：已获得 100,000 金币用于测试"));
