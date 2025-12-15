@@ -1999,6 +1999,10 @@
 				id="NPCCharacter.imperial_noble_t2_eagle_legion_recruit" />
 			<upgrade_target
 				id="NPCCharacter.imperial_noble_t2_guard_archer_trainee" />
+			<upgrade_target
+				id="NPCCharacter.imperial_crossbow_cavalry_t3" />
+			<upgrade_target
+				id="NPCCharacter.imperial_horse_archer_t3" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
