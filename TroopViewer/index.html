@@ -14,6 +14,7 @@
                 <input type="file" id="xmlFileInput" accept=".xml" multiple>
                 <button id="loadBtn">加载XML文件</button>
                 <button id="loadFolderBtn">加载整个文件夹</button>
+                <button id="validateBtn" style="background: #e74c3c; color: white;">🔍 验证装备</button>
                 <input type="text" id="searchInput" placeholder="搜索兵种名称、ID或文化...">
                 <select id="cultureFilter">
                     <option value="">所有文化</option>
@@ -54,12 +55,52 @@
             <button id="closeTreeBtn">关闭</button>
             <div id="troopTree" class="troop-tree"></div>
         </div>
+
+        <div class="validation-panel" id="validationPanel" style="display: none;">
+            <div class="validation-header">
+                <h2>🔍 装备验证结果</h2>
+                <div class="validation-actions">
+                    <button id="copyReportBtn">📋 复制报告</button>
+                    <button id="closeValidationBtn">关闭</button>
+                </div>
+            </div>
+            <div class="validation-content">
+                <div id="validationSummary" class="validation-summary"></div>
+                <div id="validationResults" class="validation-results"></div>
+                <textarea id="validationReport" class="validation-report" readonly></textarea>
+            </div>
+        </div>
     </div>
 
     <script src="parser.js"></script>
+    <script src="validator.js"></script>
     <script src="viewer.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

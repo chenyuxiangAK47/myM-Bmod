@@ -396,6 +396,228 @@ header h1 {
     background: #1e3c72;
 }
 
+/* 验证面板样式 */
+.validation-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    padding: 40px;
+    overflow: auto;
+}
+
+.validation-header {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.validation-header h2 {
+    color: #1e3c72;
+    margin: 0;
+}
+
+.validation-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.validation-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#copyReportBtn {
+    background: #28a745;
+    color: white;
+}
+
+#copyReportBtn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+#closeValidationBtn {
+    background: #6c757d;
+    color: white;
+}
+
+#closeValidationBtn:hover {
+    background: #5a6268;
+}
+
+.validation-content {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.validation-summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2a5298;
+}
+
+.validation-summary h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.summary-stat {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.summary-stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2a5298;
+}
+
+.summary-stat-label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.validation-results {
+    margin-bottom: 20px;
+}
+
+.validation-result-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #e74c3c;
+}
+
+.validation-result-item.has-warnings {
+    border-left-color: #f39c12;
+}
+
+.validation-result-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.validation-result-item-header h4 {
+    color: #1e3c72;
+    margin: 0;
+}
+
+.validation-result-item-meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.validation-issues {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.validation-issue {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.validation-issue.error {
+    border-left: 3px solid #e74c3c;
+}
+
+.validation-issue.warning {
+    border-left: 3px solid #f39c12;
+}
+
+.issue-icon {
+    font-size: 20px;
+}
+
+.issue-slot {
+    background: #6c757d;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+}
+
+.issue-message {
+    flex: 1;
+    color: #333;
+}
+
+.validation-report {
+    width: 100%;
+    min-height: 300px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    background: #f8f9fa;
+    resize: vertical;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

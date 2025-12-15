@@ -19,6 +19,11 @@ class TroopViewer {
         document.getElementById('closeTreeBtn').addEventListener('click', () => {
             document.getElementById('troopTreePanel').style.display = 'none';
         });
+        document.getElementById('validateBtn').addEventListener('click', () => this.validateEquipment());
+        document.getElementById('closeValidationBtn').addEventListener('click', () => {
+            document.getElementById('validationPanel').style.display = 'none';
+        });
+        document.getElementById('copyReportBtn').addEventListener('click', () => this.copyReport());
     }
 
     async loadFiles() {
@@ -324,6 +329,135 @@ class TroopViewer {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
+    }
+
+    // 验证装备
+    validateEquipment() {
+        const troops = troopParser.getAllTroops();
+        
+        if (troops.length === 0) {
+            alert('请先加载XML文件');
+            return;
+        }
+
+        // 运行验证
+        const validationResults = equipmentValidator.validateAllTroops(troops);
+        
+        // 显示验证面板
+        this.showValidationResults(validationResults, troops.length);
+    }
+
+    // 显示验证结果
+    showValidationResults(validationResults, totalTroops) {
+        const panel = document.getElementById('validationPanel');
+        const summaryDiv = document.getElementById('validationSummary');
+        const resultsDiv = document.getElementById('validationResults');
+        const reportTextarea = document.getElementById('validationReport');
+
+        // 生成报告
+        const report = equipmentValidator.generateReport(validationResults);
+        reportTextarea.value = report;
+
+        // 显示摘要
+        let errorCount = 0;
+        let warningCount = 0;
+        for (let result of validationResults) {
+            for (let issue of result.issues) {
+                if (issue.type === 'error') errorCount++;
+                else warningCount++;
+            }
+        }
+
+        summaryDiv.innerHTML = `
+            <h3>验证摘要</h3>
+            <div class="summary-stats">
+                <div class="summary-stat">
+                    <div class="summary-stat-value">${totalTroops}</div>
+                    <div class="summary-stat-label">总兵种数</div>
+                </div>
+                <div class="summary-stat">
+                    <div class="summary-stat-value" style="color: #e74c3c;">${validationResults.length}</div>
+                    <div class="summary-stat-label">存在问题</div>
+                </div>
+                <div class="summary-stat">
+                    <div class="summary-stat-value" style="color: #e74c3c;">${errorCount}</div>
+                    <div class="summary-stat-label">错误</div>
+                </div>
+                <div class="summary-stat">
+                    <div class="summary-stat-value" style="color: #f39c12;">${warningCount}</div>
+                    <div class="summary-stat-label">警告</div>
+                </div>
+            </div>
+        `;
+
+        // 显示详细结果
+        resultsDiv.innerHTML = '';
+        
+        if (validationResults.length === 0) {
+            resultsDiv.innerHTML = '<p style="text-align: center; color: #28a745; font-size: 18px; padding: 40px;">✅ 所有兵种装备检查通过！</p>';
+        } else {
+            for (let result of validationResults) {
+                const troop = result.troop;
+                const hasErrors = result.issues.some(i => i.type === 'error');
+                const itemClass = hasErrors ? 'validation-result-item' : 'validation-result-item has-warnings';
+                
+                const itemDiv = document.createElement('div');
+                itemDiv.className = itemClass;
+                
+                let issuesHtml = '';
+                for (let issue of result.issues) {
+                    const issueClass = issue.type === 'error' ? 'error' : 'warning';
+                    const icon = issue.type === 'error' ? '❌' : '⚠️';
+                    issuesHtml += `
+                        <div class="validation-issue ${issueClass}">
+                            <span class="issue-icon">${icon}</span>
+                            <span class="issue-slot">${issue.slot || 'N/A'}</span>
+                            <span class="issue-message">${this.escapeHtml(issue.message)}</span>
+                        </div>
+                    `;
+                }
+                
+                itemDiv.innerHTML = `
+                    <div class="validation-result-item-header">
+                        <h4>${this.escapeHtml(troop.name)}</h4>
+                        <span style="font-size: 12px; color: #666;">${result.issues.length} 个问题</span>
+                    </div>
+                    <div class="validation-result-item-meta">
+                        ID: <code>${troop.id}</code> | 
+                        类型: ${troop.defaultGroup} | 
+                        等级: T${troop.tier} | 
+                        文化: ${troop.culture}
+                    </div>
+                    <div class="validation-issues">
+                        ${issuesHtml}
+                    </div>
+                `;
+                
+                resultsDiv.appendChild(itemDiv);
+            }
+        }
+
+        // 显示面板
+        panel.style.display = 'block';
+    }
+
+    // 复制报告
+    copyReport() {
+        const reportTextarea = document.getElementById('validationReport');
+        reportTextarea.select();
+        reportTextarea.setSelectionRange(0, 99999); // 移动设备支持
+        
+        try {
+            document.execCommand('copy');
+            alert('报告已复制到剪贴板！');
+        } catch (err) {
+            // 使用现代API
+            navigator.clipboard.writeText(reportTextarea.value).then(() => {
+                alert('报告已复制到剪贴板！');
+            }).catch(() => {
+                alert('复制失败，请手动选择文本复制');
+            });
+        }
     }
 }
 
