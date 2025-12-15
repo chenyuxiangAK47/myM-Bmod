@@ -147,6 +147,26 @@ MyMod/
 - [ ] 添加更多单位变体
 - [ ] 完善装备配置
 
+## 🔧 最新修复 (2025/12/15)
+
+### 装备验证与修复
+- ✅ 修复了多个兵种缺少腿部装备（鞋子）的问题
+  - Battania: `battania_t3_wild_marksman`
+  - Khuzait: `khuzait_t1_nomad_levy` (前3个装备池), `khuzait_t2_mixed_militia`
+  - Vlandia: `vlandia_t1_serf_levy` (前3个装备池)
+- ✅ 为库吉特 T4 骑兵单位添加了头盔
+  - `khuzait_t4_veteran_horse_archer` (库吉特资深骑射手)
+  - `khuzait_t4_veteran_mounted_javelin_raider` (库吉特资深标枪突袭骑兵)
+
+### 升级路径修复
+- ✅ 修复了帝国贵族 T1 兵种的升级路径
+  - `imperial_noble_t1_wealthy_citizen` 现在可以升级到：
+    - `imperial_crossbow_cavalry_t3` (帝国弩骑兵)
+    - `imperial_horse_archer_t3` (帝国弓骑兵)
+
+### 快速开局功能
+- ✅ 实现了快速开局功能，每次新战役开始时自动给予玩家 100,000 金币用于测试
+
 ## 🐛 已知问题
 
 无
@@ -164,5 +184,6 @@ MyMod/
 
 ---
 
-**最后更新：** 2024年（当前日期）  
-**状态：** ✅ 所有派系兵种已成功加载并显示
+**最后更新：** 2025/12/15  
+**状态：** ✅ 所有派系兵种已成功加载并显示，装备验证与修复已完成
+
