@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
 	<!-- ================================================= -->
 	<!-- =============== Khuzait Troops =============== -->
@@ -44,8 +44,15 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t2_mixed_militia" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_t2_foot_archer" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_t2_steppe_rider" />
 		</upgrade_targets>
 		<Equipments>
+			<!-- 装备池1: 单手刀 + 小盾 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -53,6 +60,36 @@
 				<equipment
 					slot="Item1"
 					id="Item.tribal_steppe_shield" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池2: 简陋长枪 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.western_spear_1_t2" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池3: 破弓 + 少量箭 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.hunting_bow" />
+				<equipment
+					slot="Item1"
+					id="Item.default_arrows" />
+				<equipment
+					slot="Body"
+					id="Item.sackcloth_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池4: 单手刀（无盾） -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.simple_sabre_sword_t2" />
 				<equipment
 					slot="Body"
 					id="Item.sackcloth_tunic" />
@@ -154,6 +191,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t3_foot_veteran_archer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -172,6 +211,12 @@
 				<equipment
 					slot="Body"
 					id="Item.khuzait_sturdy_armor" />
+				<equipment
+					slot="Head"
+					id="Item.steppe_helmet" />
+				<equipment
+					slot="Leg"
+					id="Item.steppe_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -279,6 +324,12 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t3_horse_archer" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_t3_mounted_javelin_raider" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_t3_shock_lancer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -343,6 +394,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t4_veteran_horse_archer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -471,6 +524,8 @@
 				value="120" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t4_veteran_mounted_javelin_raider" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -599,6 +654,8 @@
 				value="0" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_t4_veteran_shock_lancer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -733,21 +790,36 @@
 				value="20" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_noble_t3_tent_guard_glaive" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_noble_t3_shock_cavalry" />
+			<upgrade_target
+				id="NPCCharacter.khuzait_noble_t3_khans_court_horse_archer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.simple_sabre_sword_t2" />
+					id="Item.ridged_sabre_sword_t4" />
 				<equipment
 					slot="Item1"
-					id="Item.worn_kite_shield" />
+					id="Item.steppe_guardian_shield" />
 				<equipment
 					slot="Head"
-					id="Item.steppe_helmet" />
+					id="Item.khuzait_noble_helmet_with_feathers" />
 				<equipment
 					slot="Body"
-					id="Item.khuzait_sturdy_armor" />
+					id="Item.khuzait_heavy_armor" />
+				<equipment
+					slot="Cape"
+					id="Item.fur_cloak_b" />
+				<equipment
+					slot="Gloves"
+					id="Item.eastern_plated_leather_vambraces" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -791,6 +863,8 @@
 				value="20" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_noble_t4_veteran_tent_guard_glaive" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -916,6 +990,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_noble_t4_veteran_shock_cavalry" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -980,6 +1056,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_noble_t5_heavy_shock_cavalry" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -1108,6 +1186,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_noble_t4_veteran_khans_court_horse_archer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -1175,6 +1255,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.khuzait_noble_t5_elite_khans_court_horse_archer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>

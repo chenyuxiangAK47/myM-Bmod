@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
 	<!-- ================================================= -->
 	<!-- =============== Sturgia Troops =============== -->
@@ -44,18 +44,46 @@
 				value="5" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.sturgia_t2_spearwarden" />
+			<upgrade_target
+				id="NPCCharacter.sturgia_t2_hunter" />
+			<upgrade_target
+				id="NPCCharacter.sturgia_t2_raider_cavalry" />
 		</upgrade_targets>
 		<Equipments>
+			<!-- 装备池1: 单手斧 + 圆盾 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.peasant_hatchet_1_t1" />
+				<equipment
+					slot="Item1"
+					id="Item.northern_round_shield" />
+				<equipment
+					slot="Head"
+					id="Item.nordic_fur_cap" />
+				<equipment
+					slot="Body"
+					id="Item.fur_trimmed_short_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池2: 长矛（无盾） -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
 					id="Item.western_spear_1_t2" />
 				<equipment
-					slot="Item1"
-					id="Item.worn_kite_shield" />
-				<equipment
 					slot="Head"
 					id="Item.nordic_fur_cap" />
+				<equipment
+					slot="Body"
+					id="Item.fur_trimmed_short_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池3: 单手斧（无盾） -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.peasant_hatchet_1_t1" />
 				<equipment
 					slot="Body"
 					id="Item.fur_trimmed_short_tunic" />
@@ -102,6 +130,10 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.sturgia_t3_shield_guard" />
+			<upgrade_target
+				id="NPCCharacter.sturgia_t3_shieldbreaker" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -113,13 +145,16 @@
 					id="Item.leather_bound_kite_shield" />
 				<equipment
 					slot="Item2"
-					id="Item.peasant_hatchet_1_t1" />
+					id="Item.sturgia_sword_1_t3" />
 				<equipment
 					slot="Head"
 					id="Item.nordic_leather_cap" />
 				<equipment
 					slot="Body"
 					id="Item.heavy_nordic_tunic" />
+				<equipment
+					slot="Leg"
+					id="Item.sturgian_leather_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -163,6 +198,8 @@
 				value="10" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.sturgia_t3_mounted_hunter" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -232,6 +269,9 @@
 					id="Item.reinforced_kite_shield" />
 				<equipment
 					slot="Item2"
+					id="Item.western_spear_2_t2" />
+				<equipment
+					slot="Item3"
 					id="Item.western_javelin_1_t2" />
 				<equipment
 					slot="Head"
@@ -239,6 +279,9 @@
 				<equipment
 					slot="Body"
 					id="Item.sturgian_chainmale_shortsleeve" />
+				<equipment
+					slot="Leg"
+					id="Item.sturgian_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -287,13 +330,19 @@
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.battle_axe_t4" />
+					id="Item.black_heart_2haxe_t3" />
+				<equipment
+					slot="Item1"
+					id="Item.northern_throwing_axe_1_t1" />
 				<equipment
 					slot="Head"
 					id="Item.nordic_helmet" />
 				<equipment
 					slot="Body"
 					id="Item.sturgian_chainmale_shortsleeve" />
+				<equipment
+					slot="Leg"
+					id="Item.sturgian_mail_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -471,27 +520,40 @@
 				value="20" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.sturgia_noble_t3_boyar_guard" />
+			<upgrade_target
+				id="NPCCharacter.sturgia_noble_t3_druzhinnik_heavy_horse_archer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.sturgia_axe_2_t2" />
+					id="Item.sturgia_sword_1_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.sturgia_old_shield_a" />
+					id="Item.sturgia_infantry_shield_a" />
 				<equipment
 					slot="Horse"
-					id="Item.t2_sturgia_horse" />
+					id="Item.t3_sturgia_horse" />
 				<equipment
 					slot="HorseHarness"
-					id="Item.halfchain_barding" />
+					id="Item.chain_barding" />
 				<equipment
 					slot="Head"
-					id="Item.sturgian_helmet_base" />
+					id="Item.sturgian_helmet_closed" />
 				<equipment
 					slot="Body"
-					id="Item.sturgian_chainmale_shortsleeve" />
+					id="Item.sturgian_lamellar_base" />
+				<equipment
+					slot="Cape"
+					id="Item.scale_shoulder_armor" />
+				<equipment
+					slot="Gloves"
+					id="Item.plated_strip_gauntlets" />
+				<equipment
+					slot="Leg"
+					id="Item.plated_strip_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -535,6 +597,8 @@
 				value="90" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.sturgia_noble_t4_boyar_heavy_shield_guard" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -675,6 +739,8 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.sturgia_noble_t4_druzhinnik_noble_horse_archer" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>

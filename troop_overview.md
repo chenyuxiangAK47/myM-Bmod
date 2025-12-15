@@ -1,7 +1,13 @@
-## Troop overview (equipment / skills)
+﻿## Troop overview (equipment / skills)
 
 Source: MyMod/ModuleData/*_troops_new.xml
 Design rules: MyMod/鏂囨槑鍏电璁捐钃濆浘.md
+
+**Status (Latest Update):**
+- 鉁?All upgrade paths completed (all troops have upgrade targets defined, except top-tier units)
+- 鉁?All lowest-tier noble troops have been upgraded with well-equipped gear
+- 鉁?T1 recruit troops (khuzait_t1_nomad_levy, sturgia_t1_conscript, battania_t1_tribesman, vlandia_t1_serf_levy) have randomized equipment pools
+
 
 Columns:
 - level: internal troop level (common mapping: 6/11/16/21/26/31 ~= T1..T6)
@@ -43,7 +49,7 @@ Columns:
 | imperial_crossbow_cavalry_t3 | 帝国弩骑兵 | HorseArcher | 16 | 30/115/55/10/20/0/130/10 | Item0=crossbow_a, Item1=bolt_d, Item2=empire_sword_2_t3, Item3=worn_kite_shield, Horse=t2_empire_horse, HorseHarness=imperial_scale_barding, Head=imperial_mail_coif, Body=imperial_mail_over_leather |
 | imperial_heavy_crossbow_cavalry_t4 | 帝国重装弩骑兵 | HorseArcher | 21 | 35/135/65/10/20/0/160/10 | Item0=crossbow_a, Item1=bolt_d, Item2=empire_sword_3_t3, Item3=worn_kite_shield, Horse=t3_empire_horse, HorseHarness=half_mail_and_plate_barding, Head=imperial_nasal_helm, Body=imperial_lamellar |
 | imperial_hardened_crossbow_cavalry_t5 | 帝国历战弩骑兵 | HorseArcher | 26 | 40/160/75/10/20/0/190/10 | Item0=crossbow_a, Item1=bolt_d, Item2=empire_sword_3_t3, Item3=reinforced_kite_shield, Horse=t3_empire_horse, HorseHarness=mail_and_plate_barding, Head=imperial_goggled_helmet, Body=imperial_scale_armor |
-| imperial_noble_t1_wealthy_citizen | 帝国富裕公民兵 | Infantry | 6 | 25/15/35/10/25/10/10/10 | Item0=empire_sword_2_t3, Item1=reinforced_kite_shield, Head=imperial_nasal_helm, Body=imperial_mail_vest |
+| imperial_noble_t1_wealthy_citizen | 帝国富裕公民兵 | Infantry | 6 | 25/15/35/10/25/10/10/10 | Item0=empire_sword_3_t3, Item1=reinforced_kite_shield, Head=imperial_goggled_helmet, Body=imperial_lamellar, Cape=imperial_lamellar_shoulders, Gloves=decorated_imperial_gauntlets, Leg=decorated_imperial_boots |
 | imperial_noble_t2_noble_cavalry | 帝国贵族骑兵 | Cavalry | 11 | 25/110/65/10/110/20/0/10 | Item0=empire_lance_1_t3, Item1=reinforced_kite_shield, Item2=empire_sword_3_t3, Horse=t2_empire_horse, HorseHarness=imperial_scale_barding, Head=imperial_nasal_helm, Body=imperial_mail_over_leather |
 | imperial_noble_t3_heavy_noble_cavalry | 帝国重装贵族骑兵 | Cavalry | 16 | 30/135/85/10/145/20/0/10 | Item0=empire_lance_1_t3, Item1=reinforced_kite_shield, Item2=empire_sword_3_t3, Horse=t3_empire_horse, HorseHarness=half_mail_and_plate_barding, Head=imperial_goggled_helmet, Body=imperial_lamellar |
 | imperial_noble_t4_royal_heavy_cavalry | 帝国皇家重骑兵 | Cavalry | 21 | 35/160/110/10/170/20/0/10 | Item0=empire_lance_1_t3, Item1=reinforced_kite_shield, Item2=empire_sword_3_t3, Horse=t3_empire_horse, HorseHarness=mail_and_plate_barding, Head=imperial_goggled_helmet, Body=imperial_scale_armor |
@@ -78,7 +84,7 @@ Columns:
 | vlandia_t3_crossbow_levy | 瓦兰农奴熟练弩兵 | Ranged | 16 | 60/15/30/10/10/0/110/10 | Item0=crossbow_a, Item1=bolt_d, Item2=peasant_hatchet_1_t1, Head=head_wrapping, Body=aketon |
 | vlandia_noble_t1_page | 瓦兰贵族侍从 | Infantry | 6 | 30/30/45/10/25/10/10/10 | Item0=vlandia_sword_2_t3, Item1=steel_round_shield, Head=arming_coif, Body=aketon |
 | vlandia_noble_t2_squire | 瓦兰贵族扈从骑士 | Cavalry | 11 | 30/90/60/10/70/10/0/10 | Item0=vlandia_lance_1_t3, Item1=vlandia_sword_2_t3, Item2=steel_round_shield, Horse=t2_vlandia_horse, HorseHarness=light_harness, Head=kettle_hat_over_padded_cloth, Body=mail_shirt |
-| vlandia_noble_t3_knight | 瓦兰骑士 | Cavalry | 16 | 35/120/90/20/120/10/0/10 | Item0=vlandia_lance_1_t3, Item1=vlandia_sword_3_t4, Item2=steel_round_shield, Horse=t2_vlandia_horse, HorseHarness=light_harness, Head=kettle_hat_over_mail_coif, Body=mail_shirt |
+| vlandia_noble_t3_knight | 瓦兰骑士 | Cavalry | 16 | 35/120/90/20/120/10/0/10 | Item0=vlandia_lance_1_t3, Item1=vlandia_sword_3_t4, Item2=steel_round_shield, Horse=t3_vlandia_horse, HorseHarness=chain_horse_harness, Head=great_helm, Body=coat_of_plates_over_mail, Cape=noble_pauldron_with_cape, Gloves=knight_gauntlets, Leg=knight_greaves |
 | vlandia_noble_t4_champion_knight | 瓦兰冠军骑士 | Cavalry | 21 | 40/150/120/25/150/10/0/10 | Item0=vlandia_lance_2_t4, Item1=vlandia_sword_3_t4, Item2=steel_round_shield, Horse=t3_vlandia_horse, HorseHarness=chain_horse_harness, Head=kettle_hat_over_mail_coif, Body=coat_of_plates_over_mail, Cape=noble_pauldron_with_cape |
 | vlandia_noble_t5_foot_commander_knight | 瓦兰领军骑士（步战） | Infantry | 26 | 140/40/140/160/60/10/0/10 | Item0=northern_2hsword_t4, Item1=vlandia_sword_3_t4, Item2=steel_round_shield, Head=full_helm_over_padded_cap, Body=coat_of_plates_over_mail, Cape=noble_pauldron_with_cape |
 | vlandia_noble_t5_champion_vanguard_knight | 瓦兰冠军先锋骑士 | Cavalry | 26 | 50/200/160/30/220/10/0/10 | Item0=vlandia_lance_3_t5, Item1=vlandia_sword_3_t4, Item2=steel_round_shield, Horse=t3_vlandia_horse, HorseHarness=halfchain_barding, Head=full_helm_over_padded_cap, Body=coat_of_plates_over_mail, Cape=pauldron_over_scale_armor |
@@ -98,7 +104,7 @@ Columns:
 | battania_t3_shield_warrior | 巴丹氏族勇士 | Infantry | 16 | 80/20/70/30/80/15/0/10 | Item0=battania_sword_2_t3, Item1=battania_large_shield_a, Head=leather_studdedhelm, Body=sleeveless_studded_fur_armor |
 | battania_t3_javelin_raider | 巴丹氏族突袭者 | Infantry | 16 | 100/15/60/40/50/10/0/90 | Item0=battania_sword_2_t3, Item1=battania_shield_targe_a, Item2=northern_javelin_2_t3, Body=northern_leather_vest |
 | battania_t3_horse_raider | 巴丹狂野骑兵 | Cavalry | 16 | 60/100/20/80/90/0/0/0 | Item0=battania_2hsword_2_t3, Horse=t3_battania_horse, HorseHarness=battania_horse_harness, Head=battania_fur_helmet, Body=battanian_savage_armor, Cape=battania_shoulder_furr |
-| battania_noble_t2_bloodline | 巴丹贵族血脉 | Infantry | 11 | 70/10/90/80/40/60/0/30 | Item0=battania_sword_1_t2, Item1=battania_shield_targe_a, Head=leather_studdedhelm_over_thinhide, Body=battania_light_armor_c |
+| battania_noble_t2_bloodline | 巴丹贵族血脉 | Infantry | 11 | 70/10/90/80/40/60/0/30 | Item0=battania_sword_2_t3, Item1=battania_large_shield_a, Head=leather_studdedhelm_over_roughscale, Body=battania_noble_armor, Cape=battania_shoulder_furr, Gloves=battania_noble_bracers, Leg=battania_fur_boots |
 | battania_noble_t3_hunter_hero | 巴丹弓手豪杰 | Ranged | 16 | 90/10/50/120/30/160/0/30 | Item0=woodland_longbow, Item1=bodkin_arrows_b, Item2=battania_2hsword_2_t3, Head=leather_studdedhelm_over_headcloth, Body=battania_light_armor_d |
 | battania_noble_t4_veteran_hunter_hero | 巴丹资深弓手豪杰 | Ranged | 21 | 110/10/55/150/30/200/0/35 | Item0=woodland_yew_bow, Item1=bodkin_arrows_b, Item2=battania_2hsword_4_t4, Head=battania_earmuff_helmet_c, Body=battania_noble_armor, Cape=battania_shoulder_furr |
 | battania_noble_t5_legendary_hunter_hero | 巴丹传奇弓手豪杰 | Ranged | 26 | 130/10/60/180/30/240/0/40 | Item0=woodland_yew_bow, Item1=bodkin_arrows_b, Item2=battania_2hsword_5_t5, Head=battania_earmuff_helmet_c_brnz, Body=battania_warlord_armor, Cape=battania_shoulder_furr |
@@ -122,7 +128,7 @@ Columns:
 | sturgia_t3_shieldbreaker | 斯特吉亚破阵者 | Infantry | 16 | 70/0/40/100/40/5/0/10 | Item0=battle_axe_t4, Head=nordic_helmet, Body=sturgian_chainmale_shortsleeve |
 | sturgia_t2_raider_cavalry | 斯特吉亚轻骑兵 | Cavalry | 11 | 30/60/50/20/60/20/0/20 | Item0=western_spear_1_t2, Item1=reinforced_kite_shield, Item2=peasant_hatchet_1_t1, Horse=t2_sturgia_horse, HorseHarness=northern_ring_barding, Head=nordic_leather_cap, Body=sturgian_chainmale_shortsleeve |
 | sturgia_t3_mounted_hunter | 斯特吉亚骑射手 | HorseArcher | 16 | 40/90/40/20/40/110/0/20 | Item0=steppe_war_bow, Item1=bodkin_arrows_b, Item2=sturgia_sword_1_t3, Horse=t2_sturgia_horse, HorseHarness=northern_ring_barding, Head=nordic_helmet, Body=sturgian_chainmale_shortsleeve |
-| sturgia_noble_t2_retainer | 斯特吉亚贵族随从 | Cavalry | 16 | 35/80/90/20/40/20/0/20 | Item0=sturgia_axe_2_t2, Item1=sturgia_old_shield_a, Horse=t2_sturgia_horse, HorseHarness=halfchain_barding, Head=sturgian_helmet_base, Body=sturgian_chainmale_shortsleeve |
+| sturgia_noble_t2_retainer | 斯特吉亚贵族随从 | Cavalry | 16 | 35/80/90/20/40/20/0/20 | Item0=sturgia_sword_1_t3, Item1=sturgia_infantry_shield_a, Horse=t3_sturgia_horse, HorseHarness=chain_barding, Head=sturgian_helmet_closed, Body=sturgian_lamellar_base, Cape=scale_shoulder_armor, Gloves=plated_strip_gauntlets, Leg=plated_strip_boots |
 | sturgia_noble_t3_boyar_guard | 波耶侍卫 | Cavalry | 21 | 55/95/110/120/110/20/0/90 | Item0=northern_spear_2_t3, Item1=sturgia_infantry_shield_a, Item2=western_javelin_2_t3, Item3=black_heart_2haxe_t3, Horse=t3_sturgia_horse, HorseHarness=northern_ring_barding, Head=sturgian_helmet_closed, Body=sturgian_chainmale_longsleeve |
 | sturgia_noble_t4_boyar_heavy_shield_guard | 波耶重盾侍卫 | Cavalry | 26 | 70/110/130/140/130/20/0/110 | Item0=northern_spear_3_t4, Item1=sturgia_infantry_shield_b, Item2=western_javelin_3_t4, Item3=battle_axe_t4, Horse=t3_sturgia_horse, HorseHarness=chain_barding, Head=sturgia_heavy_cavalary_helmet, Body=sturgian_fortified_armor |
 | sturgia_noble_t3_druzhinnik_heavy_horse_archer | 德纳鲁日重型弓骑兵 | HorseArcher | 21 | 45/110/90/20/30/160/0/30 | Item0=steppe_war_bow, Item1=bodkin_arrows_b, Item2=sturgia_mace_1_t3, Item3=sturgia_infantry_shield_a, Horse=t3_sturgia_horse, HorseHarness=northern_ring_barding, Head=sturgian_helmet_open, Body=sturgian_lamellar_base |
@@ -145,7 +151,7 @@ Columns:
 | khuzait_t4_veteran_mounted_javelin_raider | 库吉特资深标枪突袭骑兵 | Cavalry | 21 | 35/140/80/10/20/10/0/150 | Item0=western_javelin_1_t2, Item1=western_javelin_1_t2, Item2=ridged_sabre_sword_t4, Horse=t3_khuzait_horse, HorseHarness=studded_steppe_barding, Body=khuzait_fortified_armor |
 | khuzait_t3_shock_lancer | 库吉特重装枪骑兵 | Cavalry | 16 | 30/110/70/10/150/0/0/0 | Item0=khuzait_lance_1_t3, Item1=simple_sabre_sword_t2, Item2=steppe_guardian_shield, Horse=t2_khuzait_horse, HorseHarness=steppe_half_barding, Head=steppe_helmet, Body=khuzait_heavy_armor |
 | khuzait_t4_veteran_shock_lancer | 库吉特资深重装枪骑兵 | Cavalry | 21 | 35/140/90/10/185/0/0/0 | Item0=khuzait_lance_2_t4, Item1=ridged_sabre_sword_t4, Item2=steppe_guardian_shield, Horse=t3_khuzait_horse, HorseHarness=studded_steppe_barding, Head=steppe_helmet, Body=khuzait_fortified_armor |
-| khuzait_noble_t2_youth | 库吉特贵族子弟 | Infantry | 11 | 40/60/70/40/40/60/0/20 | Item0=simple_sabre_sword_t2, Item1=worn_kite_shield, Head=steppe_helmet, Body=khuzait_sturdy_armor |
+| khuzait_noble_t2_youth | 库吉特贵族子弟 | Infantry | 11 | 40/60/70/40/40/60/0/20 | Item0=ridged_sabre_sword_t4, Item1=steppe_guardian_shield, Head=khuzait_noble_helmet_with_feathers, Body=khuzait_heavy_armor, Cape=fur_cloak_b, Gloves=eastern_plated_leather_vambraces, Leg=plated_strip_boots |
 | khuzait_noble_t3_tent_guard_glaive | 库吉特帐卫关刀兵 | Infantry | 16 | 75/30/50/90/140/120/0/20 | Item0=composite_steppe_bow, Item1=bodkin_arrows_a, Item2=khuzait_polearm_1_t4, Head=spiked_helmet_with_facemask, Body=khuzait_fortified_armor |
 | khuzait_noble_t4_veteran_tent_guard_glaive | 库吉特资深帐卫关刀兵 | Infantry | 21 | 95/30/60/110/170/150/0/20 | Item0=steppe_war_bow, Item1=bodkin_arrows_b, Item2=khuzait_polearm_1_t4, Head=spiked_helmet_with_facemask, Body=khuzait_fortified_armor, Cape=fur_cloak_b |
 | khuzait_noble_t3_shock_cavalry | 库吉特陷阵骑兵 | Cavalry | 16 | 30/120/90/20/150/20/0/10 | Item0=khuzait_lance_1_t3, Item1=simple_sabre_sword_t2, Horse=t2_khuzait_horse, HorseHarness=steppe_harness, Head=steppe_helmet, Body=khuzait_sturdy_armor |
@@ -171,7 +177,7 @@ Columns:
 | aserai_t3_bow_rider | 沙漠弓骑手 | HorseArcher | 16 | 30/95/70/10/10/120/0/20 | Item0=nomad_bow, Item1=bodkin_arrows_b, Item2=falchion_sword_t2, Item3=leather_bound_kite_shield, Horse=t3_aserai_horse, HorseHarness=steppe_half_barding, Head=wrapped_headcloth, Body=aserai_horseman_armor |
 | aserai_t3_camel_anti_cavalry | 沙漠骆驼反骑手 | Cavalry | 16 | 35/90/45/10/110/10/0/90 | Item0=southern_spear_3_t4, Item1=leather_bound_kite_shield, Item2=western_javelin_2_t3, Horse=war_camel, HorseHarness=camel_saddle, Head=open_desert_helmet, Body=aserai_armor_02_b |
 | aserai_t4_city_guard | 沙漠城邦卫士 | Infantry | 21 | 80/0/120/30/35/10/0/120 | Item0=aserai_sword_1_t2, Item1=reinforced_kite_shield, Item2=western_javelin_3_t4, Head=open_desert_helmet, Body=aserai_scale_armor_on_chain |
-| aserai_noble_t2_faris_retainer | 沙漠法里斯随骑 | Cavalry | 16 | 25/90/90/10/20/30/0/100 | Item0=aserai_sword_1_t2, Item1=leather_bound_kite_shield, Item2=western_javelin_1_t2, Horse=t2_aserai_horse, HorseHarness=halfchain_barding, Head=wrapped_headcloth, Body=aserai_horseman_armor |
+| aserai_noble_t2_faris_retainer | 沙漠法里斯随骑 | Cavalry | 16 | 25/90/90/10/20/30/0/100 | Item0=aserai_sword_1_t2, Item1=reinforced_kite_shield, Item2=western_javelin_2_t3, Horse=t3_aserai_horse, HorseHarness=chain_barding, Head=open_desert_helmet, Body=aserai_scale_armor_on_chain, Cape=aserai_scale_shoulder_b, Gloves=sturgian_splint_brancers, Leg=sturgian_plated_boots |
 | aserai_noble_t3_faris_javelin | 沙漠投矛法里斯 | Cavalry | 21 | 30/110/120/10/25/30/0/150 | Item0=aserai_sword_1_t2, Item1=reinforced_kite_shield, Item2=western_javelin_2_t3, Horse=t3_aserai_horse, HorseHarness=steppe_half_barding, Head=open_desert_helmet, Body=southern_lamellar_armor |
 | aserai_noble_t3_faris_bow | 沙漠弓骑法里斯 | HorseArcher | 21 | 30/120/110/10/15/170/0/90 | Item0=steppe_war_bow, Item1=bodkin_arrows_b, Item2=aserai_sword_1_t2, Item3=western_javelin_2_t3, Horse=t3_aserai_horse, HorseHarness=steppe_half_barding, Head=open_desert_helmet, Body=southern_lamellar_armor |
 | aserai_noble_t4_faris_vanguard | 沙漠先锋法里斯 | Cavalry | 26 | 35/140/140/10/20/40/0/200 | Item0=aserai_sword_1_t2, Item1=reinforced_kite_shield, Item2=western_javelin_3_t4, Item3=western_javelin_3_t4, Horse=t3_aserai_horse, HorseHarness=half_scale_barding, Head=open_desert_helmet, Body=aserai_scale_armor_on_chain |
@@ -192,7 +198,7 @@ Columns:
 | nord_t3_berserker | 诺德狂战士 | Infantry | 16 | 110/0/40/120/20/10/0/90 | Item0=black_heart_2haxe_t3, Item1=northern_throwing_axe_1_t1, Body=sleeveless_studded_fur_armor |
 | nord_t3_veteran_shortbow_warrior | 诺德短弓老兵 | Infantry | 16 | 90/0/95/30/20/90/0/10 | Item0=nordic_shortbow, Item1=barbed_arrows, Item2=heavy_round_shield, Item3=sturgia_axe_3_t3, Head=nasal_helmet, Body=sturgian_chainmale_shortsleeve |
 | nord_t3_veteran_longbowman | 诺德资深长弓手 | Ranged | 16 | 80/0/45/10/10/130/0/0 | Item0=woodland_longbow, Item1=bodkin_arrows_a, Item2=sturgia_axe_2_t2, Head=nasal_helmet, Body=heavy_nordic_tunic |
-| nord_noble_t1_scion | 诺德贵胄之子 | Infantry | 6 | 70/0/90/50/50/30/0/60 | Item0=sturgia_axe_2_t2, Item1=northern_round_shield, Head=nordic_leather_cap, Body=northern_leather_vest |
+| nord_noble_t1_scion | 诺德贵胄之子 | Infantry | 6 | 70/0/90/50/50/30/0/60 | Item0=sturgia_axe_3_t3, Item1=heavy_round_shield, Head=nordic_helmet, Body=nordic_hauberk, Cape=scale_shoulder_armor, Gloves=plated_strip_gauntlets, Leg=plated_strip_boots |
 | nord_noble_t2_shield_guard | 盾卫 | Infantry | 11 | 90/0/120/50/50/30/0/60 | Item0=sturgia_axe_3_t3, Item1=northern_round_shield, Head=nasalhelm_over_leather, Body=sturgian_chainmale_shortsleeve |
 | nord_noble_t3_veteran_shield_guard | 百战盾卫 | Infantry | 16 | 110/0/150/60/60/35/0/70 | Item0=sturgia_axe_3_t3, Item1=heavy_round_shield, Head=nasal_helmet, Body=nordic_hauberk |
 | nord_noble_t4_vanguard_shield_guard | 先锋盾卫 | Infantry | 21 | 130/0/180/70/70/40/0/80 | Item0=sturgia_sword_4_t4, Item1=heavy_round_shield, Head=nordic_helmet, Body=decorated_nordic_hauberk |

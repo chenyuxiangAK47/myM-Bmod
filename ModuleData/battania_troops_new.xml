@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
 	<!-- ================================================= -->
 	<!-- =============== Battania Troops =============== -->
@@ -44,8 +44,24 @@
 				value="15" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_t2_woods_bowman" />
+			<upgrade_target
+				id="NPCCharacter.battania_t2_wildfighter" />
+			<upgrade_target
+				id="NPCCharacter.battania_t2_spear_warrior" />
 		</upgrade_targets>
 		<Equipments>
+			<!-- 装备池1: 短矛 -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.western_spear_1_t2" />
+				<equipment
+					slot="Body"
+					id="Item.cloth_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池2: 简易盾 + 单手武器 -->
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
@@ -53,6 +69,15 @@
 				<equipment
 					slot="Item1"
 					id="Item.battania_shield_targe_a" />
+				<equipment
+					slot="Body"
+					id="Item.cloth_tunic" />
+			</EquipmentRoster>
+			<!-- 装备池3: 单手武器（无盾） -->
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.battania_sword_1_t2" />
 				<equipment
 					slot="Body"
 					id="Item.cloth_tunic" />
@@ -99,6 +124,8 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_t3_wild_marksman" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -215,6 +242,8 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_t3_berserker" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -224,6 +253,12 @@
 				<equipment
 					slot="Body"
 					id="Item.battanian_savage_armor" />
+				<equipment
+					slot="Head"
+					id="Item.battania_fur_helmet" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -267,6 +302,8 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_t3_horse_raider" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -276,6 +313,12 @@
 				<equipment
 					slot="Body"
 					id="Item.battanian_savage_armor" />
+				<equipment
+					slot="Head"
+					id="Item.battania_fur_helmet" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -319,6 +362,10 @@
 				value="40" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_t3_shield_warrior" />
+			<upgrade_target
+				id="NPCCharacter.battania_t3_javelin_raider" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -557,21 +604,39 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t3_hunter_hero" />
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t3_slaughter_hero" />
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t3_oath_hero" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
 				<equipment
 					slot="Item0"
-					id="Item.battania_sword_1_t2" />
+					id="Item.battania_sword_2_t3" />
 				<equipment
 					slot="Item1"
-					id="Item.battania_shield_targe_a" />
+					id="Item.battania_large_shield_a" />
+				<equipment
+					slot="Item2"
+					id="Item.northern_javelin_2_t3" />
 				<equipment
 					slot="Head"
-					id="Item.leather_studdedhelm_over_thinhide" />
+					id="Item.leather_studdedhelm_over_roughscale" />
 				<equipment
 					slot="Body"
-					id="Item.battania_light_armor_c" />
+					id="Item.battania_noble_armor" />
+				<equipment
+					slot="Cape"
+					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Gloves"
+					id="Item.battania_noble_bracers" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -615,6 +680,8 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t4_veteran_hunter_hero" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -633,6 +700,15 @@
 				<equipment
 					slot="Body"
 					id="Item.battania_light_armor_d" />
+				<equipment
+					slot="Cape"
+					id="Item.battania_shoulder_furr" />
+				<equipment
+					slot="Gloves"
+					id="Item.battania_noble_bracers" />
+				<equipment
+					slot="Leg"
+					id="Item.battania_fur_boots" />
 			</EquipmentRoster>
 		</Equipments>
 	</NPCCharacter>
@@ -676,6 +752,8 @@
 				value="35" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t5_legendary_hunter_hero" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -804,6 +882,8 @@
 				value="30" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t4_veteran_slaughter_hero" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -862,6 +942,8 @@
 				value="35" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t5_legendary_slaughter_hero" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -978,6 +1060,8 @@
 				value="20" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t4_veteran_oath_hero" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
@@ -987,6 +1071,9 @@
 				<equipment
 					slot="Item1"
 					id="Item.battania_large_shield_a" />
+				<equipment
+					slot="Item2"
+					id="Item.northern_javelin_2_t3" />
 				<equipment
 					slot="Head"
 					id="Item.leather_studdedhelm" />
@@ -1036,6 +1123,8 @@
 				value="20" />
 		</skills>
 		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.battania_noble_t5_oath_guardian" />
 		</upgrade_targets>
 		<Equipments>
 			<EquipmentRoster>
