@@ -453,3 +453,5 @@ class EquipmentValidator {
 
 // 全局验证器实例
 const equipmentValidator = new EquipmentValidator();
+
+

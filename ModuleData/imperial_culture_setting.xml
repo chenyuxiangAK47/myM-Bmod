@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPCultures>
+	<Culture id="empire"
+		basic_troop="NPCCharacter.imperial_t1_tirones"
+		elite_basic_troop="NPCCharacter.imperial_noble_t1_wealthy_citizen">
+	</Culture>
+</SPCultures>

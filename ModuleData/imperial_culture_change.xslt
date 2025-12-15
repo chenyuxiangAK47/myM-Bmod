@@ -7,19 +7,13 @@
 		</xsl:copy>
 	</xsl:template>
 	
-	<!-- 修改Imperial文化的基础兵种设置 -->
+	<!-- 修改Empire文化的基础兵种设置 -->
 	<xsl:template match="Culture[@id='empire']/@basic_troop">
 		<xsl:attribute name="basic_troop">NPCCharacter.imperial_t1_tirones</xsl:attribute>
 	</xsl:template>
 	
-	<!-- 修改Imperial文化的贵族兵种设置 -->
+	<!-- 修改Empire文化的贵族兵种设置 -->
 	<xsl:template match="Culture[@id='empire']/@elite_basic_troop">
-		<xsl:attribute name="elite_basic_troop">NPCCharacter.imperial_t1_wealthy_citizen</xsl:attribute>
+		<xsl:attribute name="elite_basic_troop">NPCCharacter.imperial_noble_t1_wealthy_citizen</xsl:attribute>
 	</xsl:template>
 </xsl:stylesheet>
-
-
-
-
-
-

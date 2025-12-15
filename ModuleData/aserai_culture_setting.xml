@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPCultures>
+	<Culture id="aserai"
+		basic_troop="NPCCharacter.aserai_t1_desert_levy"
+		elite_basic_troop="NPCCharacter.aserai_noble_t2_faris_retainer">
+	</Culture>
+</SPCultures>
+
+
+

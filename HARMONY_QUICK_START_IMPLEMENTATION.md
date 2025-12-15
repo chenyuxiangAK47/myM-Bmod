@@ -78,3 +78,5 @@
 1. 调整类名（`InitialMenuVM` 的实际命名空间）
 2. 调整方法名（`RefreshMenuOptions` 的实际名称）
 3. 调整对象创建方式（`InitialMenuOptionVM` 的构造函数参数）
+
+

@@ -7,10 +7,13 @@
 		</xsl:copy>
 	</xsl:template>
 	
-	<!-- 修改Nord文化的基础兵种设置，改为我们的新兵种 -->
-	<!-- 这会覆盖NavalDLC的设置，因为我们的mod在NavalDLC之后加载 -->
+	<!-- 修改Nord文化的基础兵种设置 -->
 	<xsl:template match="Culture[@id='nord']/@basic_troop">
 		<xsl:attribute name="basic_troop">NPCCharacter.nord_youth</xsl:attribute>
 	</xsl:template>
+	
+	<!-- 修改Nord文化的贵族兵种设置 -->
+	<xsl:template match="Culture[@id='nord']/@elite_basic_troop">
+		<xsl:attribute name="elite_basic_troop">NPCCharacter.nord_noble_t1_scion</xsl:attribute>
+	</xsl:template>
 </xsl:stylesheet>
-

@@ -60,3 +60,5 @@ Campaign.Current.AddMoneyToPlayerParty(100000);  // 修改这里的数字
 - 在主菜单添加"快速开始"按钮
 - 完全跳过角色创建
 - 使用预设的默认角色数据
+
+

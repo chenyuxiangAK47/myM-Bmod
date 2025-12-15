@@ -10,6 +10,7 @@
 	<!-- 完全删除旧的Imperial兵种 -->
 	<xsl:template match="NPCCharacter[@id='imperial_recruit']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_infantryman']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_trained_infantryman']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_veteran_infantryman']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_legionary']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_archer']"/>
@@ -20,11 +21,17 @@
 	<xsl:template match="NPCCharacter[@id='imperial_menavliaton']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_elite_menavliaton']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_horseman']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_equite']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_heavy_horseman']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_cataphract']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_elite_cataphract']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_palatine_guard']"/>
 	<xsl:template match="NPCCharacter[@id='imperial_vigla_recruit']"/>
 	<xsl:template match="NPCCharacter[@id='bucellarii']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_militia_archer']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_militia_veteran_archer']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_militia_spearman']"/>
+	<xsl:template match="NPCCharacter[@id='imperial_militia_veteran_spearman']"/>
 </xsl:stylesheet>
 
 

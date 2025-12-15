@@ -390,3 +390,6 @@ Nord 兵种（如 `nord_youngling`、`nord_drengr`、`nord_huntsman`）是在 Na
 - **2025-12-14**: 参考原版文件格式，修复所有文化 troops_new.xml 文件中的 name 属性（从直接中文字符改为本地化字符串格式 `{=KEY}Text`）
 - **2025-12-14**: 发现 Nord 兵种属于 NavalDLC，将 NavalDLC 从可选依赖改为必需依赖（`Optional="false"`），并移除 `ModulesToLoadAfterThis` 中的 NavalDLC（问题9）
 
+
+
+

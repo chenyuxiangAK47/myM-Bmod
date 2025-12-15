@@ -1,5 +1,6 @@
 using System;
 using HarmonyLib;
+using Bannerlord.UIExtenderEx;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
@@ -12,22 +13,34 @@ namespace NordThrowingAxeMod
     {
         private static bool _hasGivenQuickStartGold = false;
         private static Harmony _harmony = null;
+        private UIExtender _uiExtender = null;
 
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
             
-            // 初始化 Harmony 补丁
+            // 初始化 UIExtenderEx（用于添加主菜单按钮）
+            try
+            {
+                _uiExtender = new UIExtender("NordThrowingAxeMod");
+                _uiExtender.Register(typeof(WelcomeMessageSubModule).Assembly);
+                _uiExtender.Enable();
+                System.Diagnostics.Debug.WriteLine("UIExtenderEx v2.13.2 已启用");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"UIExtenderEx 加载失败: {ex.Message}");
+            }
+            
+            // 初始化 Harmony 补丁（用于快速开始功能）
             try
             {
                 _harmony = new Harmony("com.nordthrowingaxe.quickstart");
                 _harmony.PatchAll();
-                // 不显示消息，避免干扰游戏启动
-                System.Diagnostics.Debug.WriteLine("快速开局功能已启用（Harmony补丁）");
+                System.Diagnostics.Debug.WriteLine("Harmony v2.4.2.0 补丁已启用");
             }
             catch (Exception ex)
             {
-                // 如果 Harmony 不可用，记录错误但继续运行
                 System.Diagnostics.Debug.WriteLine($"Harmony 补丁加载失败: {ex.Message}");
             }
         }
@@ -36,15 +49,15 @@ namespace NordThrowingAxeMod
         {
             base.OnSubModuleUnloaded();
             
+            // 清理 UIExtenderEx
+            _uiExtender?.Disable();
+            _uiExtender = null;
+            
             // 清理 Harmony 补丁
             _harmony?.UnpatchAll();
             _harmony = null;
         }
 
-        protected override void OnBeforeInitialModuleScreenSetAsRoot()
-        {
-            base.OnBeforeInitialModuleScreenSetAsRoot();
-        }
 
         protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
         {

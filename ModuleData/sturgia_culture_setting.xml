@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPCultures>
+	<Culture id="sturgia"
+		basic_troop="NPCCharacter.sturgia_t1_conscript"
+		elite_basic_troop="NPCCharacter.sturgia_noble_t2_retainer">
+	</Culture>
+</SPCultures>
+
+
+

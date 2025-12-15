@@ -330,3 +330,5 @@ public class MyPatch
 - Bannerlord.Harmony（Nexus Mods）：https://www.nexusmods.com/mountandblade2bannerlord/mods/2006
 - Bannerlord.Harmony（GitHub）：https://github.com/BUTR/Bannerlord.Harmony
 - Bannerlord 模组开发社区：https://github.com/BUTR/Bannerlord.BUTRLoader
+
+

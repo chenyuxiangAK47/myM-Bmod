@@ -21,7 +21,17 @@
 				id="NPCCharacter.imperial_t1_tirones" />
 		</upgrade_targets>
 	</xsl:template>
+	
+	<!-- 修改原版贵族基础兵种imperial_vigla_recruit的升级路径，指向新的贵族兵种树 -->
+	<xsl:template match="NPCCharacter[@id='imperial_vigla_recruit']/upgrade_targets">
+		<upgrade_targets>
+			<upgrade_target
+				id="NPCCharacter.imperial_noble_t1_wealthy_citizen" />
+		</upgrade_targets>
+	</xsl:template>
 </xsl:stylesheet>
+
+
 
 
 

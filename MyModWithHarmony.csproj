@@ -50,12 +50,20 @@
       <HintPath>$(BANNERLORD_INSTALL_DIR)\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Bannerlord.UIExtenderEx">
+      <HintPath>$(BANNERLORD_INSTALL_DIR)\Modules\Bannerlord.UIExtenderEx\bin\Win64_Shipping_Client\Bannerlord.UIExtenderEx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SubModule\WelcomeMessage.cs" />
     <Compile Include="SubModule\QuickStartPatches.cs" />
+    <Compile Include="SubModule\QuickStartUIExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
+
+

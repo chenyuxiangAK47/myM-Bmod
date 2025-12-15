@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPCultures>
+	<Culture id="khuzait"
+		basic_troop="NPCCharacter.khuzait_t1_nomad_levy"
+		elite_basic_troop="NPCCharacter.khuzait_noble_t2_youth">
+	</Culture>
+</SPCultures>
+
+
+

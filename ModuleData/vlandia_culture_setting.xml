@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPCultures>
+	<Culture id="vlandia"
+		basic_troop="NPCCharacter.vlandia_t1_serf_levy"
+		elite_basic_troop="NPCCharacter.vlandia_noble_t3_knight">
+	</Culture>
+</SPCultures>
+
+
+

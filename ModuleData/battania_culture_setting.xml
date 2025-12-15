@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPCultures>
+	<Culture id="battania"
+		basic_troop="NPCCharacter.battania_t1_tribesman"
+		elite_basic_troop="NPCCharacter.battania_noble_t2_bloodline">
+	</Culture>
+</SPCultures>
+
+
+
